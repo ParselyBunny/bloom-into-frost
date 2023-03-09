@@ -398,6 +398,8 @@ label start:
     narrator "She is silent for a long moment, breathing slow and steady, and I begin to wonder if she’d fallen asleep. Finally, without opening her eyes, she speaks, low enough I could barely hear."
 
     plumeria "I just felt like it, was all. Wanted to see the north."
+    
+    # Day 1
 
     narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into a still pond, I fall asleep."
 
@@ -767,57 +769,72 @@ label start:
 
     plumeria "It’s not gross, just kind of strange."
 
-    ###Player choice; touch the toe or not
+    ## Player choice 1; touch the toe or not
+    
+    menu:
+    
+        "Touch it.":
+            jump do_touch
+           
+        "Don't touch it.":
+            jump dont_touch
 
-    #"[touch it]"
+    # "[touch it]"
+    label do_touch:
 
-    narrator "I look at her for a moment longer, then give in and traipse over to touch the ancient artefact. Where a statue would have been worn smooth by the touch of a hundred thousand beseeching penitents, it has remained as whole and inviolate as the day it was cut."
+        narrator "I look at her for a moment longer, then give in and traipse over to touch the ancient artefact. Where a statue would have been worn smooth by the touch of a hundred thousand beseeching penitents, it has remained as whole and inviolate as the day it was cut."
 
-    narrator "Gingerly, I reach out and press my hand against it. Even through my gloves, it feels cold and smooth, like marble, unyieldingly solid."
+        narrator "Gingerly, I reach out and press my hand against it. Even through my gloves, it feels cold and smooth, like marble, unyieldingly solid."
 
-    narrator "I poke at the crystalline flesh surrounding the diamond plate of the nail itself and snatch back my hand, the spasmodic reflex of the fingertip in the flame."
+        narrator "I poke at the crystalline flesh surrounding the diamond plate of the nail itself and snatch back my hand, the spasmodic reflex of the fingertip in the flame."
 
-    foxglove "It’s- warm, and-"
+        foxglove "It’s- warm, and-"
 
-    plumeria "Weird, right? Like static."
+        plumeria "Weird, right? Like static."
 
-    narrator "I look down at my glove, half-expecting to see the tips discoloured by contact with the divine."
+        narrator "I look down at my glove, half-expecting to see the tips discoloured by contact with the divine."
 
-    narrator "Same as always; the only evidence of contact is a faint tingle that remains in the furthest reaches of my hands, so faint I’m not sure it isn’t imagined. I shake my hand to rid it of the feeling, like shedding spider web."
+        narrator "Same as always; the only evidence of contact is a faint tingle that remains in the furthest reaches of my hands, so faint I’m not sure it isn’t imagined. I shake my hand to rid it of the feeling, like shedding spider web."
 
-    foxglove "You could have warned me."
+        foxglove "You could have warned me."
 
-    narrator "My grumble has no real heat in it, and Plumeria just grins."
+        narrator "My grumble has no real heat in it, and Plumeria just grins."
 
-    plumeria "Then you wouldn’t have touched it, would you? And now you can say you poked one of the gods themselves."
+        plumeria "Then you wouldn’t have touched it, would you? And now you can say you poked one of the gods themselves."
 
-    foxglove "Lucky me."
+        foxglove "Lucky me."
 
-    narrator "Something tickles the inside of my throat, and I cough abruptly."
+        narrator "Something tickles the inside of my throat, and I cough abruptly."
+        
+        jump choice_1_end
 
     # "[Don’t touch it]"
+    label dont_touch:
 
-    narrator "I shake my head."
+        narrator "I shake my head."
 
-    foxglove "I’m good, thanks. There’s probably been a million grubby hands rubbing all over it for years."
+        foxglove "I’m good, thanks. There’s probably been a million grubby hands rubbing all over it for years."
 
-    narrator "Plume makes a groan, amused and disappointed in equal measure."
+        narrator "Plume makes a groan, amused and disappointed in equal measure."
 
-    plumeria "Aw, too bad. It’s sort of tingly, you know? Warmer than you’d think, too."
+        plumeria "Aw, too bad. It’s sort of tingly, you know? Warmer than you’d think, too."
 
-    foxglove "Well, now I’m doubly glad I didn’t. That sounds even worse than I expected."
+        foxglove "Well, now I’m doubly glad I didn’t. That sounds even worse than I expected."
 
-    narrator "Something occurs to me, and I pull an expression of distaste."
+        narrator "Something occurs to me, and I pull an expression of distaste."
 
-    foxglove "Aw, that’s why it’s warmer in here, isn’t it? The air is full of... toe heat."
+        foxglove "Aw, that’s why it’s warmer in here, isn’t it? The air is full of... toe heat."
 
-    narrator "Something about that statement sends my friend cackling with ungraceful laughter. She deliberately rubs a hand on the toe again, and with an evil expression advances on me, contaminated hand held towards me like a weapon."
+        narrator "Something about that statement sends my friend cackling with ungraceful laughter. She deliberately rubs a hand on the toe again, and with an evil expression advances on me, contaminated hand held towards me like a weapon."
 
-    foxglove "Oh my gods, you horrible woman, don’t you dare-"
+        foxglove "Oh my gods, you horrible woman, don’t you dare-"
 
-    narrator "She lunges, and I dart backwards, definitely not making a squeaking sound of alarm. She gives an exaggeratedly evil cackle, but stops abruptly when coughing abruptly racks my chest and brings tears to my eyes."
+        narrator "She lunges, and I dart backwards, definitely not making a squeaking sound of alarm. She gives an exaggeratedly evil cackle, but stops abruptly when coughing abruptly racks my chest and brings tears to my eyes."
 
-    # "[End choice]"
+        jump choice_1_end
+
+    # End choice 1
+    label choice_1_end:
 
     plumeria "You alright?"
 
@@ -865,35 +882,49 @@ label start:
 
     grandma "You may pick it up, if you like. It doesn’t have anything in it; all the same, don’t point it at someone."
 
-    ##Player choice: Gun
+    ## Player choice 2: Gun
+    menu:
+    
+        "Pick it up.":
+            jump pick_up
+            
+        "Don't pick it up.":
+            jump dont_pick_up
 
     # "[Pick it up]"
+    label pick_up:
 
-    narrator "I look to Plumeria, and she shakes her head slightly. I reach into the box and pick it up, blinking at the weight of it. The grip is coarse against my palm, and fits neatly; all the same, I hold it awkwardly, unsure how to heft it properly."
+        narrator "I look to Plumeria, and she shakes her head slightly. I reach into the box and pick it up, blinking at the weight of it. The grip is coarse against my palm, and fits neatly; all the same, I hold it awkwardly, unsure how to heft it properly."
 
-    foxglove "It’s heavier than I expected."
+        foxglove "It’s heavier than I expected."
 
-    narrator "Grandmother let out a small laugh, absent of humour."
+        narrator "Grandmother let out a small laugh, absent of humour."
 
-    grandma "A gun should always be the heaviest thing in the world to carry."
+        grandma "A gun should always be the heaviest thing in the world to carry."
 
-    narrator "She stares at the thing in my hand with a strange expression. Fondness and hate for it blended like a poison. Uncomfortable, I offer it to her, but she just gestures to the box. With some relief, I stick it back into its little prison."
-
+        narrator "She stares at the thing in my hand with a strange expression. Fondness and hate for it blended like a poison. Uncomfortable, I offer it to her, but she just gestures to the box. With some relief, I stick it back into its little prison."
+        
+        jump choice_2_end
+        
     # "[Don’t pick it up]"
+    label dont_pick_up:
 
-    foxglove "I’d... rather not."
+        foxglove "I’d... rather not."
 
-    narrator "At this my Grandmother simply gives me a glance."
+        narrator "At this my Grandmother simply gives me a glance."
 
-    grandma "I suppose so. In these times of peace, and such."
+        grandma "I suppose so. In these times of peace, and such."
 
-    narrator "I can’t understand her tone - does she approve of my choice or not? Her face gives away nothing as she stares gravely down into the box, the revolver sitting innocently in the padding. Has it killed someone?"
+        narrator "I can’t understand her tone - does she approve of my choice or not? Her face gives away nothing as she stares gravely down into the box, the revolver sitting innocently in the padding. Has it killed someone?"
 
-    narrator "Has Grandmother?"
+        narrator "Has Grandmother?"
 
-    narrator "I find myself unable to ask, and unsure if I even want to. "
+        narrator "I find myself unable to ask, and unsure if I even want to. "
 
-    # "[End choice]"
+        jump choice_2_end
+        
+    # End choice 2
+    label choice_2_end:
 
     plumeria "If you don’t mind me asking, then - if you dislike them so much, why did you keep it?"
 
@@ -1365,175 +1396,189 @@ label start:
 
     narrator "The raven-haired girl merely cocks her head a little in my direction, waiting for my answer."
 
-    ##Player choice: Drink with Fennel
+    ## Player choice 3: Drink with Fennel
+    menu:
+        
+        "Accept the drink.":
+            jump accept_drink
+            
+        "Refuse the drink.":
+            jump refuse_drink
 
     # "[Accept the drink]"
+    label accept_drink:
 
-    foxglove "Um, well, cheers."
+        foxglove "Um, well, cheers."
 
-    narrator "The lighter ale (beer?) is lighter flavoured, less overwhelmingly bitter and into tolerable levels. In truth, I’d always preferred spirits, and the sweeter ones at that."
+        narrator "The lighter ale (beer?) is lighter flavoured, less overwhelmingly bitter and into tolerable levels. In truth, I’d always preferred spirits, and the sweeter ones at that."
 
-    foxglove "How about a swap, then, if I’ve got yours?"
+        foxglove "How about a swap, then, if I’ve got yours?"
 
-    narrator "Fennel shrugs and claims the drink that was formerly mine, taking a swallow."
+        narrator "Fennel shrugs and claims the drink that was formerly mine, taking a swallow."
 
-    fennel "This is the local speciality cask stuff, right? Yeah, they always flog it on visitors. Gods only know why, because it’s definitely an acquired taste, if you ask me."
+        fennel "This is the local speciality cask stuff, right? Yeah, they always flog it on visitors. Gods only know why, because it’s definitely an acquired taste, if you ask me."
 
-    plumeria "Seems pretty nice to me. Honestly, compared to some of the things I’ve drank at university parties, this is nothing."
+        plumeria "Seems pretty nice to me. Honestly, compared to some of the things I’ve drank at university parties, this is nothing."
 
-    fennel "You’re a university student?"
+        fennel "You’re a university student?"
 
-    narrator "Plume, perhaps sensing an opportunity, grins. She waves her glass in emphasis, narrowly avoiding painting the already-sticky tabletop with a fresh layer of awful."
+        narrator "Plume, perhaps sensing an opportunity, grins. She waves her glass in emphasis, narrowly avoiding painting the already-sticky tabletop with a fresh layer of awful."
 
-    plumeria "Yup. Thaumaturgical History. That is to say- the study of magic back when it was strong and people had magic and miracles just squirting out of every orifice."
+        plumeria "Yup. Thaumaturgical History. That is to say- the study of magic back when it was strong and people had magic and miracles just squirting out of every orifice."
 
-    foxglove "I’m consistently amazed at your ability to say the worst things ever. You’d think I’d get used to it, but it never seems to happen."
+        foxglove "I’m consistently amazed at your ability to say the worst things ever. You’d think I’d get used to it, but it never seems to happen."
 
-    plumeria "Please, call me amazing more."
+        plumeria "Please, call me amazing more."
 
-    foxglove "Remind me why I didn’t leave you back home?"
+        foxglove "Remind me why I didn’t leave you back home?"
 
-    narrator "Fennel looks between the two of us as we banter, dark eyes flicking to and fro. I’m just taking a sip when she asks a question."
+        narrator "Fennel looks between the two of us as we banter, dark eyes flicking to and fro. I’m just taking a sip when she asks a question."
 
-    fennel "So, you two dating, or what?"
+        fennel "So, you two dating, or what?"
 
-    narrator "I choke. The pressure builds in my throat as I try to avoid hacking up a lung. Beer (or perhaps ale) merrily leaps up into my nasal cavity, stinging wildly. Fennel watches me, hand partly raised in the beginnings of assistance and an expression of amusement."
+        narrator "I choke. The pressure builds in my throat as I try to avoid hacking up a lung. Beer (or perhaps ale) merrily leaps up into my nasal cavity, stinging wildly. Fennel watches me, hand partly raised in the beginnings of assistance and an expression of amusement."
 
-    fennel "That a no, then?"
+        fennel "That a no, then?"
 
-    narrator "I clear my throat a couple of times, trying to find my voice. I wave off Plumeria’s concern as it becomes evident I’m not about to choke to death in a dingy pub in Godigsfel."
+        narrator "I clear my throat a couple of times, trying to find my voice. I wave off Plumeria’s concern as it becomes evident I’m not about to choke to death in a dingy pub in Godigsfel."
 
-    foxglove "Ah, no, we’re not. We’re friends."
+        foxglove "Ah, no, we’re not. We’re friends."
 
-    narrator "The local hums thoughtfully, resting her chin on the back of one snow-skinned hand."
+        narrator "The local hums thoughtfully, resting her chin on the back of one snow-skinned hand."
 
-    fennel "Oh ho. Interesting."
+        fennel "Oh ho. Interesting."
 
-    narrator "Before I can ask interesting how, she focuses on me."
+        narrator "Before I can ask interesting how, she focuses on me."
 
-    fennel "So she’s a university student. Are you one, too?"
+        fennel "So she’s a university student. Are you one, too?"
 
-    foxglove "I’m not, no. I wanted to, but, you know."
+        foxglove "I’m not, no. I wanted to, but, you know."
 
-    narrator "I shrug helplessly. It’s a bitter taste in my mouth, even more so than the tarry black of the beer."
+        narrator "I shrug helplessly. It’s a bitter taste in my mouth, even more so than the tarry black of the beer."
 
-    foxglove "Couldn’t afford the fees."
+        foxglove "Couldn’t afford the fees."
 
-    fennel "That’s tough. Not like there’s one in this town, to be fair, so I’m in the same boat. Thought about heading down the tracks to someplace else, but this little town is still home, you know?"
+        fennel "That’s tough. Not like there’s one in this town, to be fair, so I’m in the same boat. Thought about heading down the tracks to someplace else, but this little town is still home, you know?"
 
-    narrator "She rolls the pint glass in her palms, back and forth, dark liquid inside rising and falling as steady as dusk. Foam hisses silently against the glass."
+        narrator "She rolls the pint glass in her palms, back and forth, dark liquid inside rising and falling as steady as dusk. Foam hisses silently against the glass."
 
-    plumeria "I’ve always felt it’s more the people than the place that makes a home. So even if you’d have left me at home, I’d still have come along."
+        plumeria "I’ve always felt it’s more the people than the place that makes a home. So even if you’d have left me at home, I’d still have come along."
 
-    narrator "She grins at me. Fennel gives her a look, slightly exasperated, before she sighs."
+        narrator "She grins at me. Fennel gives her a look, slightly exasperated, before she sighs."
 
-    fennel "Guess I really do have no luck today. Alright, well."
+        fennel "Guess I really do have no luck today. Alright, well."
 
-    narrator "She drains the rest of her glass."
+        narrator "She drains the rest of her glass."
 
-    fennel "Well, nice to meet you both, I guess. Now if you don’t mind, there’s a cutie at the bar looking lonely, so I’m going to try my luck."
+        fennel "Well, nice to meet you both, I guess. Now if you don’t mind, there’s a cutie at the bar looking lonely, so I’m going to try my luck."
 
-    foxglove "Oh, um, bye."
+        foxglove "Oh, um, bye."
 
-    narrator "She winks and is gone, to try her game elsewhere."
+        narrator "She winks and is gone, to try her game elsewhere."
 
-    narrator "Good luck to her, I guess...?"
+        narrator "Good luck to her, I guess...?"
 
-    narrator "I can’t help but feel a little relieved; she wasn’t bad to talk to, but I have no idea how to deal with people like that. Plume flirting with me for fun is bad enough. The aforementioned flirter watches Fennel go with an unreadable expression before she turns to me."
+        narrator "I can’t help but feel a little relieved; she wasn’t bad to talk to, but I have no idea how to deal with people like that. Plume flirting with me for fun is bad enough. The aforementioned flirter watches Fennel go with an unreadable expression before she turns to me."
 
-    plumeria "You sure meet different people in pubs, huh. You want to head off, or still up for staying?"
+        plumeria "You sure meet different people in pubs, huh. You want to head off, or still up for staying?"
 
-    foxglove "Well, we haven’t been here very long. I’m fine for staying a bit longer."
+        foxglove "Well, we haven’t been here very long. I’m fine for staying a bit longer."
 
-    narrator "And we do: slowly, we try whatever on the boards catches our attention with strange or interesting names."
+        narrator "And we do: slowly, we try whatever on the boards catches our attention with strange or interesting names."
 
+        jump choice_3_end
+        
     # "[Refuse the drink]"
+    label refuse_drink:
 
-    foxglove "Ah- thanks, but I wouldn’t want to deprive you or anything."
+        foxglove "Ah- thanks, but I wouldn’t want to deprive you or anything."
 
-    fennel "Suit yourself, cutie."
+        fennel "Suit yourself, cutie."
 
-    narrator "Fennel takes a sip, shrugging lightly."
+        narrator "Fennel takes a sip, shrugging lightly."
 
-    narrator "Plumeria nods and stands again."
+        narrator "Plumeria nods and stands again."
 
-    plumeria "Alright. Got any preferences?"
+        plumeria "Alright. Got any preferences?"
 
-    foxglove "Something light, I guess? You can practically chew this one."
+        foxglove "Something light, I guess? You can practically chew this one."
 
-    narrator "She laughs and throws a mock salute."
+        narrator "She laughs and throws a mock salute."
 
-    plumeria "Aye-aye, ma’am. Save my chair."
+        plumeria "Aye-aye, ma’am. Save my chair."
 
-    narrator "After she’s departed to battle her way through the crowd at the bar, Fennel leans in towards me."
+        narrator "After she’s departed to battle her way through the crowd at the bar, Fennel leans in towards me."
 
-    fennel "So are you two, you know, together?"
+        fennel "So are you two, you know, together?"
 
-    narrator "The question brings inadvertent heat to my cheeks. To cover, I take another sip of the thick black ale. Yeah, it still tastes grim. Bad move."
+        narrator "The question brings inadvertent heat to my cheeks. To cover, I take another sip of the thick black ale. Yeah, it still tastes grim. Bad move."
 
-    foxglove "Ah, no, we’re not - she’s just- we’re just friends."
+        foxglove "Ah, no, we’re not - she’s just- we’re just friends."
 
-    fennel "Uh-huh."
+        fennel "Uh-huh."
 
-    narrator "She gives a slim, satisfied smile."
+        narrator "She gives a slim, satisfied smile."
 
-    fennel "Lucky me."
+        fennel "Lucky me."
 
-    foxglove "-eh?"
+        foxglove "-eh?"
 
-    fennel "You know, I thought this night might be a bust, but you know..."
+        fennel "You know, I thought this night might be a bust, but you know..."
 
-    narrator "There’s no mistaking that sort of tone, even for me. She traces a finger along mine, and I try not to jump out of my skin. She smiles at my blush, sharp and teasing, a predator finding prey."
+        narrator "There’s no mistaking that sort of tone, even for me. She traces a finger along mine, and I try not to jump out of my skin. She smiles at my blush, sharp and teasing, a predator finding prey."
 
-    fennel "I always did like the shy ones."
+        fennel "I always did like the shy ones."
 
-    foxglove "Ah- um, I-"
+        foxglove "Ah- um, I-"
 
-    narrator "She leans forward. Her voice has lowered to a husky tone."
+        narrator "She leans forward. Her voice has lowered to a husky tone."
 
-    fennel "So how about it, cutie?"
+        fennel "So how about it, cutie?"
 
-    narrator "A drink slams on the table with a thud. Golden liquid slops from the glass, adding fresh layers of stickiness to the tabletop."
+        narrator "A drink slams on the table with a thud. Golden liquid slops from the glass, adding fresh layers of stickiness to the tabletop."
 
-    plumeria "How about what?"
+        plumeria "How about what?"
 
-    narrator "She’s frowning down at the local girl. Fennel scowls back, obviously displeased to be interrupted. I take a second to try to cool the flames off my cheeks."
+        narrator "She’s frowning down at the local girl. Fennel scowls back, obviously displeased to be interrupted. I take a second to try to cool the flames off my cheeks."
 
-    fennel "What’s your problem?"
+        fennel "What’s your problem?"
 
-    narrator "Plumeria thuds herself down in the seat, close enough to me our shoulders brush. She smiles at Fennel."
+        narrator "Plumeria thuds herself down in the seat, close enough to me our shoulders brush. She smiles at Fennel."
 
-    plumeria "Nothing at all. How about what, now?"
+        plumeria "Nothing at all. How about what, now?"
 
-    narrator "The two stare at each other for a long moment, the tension increasingly thick, before the local girl lets out a loud and irritated sigh."
+        narrator "The two stare at each other for a long moment, the tension increasingly thick, before the local girl lets out a loud and irritated sigh."
 
-    fennel "Ah, what the hell. This night really is a bust."
+        fennel "Ah, what the hell. This night really is a bust."
 
-    narrator "She rises to her feet."
+        narrator "She rises to her feet."
 
-    fennel "At least fuck if you’re going to be possessive. Hey, cutie, let me know if you get bored with greenie here. See you around."
+        fennel "At least fuck if you’re going to be possessive. Hey, cutie, let me know if you get bored with greenie here. See you around."
 
-    narrator "With a farewell flick of her fingers, Fennel stalks off into the crowds, heading towards the bar. Plume watches her go, frowning, then visibly shakes it off."
+        narrator "With a farewell flick of her fingers, Fennel stalks off into the crowds, heading towards the bar. Plume watches her go, frowning, then visibly shakes it off."
 
-    plumeria "Friendly locals, huh?"
+        plumeria "Friendly locals, huh?"
 
-    narrator "She pauses for a second as I give her back a weak smile. We very carefully do not talk about Fennel’s parting shots."
+        narrator "She pauses for a second as I give her back a weak smile. We very carefully do not talk about Fennel’s parting shots."
 
-    plumeria "Sorry I spilled some of your drink. Well, if you still want it. We could head out if you want."
+        plumeria "Sorry I spilled some of your drink. Well, if you still want it. We could head out if you want."
 
-    foxglove "Consider it part of the experience, I guess. Maybe if we’re lucky there’ll be a bar fight and you can knock out someone with a barstool."
+        foxglove "Consider it part of the experience, I guess. Maybe if we’re lucky there’ll be a bar fight and you can knock out someone with a barstool."
 
-    narrator "This forces a laugh out of her - an inelegant snort that widens her eyes in delighted surprise."
+        narrator "This forces a laugh out of her - an inelegant snort that widens her eyes in delighted surprise."
 
-    plumeria "Well, you’ll have to back me up. Get ‘em in the kidneys with a broken bottle or something."
+        plumeria "Well, you’ll have to back me up. Get ‘em in the kidneys with a broken bottle or something."
 
-    foxglove "It’s a plan."
+        foxglove "It’s a plan."
 
-    narrator "We stay for a while afterwards, though we miss out on any bar fights. Lucky for them."
+        narrator "We stay for a while afterwards, though we miss out on any bar fights. Lucky for them."
 
-    narrator "They’re only averaging twice my weight and half a head taller, after all."
+        narrator "They’re only averaging twice my weight and half a head taller, after all."
+        
+        jump choice_3_end
 
-    ###end choice
+    ## End choice 3
+    label choice_3_end:
 
     narrator "We sip at the beers, trying a new variety each glass, before we swap to a different local speciality; a smooth, mellow gin brewed with the little blue winterberries found up the mountain."
 
@@ -2117,103 +2162,118 @@ label start:
 
     plumeria "I’m listening, miss Feld."
 
-    ##Player choice: smooch
+    ## Player choice 4: smooch
+    
+    menu:
+    
+        "Admit your feelings.":
+            jump feelings
+            
+        "Just kiss her already, dumbass.":
+            jump kiss
 
     # "[Admit your feelings.]"
+    label feelings:
 
-    narrator "I take a deep breath. In and out. My gaze is trapped by hers. They are a deep and verdant sea, and I gladly drown in them. I feel the warmth of her breath, her body."
+        narrator "I take a deep breath. In and out. My gaze is trapped by hers. They are a deep and verdant sea, and I gladly drown in them. I feel the warmth of her breath, her body."
 
-    narrator "I begin, my words slow and careful."
+        narrator "I begin, my words slow and careful."
 
-    foxglove "You’re my very best friend, Plume. I really don’t know what I’d- what I’d do without you. You’re always so-"
+        foxglove "You’re my very best friend, Plume. I really don’t know what I’d- what I’d do without you. You’re always so-"
 
-    narrator "I break off. Plume watches me steadily, the corners of her mouth curved in a small, secret smile, for this moment, secret for just the two of us."
+        narrator "I break off. Plume watches me steadily, the corners of her mouth curved in a small, secret smile, for this moment, secret for just the two of us."
 
-    foxglove "What I’m trying to say is- what I want to say is-"
+        foxglove "What I’m trying to say is- what I want to say is-"
 
-    narrator "Come on. Say it, already."
+        narrator "Come on. Say it, already."
 
-    foxglove "I guess I love you, Plumeria."
+        foxglove "I guess I love you, Plumeria."
 
-    narrator "Plume smiles, wide and almost proud. She curls her hands around the back of my neck, cradling my head. Her voice is low, a husky whisper, and the sound of it lights fires inside I don’t have a name for."
+        narrator "Plume smiles, wide and almost proud. She curls her hands around the back of my neck, cradling my head. Her voice is low, a husky whisper, and the sound of it lights fires inside I don’t have a name for."
 
-    plumeria "Can I give my answer to that, now?"
+        plumeria "Can I give my answer to that, now?"
 
-    foxglove "Y-yea- mmfh!"
+        foxglove "Y-yea- mmfh!"
 
-    narrator "She’s gently but firmly pulled my head forward. Her lips press against mine, muffling my words. They’re soft, and warm, and it sends prickles of weird heat radiating through me from the very core."
+        narrator "She’s gently but firmly pulled my head forward. Her lips press against mine, muffling my words. They’re soft, and warm, and it sends prickles of weird heat radiating through me from the very core."
 
-    narrator "She kisses me again, and again, and again, until I’m half-dazed with it. Finally, she pulls back a little. I pant softly as my lips are freed. Her own are red and kiss-swollen. She grins, pure Plumeria mischief written on it."
+        narrator "She kisses me again, and again, and again, until I’m half-dazed with it. Finally, she pulls back a little. I pant softly as my lips are freed. Her own are red and kiss-swollen. She grins, pure Plumeria mischief written on it."
 
-    plumeria "Left you breathless, huh?"
+        plumeria "Left you breathless, huh?"
 
-    foxglove "Oh my gods, you dork."
+        foxglove "Oh my gods, you dork."
 
-    narrator "She chuckles and steals another. She glances down, at our bare bodies beneath the crinkly aluminium blanket, deliberately dwelling at where we’re pressed together."
+        narrator "She chuckles and steals another. She glances down, at our bare bodies beneath the crinkly aluminium blanket, deliberately dwelling at where we’re pressed together."
 
-    narrator "I follow her gaze and flush. She grins wider at my embarrassment, and deliberately wriggles."
+        narrator "I follow her gaze and flush. She grins wider at my embarrassment, and deliberately wriggles."
 
-    plumeria "You know, we’re already naked."
+        plumeria "You know, we’re already naked."
 
-    foxglove "Ye-yeah. We are."
+        foxglove "Ye-yeah. We are."
 
-    plumeria "Foxglove."
+        plumeria "Foxglove."
 
-    narrator "Her saying my name sparks in my brain. I stare at her, wordlessly, hoping to push all my feelings for her through the strength of my gaze alone."
+        narrator "Her saying my name sparks in my brain. I stare at her, wordlessly, hoping to push all my feelings for her through the strength of my gaze alone."
 
-    foxglove "Plume..."
+        foxglove "Plume..."
 
-    plumeria "Can we?"
+        plumeria "Can we?"
 
-    narrator "There’s no doubt as to what she means. I give a tiny nod. Very gently, she leans in and kisses me again. I wrap my arms around her, pulling her closer, closer. Her hands trace across my shoulders, my back, and down."
+        narrator "There’s no doubt as to what she means. I give a tiny nod. Very gently, she leans in and kisses me again. I wrap my arms around her, pulling her closer, closer. Her hands trace across my shoulders, my back, and down."
 
-    narrator "My dear Plumeria."
+        narrator "My dear Plumeria."
 
-    narrator "And for a while, there aren’t any words at all."
+        narrator "And for a while, there aren’t any words at all."
+        
+        jump choice_4_end
 
     # "[Just kiss her already, dumbass.]"
+    label kiss:
 
-    narrator "For a moment I search for the words, but then I give a tiny shake of my head. My voice had always failed me before, so I tell her through another way."
+        narrator "For a moment I search for the words, but then I give a tiny shake of my head. My voice had always failed me before, so I tell her through another way."
 
-    narrator "Gently, nervously, I free my hand from her grip. I run my crystalline fingers down the back of her head, letting the soft green hair trace between my fingers. Plume is very still. Only the soft press of her chest lets me know her heart is still beating."
+        narrator "Gently, nervously, I free my hand from her grip. I run my crystalline fingers down the back of her head, letting the soft green hair trace between my fingers. Plume is very still. Only the soft press of her chest lets me know her heart is still beating."
 
-    narrator "I listen to it, fast and excited. I guess maybe she’s nervous, too."
+        narrator "I listen to it, fast and excited. I guess maybe she’s nervous, too."
 
-    narrator "I draw her head downwards, leaning up. Slowly our lips touch. I kiss her, once, and pull back to see her face, and her expression is so tender I almost want to cry."
+        narrator "I draw her head downwards, leaning up. Slowly our lips touch. I kiss her, once, and pull back to see her face, and her expression is so tender I almost want to cry."
 
-    plumeria "That’s your answer, huh?"
+        plumeria "That’s your answer, huh?"
 
-    narrator "Her voice is a husky whisper, and something about it sends sparks right from my core to the very tips of my extremities. Even my changed fingers tingle with it. I have to swallow before I can answer."
+        narrator "Her voice is a husky whisper, and something about it sends sparks right from my core to the very tips of my extremities. Even my changed fingers tingle with it. I have to swallow before I can answer."
 
-    foxglove "If- if it’s unclear I can try again."
+        foxglove "If- if it’s unclear I can try again."
 
-    narrator "She chuckles, low and delighted, at my clumsy flirt."
+        narrator "She chuckles, low and delighted, at my clumsy flirt."
 
-    plumeria "I think it might be a good idea, yeah. Clear any uncertainties."
+        plumeria "I think it might be a good idea, yeah. Clear any uncertainties."
 
-    narrator "I lean up and kiss her again. She catches the back of my head and neck with her hands and kisses back. Again, and again, until I’m panting, kiss-drunk."
+        narrator "I lean up and kiss her again. She catches the back of my head and neck with her hands and kisses back. Again, and again, until I’m panting, kiss-drunk."
 
-    narrator "Plume smiles down at me, face flushed, indescribably lovely. Our heated bodies nearly burn where they’re in contact, skin against skin."
+        narrator "Plume smiles down at me, face flushed, indescribably lovely. Our heated bodies nearly burn where they’re in contact, skin against skin."
 
-    foxglove "Plume, can we..."
+        foxglove "Plume, can we..."
 
-    narrator "I trail off, but the question is obvious. She presses another kiss to my lips, resting her forehead against mine."
+        narrator "I trail off, but the question is obvious. She presses another kiss to my lips, resting her forehead against mine."
 
-    plumeria "You sure?"
+        plumeria "You sure?"
 
-    foxglove "Y-yeah. I want this."
+        foxglove "Y-yeah. I want this."
 
-    narrator "She pauses mischievously, grinning at me through her reddened cheeks and quickened breaths."
+        narrator "She pauses mischievously, grinning at me through her reddened cheeks and quickened breaths."
 
-    plumeria "I should have suggested mountain climbing sooner if this was the outco-"
+        plumeria "I should have suggested mountain climbing sooner if this was the outco-"
 
-    narrator "With an exasperated giggle, I seal her lips with my own. I wrap my arms around her, pulling her closer, closer, and I feel her hands trace across my shoulders, my back, and down."
+        narrator "With an exasperated giggle, I seal her lips with my own. I wrap my arms around her, pulling her closer, closer, and I feel her hands trace across my shoulders, my back, and down."
 
-    narrator "My dear Plumeria."
+        narrator "My dear Plumeria."
 
-    narrator "And for a while, there aren’t any more words at all."
+        narrator "And for a while, there aren’t any more words at all."
+        
+        jump choice_4_end
 
-    # "[End choice]"
+    # End choice 4
+    label choice_4_end:
 
     # Day 9
 
