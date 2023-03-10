@@ -17,7 +17,13 @@ define spirit = Character("Spirit")
 
 label start:
 
-    #int. train. night. "The train is rocking gently. Plumeria and the protagonist are sitting across from each other in a train compartment."
+    # The train is rocking gently. Plumeria and the protagonist are
+    #    sitting across from each other in a train compartment.
+
+    #play music "audio/illurock.ogg" fadeout 1.0 fadein 1.0
+
+    scene bg train night
+    with fade
 
     narrator "When I was twenty-one, I visited my grandmother for the first time."
 
@@ -63,9 +69,10 @@ label start:
 
     narrator "It reaches spindly fingers after us, most of the leaves shed already, but even those are quickly left behind."
 
-    narrator "The mountains with a dead god are seen."
+    narrator "The sightlines to our destination are clear. The Feallan Mountains had come into view."
 
-    narrator "The mountains with a dead god are seen."
+    # "The mountains with a dead god are seen."
+    scene bg train dead god night
 
     narrator "Yeah. It was an impressive sight."
 
@@ -75,9 +82,14 @@ label start:
 
     narrator "The voice of the train conductor comes over the speakers, thick and crackly to near incoherence."
 
+    # TODO: play audio of announcement
+
     announcer "Approaching Godigsfel station."
 
-    #Back to train. Background shows mountains.
+    # TODO: Back to train. Background shows mountains.
+    
+    scene bg train night
+    with fade
 
     narrator "Besides me, Plumeria stirs back to groggy wakefulness."
 
@@ -100,6 +112,11 @@ label start:
     foxglove "Nope."
 
     narrator "She gives a huff of amused exasperation."
+    
+    # TODO: train brakes SFX
+    
+    scene bg train station night
+    with fade
 
     narrator "The station wasn’t that much brighter than the train. The lights are dim and flicker fitfully, fluffy wintermoths clustering around them in frantic swirls."
 
@@ -286,6 +303,9 @@ label start:
     narrator "Her voice cracks out like a whip."
 
     narrator "We get."
+    
+    scene bg streets night
+    with fade
 
     narrator "Our path from the station soon takes us from the wide main roads to the tangles of terraced houses built for pilgrims in ages past."
 
@@ -362,9 +382,14 @@ label start:
     narrator "She trails off for a second, looking almost wistful."
 
     grandma "Just an old superstition now. Now get inside, if you would."
+    
+    scene bg home night
+    with fade
 
     narrator "We aren’t provided much time to look around. Within a few minutes, we’re sheparded to the spare room and told we could talk and acquaint ourselves in the morning."
 
+    scene bg bedroom night
+    
     narrator "The room itself bears the faint signs it had once been a child’s room. The walls are covered in a rather antique floral wallpaper; one side is filled with a low desk and an empty cabinet."
 
     narrator "A vase of flowers over the fireplace had shrivelled with the change in seasons. Browning spurs of plant matter curled in on themselves like poisoned spiders."
@@ -384,6 +409,9 @@ label start:
     narrator "She sighs and looks at the bed. We were going to be snug, certainly. Abruptly I yawn so wide my jaw cracks. Plume gives a small chuckle."
 
     plumeria "Well its not going to get any bigger."
+    
+    scene cg tucked into bed
+    with fade
 
     #Scene fades to showing them tucked in bed. It’s crowded and they look uncomfortable. Horn caps on.
 
@@ -398,12 +426,16 @@ label start:
     narrator "She is silent for a long moment, breathing slow and steady, and I begin to wonder if she’d fallen asleep. Finally, without opening her eyes, she speaks, low enough I could barely hear."
 
     plumeria "I just felt like it, was all. Wanted to see the north."
-    
-    # Day 1
 
     narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into a still pond, I fall asleep."
 
+    # Day 1
+    scene bg bedroom day
+    with fade
+
     narrator "The morning comes, as they tend to do, quicker than I expect. I’ve slept surprisingly well, even though I wake up with Plumeria’s elbow lodged in my ribs."
+
+    scene bg home day
 
     narrator "All the same, I’ve never been a morning person, and I feel too sleepy for any awkwardness until we’re all sat at the table, having breakfast."
 
@@ -468,6 +500,8 @@ label start:
     plumeria "Come on. Get ready and let’s have a look around town."
 
     # "Scene: city streets during the day"
+    scene bg streets day
+    with fade
 
     narrator "We wander along cobbled streets. They’re pretty, in a slightly worn-down sort of way; back home the city is all just concrete after the rebuilding. It’s a nice change."
 
@@ -480,6 +514,9 @@ label start:
     narrator "It’s pretty empty with the pilgrim season wound down; a lot of the shops, intended to cater to those who come god-seeking, have shuttered their doors for the time being."
 
     narrator "We take meandering examinations through those that remain; we poke through shelves crowded with knick-knacks and baubles, debate the necessity of tii-seed oilcloth coats against foul weather, and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
+
+    scene bg streets night
+    with fade
 
     narrator "Eventually, as the sun begins to creep back down towards the horizon, we purchase steaming cups of drink and a pail full of sticks of hot, greasy mystery meat."
 
@@ -502,6 +539,10 @@ label start:
     narrator "Plume laughs, a velvety chuckle. She has a nice laugh, I’ve noticed over the years we’ve spent together as roommates; easy and gentle."
 
     plumeria "I do wonder about mine, sometimes."
+    
+    # Day 2
+    scene bg home day
+    with fade
 
     narrator "The next morning, I’m still groggy from sleep and rubbing a crick out my neck when Grandmother cuts to the chase."
 
@@ -594,6 +635,9 @@ label start:
     plumeria "Can count on me, Ma’am."
 
     grandma "Good."
+    
+    scene bg foot of pilgrims path
+    with fade
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
 
@@ -604,8 +648,11 @@ label start:
     plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
 
     # "A map of the Pilgrim’s Path is shown."
+    scene bg map
 
-    foxglove "So the stairs last all the way up to the.... Chapel of the Nail? It's not, like... A toenail of it, is it?"
+    foxglove "So the stairs last all the way up to the... Chapel of the Nail? It's not, like... A toenail of it, is it?"
+    
+    scene bg foot of pilgrims path day
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance. The stairs traitorously remain still and solid despite her disapproval."
 
@@ -668,6 +715,7 @@ label start:
     narrator "She simply laughs and begins climbing the stairs, playfully nudging me with her shoulder as she goes past."
 
     # scene change
+    scene bg pilgrims path day
 
     narrator "We climb... and climb... and climb."
 
@@ -706,6 +754,7 @@ label start:
     narrator "Her voice is soft. She’s looking past me, back the way we came. I turn to look, and-"
 
     # "Splash screen of the town below"
+    scene bg godigsfel overlook day
 
     narrator "Godigsfel opens itself to my sight like a flower below, rows of pointy red roofs rising like spears unto heaven and crisscrossed by white-stoned streets. At the edges, it fades into green fields and then the brown prickly ocean of the forest."
 
@@ -728,6 +777,8 @@ label start:
     plumeria "This is the bad news: you still have to walk back down."
 
     narrator "The thought of heading down immediately is far too daunting, so after resting for a bit we take a look around the little church built into the mountainside."
+
+    scene bg chapel of the nail
 
     narrator "The Chapel of the Nail turns out to be bigger than I expected. Inside, the rough-carved stone of the walls extends back into the rock of the mountain itself."
 
@@ -851,12 +902,18 @@ label start:
     foxglove "Woooo~"
 
     plumeria "Consider me spooked."
+    
+    scene bg godigsfel overlook day
 
     narrator "Outside the air feels deliciously crisp in comparison. Looking back down at the panorama of the town below, I spend a few minutes admiring the view. Eventually, though, I have to stop delaying."
 
     narrator "I look at the time-worn stairs and remember the aches along my calves."
 
     foxglove "Alright, well. Let’s get this over with."
+    
+    # Day 3
+    scene bg home night
+    with fade
 
     narrator "There’s no more fun going down them as there was going up. The next day I don’t do much walking. Perhaps in mercy to my aching leg muscles, it rains. Rather than snow, the sky slashes at the ground with fierce flurries of  heavy raindrops, frigid and fat."
 
@@ -865,6 +922,8 @@ label start:
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
 
     narrator "Somehow, the conversation turns to war. My grandmother ponders for a moment, then rises and disappears into her room."
+
+    # TODO: box latching sfx
 
     narrator "When she reemerges a few minutes later, she’s holding a small metal case. Placing it on the table carefully, she clicks the latches and flips it open."
 
@@ -929,6 +988,8 @@ label start:
     plumeria "If you don’t mind me asking, then - if you dislike them so much, why did you keep it?"
 
     grandma "Hmmph. I wonder. As a reminder, perhaps."
+    
+    # TODO: box latching sfx
 
     narrator "She shuts the box, the latches clack-clacking, but doesn't take it away. One hand beats a pattern on the top like it was recalling some distant marching drum."
 
@@ -984,7 +1045,11 @@ label start:
 
     narrator "Even back in Grandmother’s day, the magic was mostly gone from the world. It had died with the gods, all those hundreds of years ago, when they’d fought each other to the grave - or at least to utterly mortal wounds."
 
-    narrator "The conversation leaves me weirdly melancholic. Eventually, I head off to sleep, and not long later, Plumeria pads in to join me."
+    narrator "The conversation leaves me weirdly melancholic."
+    
+    scene bg bedroom night
+    
+    narrator "Eventually, I head off to sleep, and not long later, Plumeria pads in to join me."
 
     narrator "Within the bedroom I shared, the air tonight seems thick with heat. Unpleasantly so."
 
@@ -1017,6 +1082,9 @@ label start:
     narrator "My heart beats strangely fast. Being grabbed must have startled me more than I thought."
 
     narrator "Trying to break her hold might wake her up, I reasoned. Best to lie still."
+    
+    # Day 6
+    scene bg pilgrims path day
 
     narrator "And so the days passed. Each day, we would climb the mountain for a while, seeking higher and higher heights."
 
@@ -1138,13 +1206,16 @@ label start:
 
     narrator "Neither of us say anything for a while."
 
-    # scene change?
+    scene bg bedroom night
+    with fade
 
     narrator "Despite my tiredness that night, I sleep poorly. I toss and turn, trying to get comfortable, until Plumeria grumbles discontentedly at the disturbance. Glancing out the window, the moon peeks in through the curtains, casting a slice of the room in silver."
 
-    narrator "Grandmother appears suddenly."
+    scene bg home night
 
-    narrator "Grandmother appears suddenly."
+    narrator "I slip out the covers and stand, padding through into the next room. I stand for a moment, letting my eyes adjust to the dim shapes coalescing into furniture. The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
+
+    # "Grandmother appears suddenly."
 
     grandma "Can’t sleep?"
 
@@ -1241,6 +1312,8 @@ label start:
     foxglove "...Goodnight, Grandmother."
 
     grandma "Goodnight, child."
+    
+    scene bg bedroom night
 
     narrator "I pad carefully back into the little bedroom I’m sharing with Plume. With my eyes adjusted to the dark, I can pick out the curves of her limbs amid the sheets, the mossy bloom of her hair on the pillow."
 
@@ -1276,10 +1349,19 @@ label start:
 
     narrator "She’s asleep."
 
-    # scene change
+    # Day 7
+    scene bg pilgrims path day
+    with fade
 
-    narrator "The next day, climbing the mountain, my heart isn’t in it. I’m distracted, my mind drifting in odd directions. Plume picks up on it, of course, and I pretend not to see her questing looks."
+    narrator "The next day, climbing the mountain, my heart isn’t in it."
+    
+    narrator "I’m distracted, my mind drifting in odd directions."
+    
+    narrator "Plume picks up on it, of course, and I pretend not to see her questing looks."
 
+    scene bg streets night
+    with fade
+    
     narrator "The sun has already begun to go down as we begin heading back through the streets. Part way back, Plumeria hesitates."
 
     plumeria "Hey, how about a drink?"
@@ -1299,6 +1381,9 @@ label start:
     plumeria "Alright!"
 
     narrator "Cheerfully, she strides to the door and pushes it open, letting me go first with mock gallantry."
+
+    # TODO: bar noise
+    scene bg bar
 
     narrator "I walk into a wave of solid noise. It crashes against my eardrums, and I rock back on my heels, momentarily stunned by the sheer assault of talking, laughing, clattering."
 
@@ -1602,6 +1687,8 @@ label start:
 
     narrator "I work my way up from my seat, and together we head for the door, the room wobbling discourteously when I’m trying to balance."
 
+    scene bg streets night
+
     narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub. I breathe in deep, feeling it seep into the crannies of my lungs, my chest swelling with the sharpness of it like a breathed-in glacier."
 
     narrator "Next to me, Plumeria gives an abrupt, violent shiver, like a dog shaking itself off after a dip. I wrap her hand in mine, curling my fingers through hers, and her lips curl upwards."
@@ -1621,12 +1708,16 @@ label start:
     narrator "She hums in acknowledgement, and for the rest of the walk, we don’t talk."
 
     narrator "But she doesn’t let go of my hand."
+    
+    scene bg home night
 
     narrator "We enter the house as quietly as possible, which is not very. Grandmother takes one look at us from her chair."
 
     grandma "Youths."
 
     narrator "She shakes her head and waves us off to bed."
+    
+    scene bg bedroom night
 
     narrator "I lie tucked against Plume, the sheets heavy and piled high. I can still feel the fizz of the alcohol in my fingertips, in my head, like a distant cloud. I can only just see the ceiling of the room."
 
@@ -1731,6 +1822,8 @@ label start:
     plumeria "As you command. Now, come here - I still need to steal your body warmth."
 
     # day 8
+    scene bg bedroom day
+    with fade
 
     narrator "The radio mutters angrily. The voice of the spokesman is a hoarse, rumbling thing, seeming half-way to a snarl."
 
@@ -1792,7 +1885,7 @@ label start:
 
     grandma "Hmmph. Then go on, then. I’ll see you when you get back."
 
-    # "She pauses and then adds:"
+    narrator "She pauses, and then adds:"
 
     grandma "Be careful."
 
@@ -1803,6 +1896,9 @@ label start:
     plumeria "Alright, let’s make a move."
 
     narrator "After a final goodbye, we let ourselves out."
+    
+    scene bg pilgrims path day
+    with fade
 
     narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps. The faint burn in my thighs from climbing is nothing in comparison to the first attempt, now, and I stomp my way up with a steady tread."
 
@@ -1840,6 +1936,8 @@ label start:
 
     narrator "It’s perhaps mid-afternoon by the time we reach the Aumic Temple. The mountain here had a sort of slot carved out of it, long ago, by the final battles of the gods, and the Temple sits in like a wedge in the cleft in the stone."
 
+    scene bg aumic temple day
+
     narrator "Like the Chapel of the Nail, it’s half underground. We force open the heavy wooden door, staring into the cool dark inside."
 
     narrator "The walls are covered with carved frescoes, the roof supported with angular statues of the god above. Little side chambers lead to sleeping hollows for pilgrims."
@@ -1855,6 +1953,9 @@ label start:
     narrator "With no divine toe to provide horrible but useful warmth, it’s just as cold inside as it is outside, and with time ticking, we don’t have much reason to stay. We can have a proper look at the frescoes and statues tomorrow."
 
     narrator "Decided, we move on."
+    
+    # TODO: wind noise should increase
+    scene bg pilgrims path day
 
     narrator "The last portion of the climb is viciously steep. We don’t walk but clamber awkwardly, scrambling over dyed-white stone."
 
@@ -1885,6 +1986,8 @@ label start:
     plumeria "We can check tomorrow morning before we head back down."
 
     foxglove "I guess. Maybe they’re not around any more."
+    
+    scene bg the dead god dusk
 
     narrator "The giant body of the god lies dead and still before us. No snow settles on his crystalline flesh, melting away silently like a dream whenever flakes settle on the divine cadaver."
 
@@ -1921,6 +2024,8 @@ label start:
     narrator "Despite whatever heat the god might be giving off, the temperature feels like it must have dropped. The wind is blowing stronger."
 
     plumeria "You alright?"
+    
+    scene bg godigsfel overlook night
 
     narrator "Not trusting words, I simply nod. Looking out from the mountain, the sun is low in the sky. It paints the canvas of the sky in hues of purples and reds like a bruise."
 
@@ -1945,8 +2050,12 @@ label start:
     foxglove "Well, no spirits. We should get back to the Temple before the weather gets worse."
 
     plumeria "No argument from me there. Damn, but it’s getting cold."
+    
+    scene bg pilgrims path night
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
+
+    # TODO: the wind becomes DEAFENING here sfx
 
     narrator "It’s not far back down the trail when the wind abruptly kicks up, hard enough I stagger against the sudden force. Plume cries out in surprise. Ice shrieks as it's pulled from the ground, whirling around us trapped in the eye of the storm."
 
@@ -1957,6 +2066,8 @@ label start:
     foxglove "Plume! Look!"
 
     narrator "Shapes are moving in the bleak fog of the snowdrifts, and I jab at the motion with an outstretched finger. Plumeria looks at what emerges. For once, her words fail her."
+
+    scene cg spirits night
 
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
 
@@ -1969,6 +2080,8 @@ label start:
     narrator "The air is so frigid, now. The fog gets thicker, like the spirits have drank the world. We are surrounded by it, like a cocoon of cold."
 
     foxglove "What- what are you talking about? Why did my mother come here? Why did she leave?"
+    
+    # TODO: spirit hissing sfx
 
     narrator "The spirits around us hiss, a sibilant sound of snow sliding on snow. My heart pounds in my throat. Plumeria is staring out at the apparitions about us, her arm half-raised in front of me."
 
@@ -2027,12 +2140,17 @@ label start:
     narrator "I grip the cap. It shifts, grates against the tip, ready to spark. The motion takes a thousand years. I am cold beyond cold. Plumeria is motionless. The shadows pool in her eyes and make a funeral mask of her face."
 
     narrator "Oh, dead and distant gods, let her live."
+    
+    # TODO: flare pop oneshot sfx
+    # TODO: flare burning sfx
 
     narrator "The flare ignites beneath my twisting grip. The monsters around me recoil and begin the lunge, but the split second is enough."
 
     narrator "I stab the flare downwards like I’m trying to pierce the heart of God and plunge it into the incense. It ignites under the ferocious heat of the flare and I choke on the sudden rush of the fumes."
 
     narrator "I topple backwards, coughing. Where my fingers had crystallised, they sting furiously, acidic pinpricks everywhere the smoke touches, but the pain is sensation and life and I seize on it."
+
+    # TODO: spirits scream sfx
 
     narrator "The spirits scream, a furious animal sound, wrenching themselves backwards in great jagged motions away from the incense, their immortal grace melting away."
 
@@ -2047,6 +2165,9 @@ label start:
     foxglove "So leave us alone!"
 
     narrator "I wind back my arm and throw the last flare. It flies straight and true and cracks against the leading spirit’s head, bursting in a shower of ruddy incandescent sparks. The spirit screeches and retreats, and the others follow, disappearing into the mist."
+
+    # TODO: stop flare SFX
+    scene bg pilgrims path night
 
     narrator "I watch them go, panting, fighting the urge to pass out. When the fog begins to break apart, and I’m sure they’re not coming back, I drop to my knees."
 
@@ -2070,13 +2191,24 @@ label start:
 
     narrator "I drag her for a thousand years until the little hut looms up. I fumble one handed with the handle, and shoulder open the door, ignoring the bloom of pain from ramming the heavy door."
 
+    # TODO: door slam oneshot sfx
+    # TODO: windows rattling sfx
+    # TODO: muffled, howling wind sfx
+    scene bg cabin dark night
+
     narrator "A tiny bit of colour has returned to Plumeria’s lips as I slam the door and lay her down. That must be a good sign, right?"
 
     narrator "I don’t really know. I don’t really know what to do."
 
+    # TODO: foil blanket crinkle oneshot sfx
+
     narrator "I pull out the survival blanket, unfolding the crinkling foil, and wrap Plumeria in it. I turn to the fireplace, scraping out the snow that had come down the chimney with my hand."
 
     narrator "The hewed logs from before are of course still there, and I pile them and kindling in before I strike a match. The first breaks, and the second, and I nearly scream with frustration before the third catches."
+
+    # TODO: fire roar oneshot sfx
+    # TODO: fire crackling sfx
+    scene bg cabin lit night
 
     narrator "I nurse it in the kindling, building the fire until it’s fiercely licking yellow tongues across the chunks of timber."
 
@@ -2276,6 +2408,8 @@ label start:
     label choice_4_end:
 
     # Day 9
+    scene bg cabin day
+    with fade
 
     narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant. My back clicks horribly as I stretch from where I’ve slept on the hard floor."
 
@@ -2387,6 +2521,8 @@ label start:
 
     plumeria "Eh, I don’t mind. It saved our butts, didn’t it? If I have to buy some more absolutely grim-tasting chocolate, I can deal."
 
+    scene bg pilgrims path day
+
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
 
     narrator "Nothing; it hasn’t even really snowed last night, and the groundcover is still lumpy and broken from our movements. In a sudden moment of irrational doubt, I pull back a glove and peek at my crystalline fingers, just to be sure that it did happen."
@@ -2412,6 +2548,8 @@ label start:
     foxglove "Call it compensation."
 
     narrator "When we head further down, I feel lighter, somehow."
+    
+    scene bg streets night
 
     narrator "We make it down without incident aside from my growing awareness of my aches and pains."
 
@@ -2420,6 +2558,8 @@ label start:
     narrator "It feels profoundly weird walking through the streets with life going on as normal. It feels like people should know, somehow - but to them, we’re probably just two tourists towards the end of the season, walking arm in arm."
 
     narrator "My Grandmother’s front door makes a welcome sight. I have to stop myself from rushing as I fumble for the latch and throw it open, stamping inside eagerly."
+   
+    scene bg home night
 
     foxglove "We’re back!"
 
@@ -2466,6 +2606,8 @@ label start:
     grandma "Don’t push your luck."
 
     plumeria "R-right."
+    
+    scene bg bedroom night
 
     narrator "Together, we head into the bedroom. The window is shut securely; a tiny saucer of incense is set burning on the windowsill, the acrid trickles of it tickling my nose."
 
@@ -2534,6 +2676,11 @@ label start:
     narrator "One of her hands wraps around me, seeking mine, and I grasp her fingers with my own; crystal against flesh."
 
     narrator "But she doesn’t seem to mind."
+    
+    # Day 10
+    # TODO: train chug sfx
+    scene bg train day
+    with fade
 
     narrator "Slowly, the train pulls away from the station. My grandmother stands, watching, straight-backed and solemn."
 
@@ -2550,6 +2697,8 @@ label start:
     foxglove "Didn’t you want to see Kalarlomoth from the train?"
 
     plumeria "Ah! You’re right!"
+    
+    scene bg train dead god day
 
     narrator "She cranes her head round. The dead god lies, still and crystalline, across the mountain top, a petrified giant of glass."
 
@@ -2570,7 +2719,12 @@ label start:
     narrator "The first wiry trunks of the forest rise into view and disappear past just as quickly. We’re approaching the bend that will take Godigsfel out of sight."
 
     narrator "Above, the god catches the light, gleaming gold one last time-"
+    
+    scene bg black
+    with fade
 
     narrator "-and is gone."
 
     return
+    
+    # TODO: credits sequence?
