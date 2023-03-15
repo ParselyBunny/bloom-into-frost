@@ -12,20 +12,30 @@ define fennel = Character("Fennel")
 define radio = Character("Radio")
 define spirit = Character("Spirit")
 
+# Declare images
+image black = "#000"
+image foxglove:
+    "character/foxglove.png"
+    zoom .33
+image plumeria:
+    "character/plumeria.png"
+    zoom .38
+
 
 # The game starts here.
 
 label start:
 
-    # The train is rocking gently. Plumeria and the protagonist are
-    #    sitting across from each other in a train compartment.
-
+    narrator "When I was twenty-one, I visited my grandmother for the first time."
+    
     #play music "audio/illurock.ogg" fadeout 1.0 fadein 1.0
-
+    # TODO: train chug sfx
+    
     scene bg train night
     with fade
-
-    narrator "When I was twenty-one, I visited my grandmother for the first time."
+    
+    show foxglove at left
+    with fade
 
     narrator "The rattle of the train is constant and soothing. It’s creeping into winter, and flakes of snow dance microsecond ballets in the lights from the train windows."
 
@@ -34,8 +44,11 @@ label start:
     narrator "I’ve always preferred the cold. Heat has a tendency to leave me listless and sluggish."
 
     narrator "The dim lights in the train are too dark to read by. Next to me, Plumeria dozes fitfully."
+    
+    show plumeria at right
+    with fade
 
-    narrator "She is a tall, slender woman, with elegant upwards horns and mossy green hair, a student in the university back home."
+    narrator "She is a tall, curvy woman, with elegant upwards horns and mossy green hair, a student in the university back home."
 
     narrator "My roommate? Friend? Either way, she had come along with me, for reasons I wasn’t entirely certain of. They’d just sort of tagged along."
 
@@ -90,6 +103,10 @@ label start:
     
     scene bg train night
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Besides me, Plumeria stirs back to groggy wakefulness."
 
@@ -116,6 +133,10 @@ label start:
     # TODO: train brakes SFX
     
     scene bg train station night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
     with fade
 
     narrator "The station wasn’t that much brighter than the train. The lights are dim and flicker fitfully, fluffy wintermoths clustering around them in frantic swirls."
@@ -209,6 +230,7 @@ label start:
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
 
     # "[grandmother sprite appears midsentence]"
+    show grandma at center
 
     grandma "Who isn’t?"
 
@@ -306,6 +328,11 @@ label start:
     
     scene bg streets night
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
+    with fade
 
     narrator "Our path from the station soon takes us from the wide main roads to the tangles of terraced houses built for pilgrims in ages past."
 
@@ -345,7 +372,7 @@ label start:
 
     narrator "For a while more we walk in silence, but it’s a comfortable one. The blue light frames her graceful form in aquamarine."
 
-    narrator "It strikes me how tall she is - half a head again taller than me, slender without being skinny, features finely made with an easy smile. My opposite, in that sense."
+    narrator "It strikes me how tall she is - half a head again taller than me, curvy, features finely made with an easy smile. My opposite, in that sense."
 
     narrator "I must be tired. My thoughts are going all over the place."
 
@@ -384,6 +411,11 @@ label start:
     grandma "Just an old superstition now. Now get inside, if you would."
     
     scene bg home night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
     with fade
 
     narrator "We aren’t provided much time to look around. Within a few minutes, we’re sheparded to the spare room and told we could talk and acquaint ourselves in the morning."
@@ -436,6 +468,11 @@ label start:
     narrator "The morning comes, as they tend to do, quicker than I expect. I’ve slept surprisingly well, even though I wake up with Plumeria’s elbow lodged in my ribs."
 
     scene bg home day
+    
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
+    with fade
 
     narrator "All the same, I’ve never been a morning person, and I feel too sleepy for any awkwardness until we’re all sat at the table, having breakfast."
 
@@ -502,6 +539,10 @@ label start:
     # "Scene: city streets during the day"
     scene bg streets day
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "We wander along cobbled streets. They’re pretty, in a slightly worn-down sort of way; back home the city is all just concrete after the rebuilding. It’s a nice change."
 
@@ -516,6 +557,8 @@ label start:
     narrator "We take meandering examinations through those that remain; we poke through shelves crowded with knick-knacks and baubles, debate the necessity of tii-seed oilcloth coats against foul weather, and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
 
     scene bg streets night
+    show foxglove at left    
+    show plumeria at right
     with fade
 
     narrator "Eventually, as the sun begins to creep back down towards the horizon, we purchase steaming cups of drink and a pail full of sticks of hot, greasy mystery meat."
@@ -542,6 +585,11 @@ label start:
     
     # Day 2
     scene bg home day
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
     with fade
 
     narrator "The next morning, I’m still groggy from sleep and rubbing a crick out my neck when Grandmother cuts to the chase."
@@ -636,7 +684,11 @@ label start:
 
     grandma "Good."
     
-    scene bg foot of pilgrims path
+    scene bg pilgrims path day
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
     with fade
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
@@ -648,11 +700,13 @@ label start:
     plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
 
     # "A map of the Pilgrim’s Path is shown."
-    scene bg map
+    scene cg pilgrims path map day
 
     foxglove "So the stairs last all the way up to the... Chapel of the Nail? It's not, like... A toenail of it, is it?"
     
-    scene bg foot of pilgrims path day
+    scene bg pilgrims path day
+    show foxglove at left    
+    show plumeria at right
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance. The stairs traitorously remain still and solid despite her disapproval."
 
@@ -716,6 +770,9 @@ label start:
 
     # scene change
     scene bg pilgrims path day
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "We climb... and climb... and climb."
 
@@ -754,7 +811,8 @@ label start:
     narrator "Her voice is soft. She’s looking past me, back the way we came. I turn to look, and-"
 
     # "Splash screen of the town below"
-    scene bg godigsfel overlook day
+    scene cg godigsfel overlook day
+    with fade
 
     narrator "Godigsfel opens itself to my sight like a flower below, rows of pointy red roofs rising like spears unto heaven and crisscrossed by white-stoned streets. At the edges, it fades into green fields and then the brown prickly ocean of the forest."
 
@@ -779,6 +837,9 @@ label start:
     narrator "The thought of heading down immediately is far too daunting, so after resting for a bit we take a look around the little church built into the mountainside."
 
     scene bg chapel of the nail
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "The Chapel of the Nail turns out to be bigger than I expected. Inside, the rough-carved stone of the walls extends back into the rock of the mountain itself."
 
@@ -903,7 +964,8 @@ label start:
 
     plumeria "Consider me spooked."
     
-    scene bg godigsfel overlook day
+    scene cg godigsfel overlook day
+    with fade
 
     narrator "Outside the air feels deliciously crisp in comparison. Looking back down at the panorama of the town below, I spend a few minutes admiring the view. Eventually, though, I have to stop delaying."
 
@@ -913,6 +975,11 @@ label start:
     
     # Day 3
     scene bg home night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
     with fade
 
     narrator "There’s no more fun going down them as there was going up. The next day I don’t do much walking. Perhaps in mercy to my aching leg muscles, it rains. Rather than snow, the sky slashes at the ground with fierce flurries of  heavy raindrops, frigid and fat."
@@ -1048,8 +1115,15 @@ label start:
     narrator "The conversation leaves me weirdly melancholic."
     
     scene bg bedroom night
+    with fade
+    
+    show foxglove at left
+    with fade
     
     narrator "Eventually, I head off to sleep, and not long later, Plumeria pads in to join me."
+    
+    show plumeria at right
+    with fade
 
     narrator "Within the bedroom I shared, the air tonight seems thick with heat. Unpleasantly so."
 
@@ -1071,7 +1145,7 @@ label start:
 
     narrator "The air creeping in was heavy with the scent of just-stopped rain. Bacterial blooms on tarmac. Slick stone. Wet soil. It creeps in without a sound, as if the deluge of the day had washed all the noise out of the universe. I drink it in like nectar."
 
-    narrator "All I can hear is Plumeria besides me, the soft rise and fall of her breathing. Finally she mutters something unintelligible. Strong and slender arms curl around me and pull me close."
+    narrator "All I can hear is Plumeria besides me, the soft rise and fall of her breathing. Finally she mutters something unintelligible. Strong arms curl around me and pull me close."
 
     foxglove "Plume...?!"
 
@@ -1085,6 +1159,11 @@ label start:
     
     # Day 6
     scene bg pilgrims path day
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "And so the days passed. Each day, we would climb the mountain for a while, seeking higher and higher heights."
 
@@ -1208,14 +1287,23 @@ label start:
 
     scene bg bedroom night
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Despite my tiredness that night, I sleep poorly. I toss and turn, trying to get comfortable, until Plumeria grumbles discontentedly at the disturbance. Glancing out the window, the moon peeks in through the curtains, casting a slice of the room in silver."
 
     scene bg home night
+    show foxglove at left
+    with fade
 
-    narrator "I slip out the covers and stand, padding through into the next room. I stand for a moment, letting my eyes adjust to the dim shapes coalescing into furniture. The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
+    narrator "I slip out the covers and stand, padding through into the next room. I stand for a moment, letting my eyes adjust to the dim shapes coalescing into furniture."
+
+    narrator "The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
 
     # "Grandmother appears suddenly."
+    show grandma at right
 
     grandma "Can’t sleep?"
 
@@ -1314,6 +1402,11 @@ label start:
     grandma "Goodnight, child."
     
     scene bg bedroom night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "I pad carefully back into the little bedroom I’m sharing with Plume. With my eyes adjusted to the dark, I can pick out the curves of her limbs amid the sheets, the mossy bloom of her hair on the pillow."
 
@@ -1352,6 +1445,10 @@ label start:
     # Day 7
     scene bg pilgrims path day
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "The next day, climbing the mountain, my heart isn’t in it."
     
@@ -1360,6 +1457,8 @@ label start:
     narrator "Plume picks up on it, of course, and I pretend not to see her questing looks."
 
     scene bg streets night
+    show foxglove at left    
+    show plumeria at right
     with fade
     
     narrator "The sun has already begun to go down as we begin heading back through the streets. Part way back, Plumeria hesitates."
@@ -1384,6 +1483,9 @@ label start:
 
     # TODO: bar noise
     scene bg bar
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "I walk into a wave of solid noise. It crashes against my eardrums, and I rock back on my heels, momentarily stunned by the sheer assault of talking, laughing, clattering."
 
@@ -1402,10 +1504,16 @@ label start:
     narrator "I nod fervently, and I feel more than hear her laughter."
 
     plumeria "Alright! I’ll get us drinks, you get us a booth!"
+    
+    hide plumeria
+    with fade
 
     narrator "She splits off from me as I shuffle towards the cluster of walled-off tables. Full, full, full..."
 
     narrator "Ah, none of them are free. I hover awkwardly, hoping one of them would free up, but all the groups sitting in the booths seem pretty entrenched. Oh wait, that one at the end seems empty."
+
+    show fennel at center
+    with fade
 
     narrator "One of them only has a single woman in it, who looks up as I wander up. She considers me for a second, then gestures to the seat opposite. I hesitate a moment, then take it."
 
@@ -1443,7 +1551,10 @@ label start:
 
     foxglove "Neither did we, until recently."
 
-    fennel "So you came to visit? I knew you couldn’t be a local. I think I’d remember"
+    fennel "So you came to visit? I knew you couldn’t be a local. I think I’d remember."
+    
+    show plumeria at right
+    with fade
 
     narrator "She opens her mouth, perhaps to ask more, when Plume shows up at last. She slides into the seat next to me, placing down a pair of white-crowned pints."
 
@@ -1558,6 +1669,9 @@ label start:
         fennel "Well, nice to meet you both, I guess. Now if you don’t mind, there’s a cutie at the bar looking lonely, so I’m going to try my luck."
 
         foxglove "Oh, um, bye."
+        
+        hide fennel
+        with fade
 
         narrator "She winks and is gone, to try her game elsewhere."
 
@@ -1640,6 +1754,8 @@ label start:
 
         fennel "At least fuck if you’re going to be possessive. Hey, cutie, let me know if you get bored with greenie here. See you around."
 
+        hide fennel
+
         narrator "With a farewell flick of her fingers, Fennel stalks off into the crowds, heading towards the bar. Plume watches her go, frowning, then visibly shakes it off."
 
         plumeria "Friendly locals, huh?"
@@ -1688,6 +1804,9 @@ label start:
     narrator "I work my way up from my seat, and together we head for the door, the room wobbling discourteously when I’m trying to balance."
 
     scene bg streets night
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub. I breathe in deep, feeling it seep into the crannies of my lungs, my chest swelling with the sharpness of it like a breathed-in glacier."
 
@@ -1710,6 +1829,12 @@ label start:
     narrator "But she doesn’t let go of my hand."
     
     scene bg home night
+    show foxglove at left    
+    show plumeria at right
+    with fade
+    
+    show grandma at center
+    with fade
 
     narrator "We enter the house as quietly as possible, which is not very. Grandmother takes one look at us from her chair."
 
@@ -1718,6 +1843,9 @@ label start:
     narrator "She shakes her head and waves us off to bed."
     
     scene bg bedroom night
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "I lie tucked against Plume, the sheets heavy and piled high. I can still feel the fizz of the alcohol in my fingertips, in my head, like a distant cloud. I can only just see the ceiling of the room."
 
@@ -1823,6 +1951,9 @@ label start:
 
     # day 8
     scene bg bedroom day
+    show foxglove at left
+    show plumeria at right
+    show grandma at center
     with fade
 
     narrator "The radio mutters angrily. The voice of the spokesman is a hoarse, rumbling thing, seeming half-way to a snarl."
@@ -1899,6 +2030,10 @@ label start:
     
     scene bg pilgrims path day
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps. The faint burn in my thighs from climbing is nothing in comparison to the first attempt, now, and I stomp my way up with a steady tread."
 
@@ -1937,6 +2072,9 @@ label start:
     narrator "It’s perhaps mid-afternoon by the time we reach the Aumic Temple. The mountain here had a sort of slot carved out of it, long ago, by the final battles of the gods, and the Temple sits in like a wedge in the cleft in the stone."
 
     scene bg aumic temple day
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Like the Chapel of the Nail, it’s half underground. We force open the heavy wooden door, staring into the cool dark inside."
 
@@ -1956,6 +2094,9 @@ label start:
     
     # TODO: wind noise should increase
     scene bg pilgrims path day
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "The last portion of the climb is viciously steep. We don’t walk but clamber awkwardly, scrambling over dyed-white stone."
 
@@ -1987,7 +2128,8 @@ label start:
 
     foxglove "I guess. Maybe they’re not around any more."
     
-    scene bg the dead god dusk
+    scene cg the dead god dusk
+    with fade
 
     narrator "The giant body of the god lies dead and still before us. No snow settles on his crystalline flesh, melting away silently like a dream whenever flakes settle on the divine cadaver."
 
@@ -2025,7 +2167,8 @@ label start:
 
     plumeria "You alright?"
     
-    scene bg godigsfel overlook night
+    scene cg godigsfel overlook night
+    with fade
 
     narrator "Not trusting words, I simply nod. Looking out from the mountain, the sun is low in the sky. It paints the canvas of the sky in hues of purples and reds like a bruise."
 
@@ -2052,6 +2195,9 @@ label start:
     plumeria "No argument from me there. Damn, but it’s getting cold."
     
     scene bg pilgrims path night
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
 
@@ -2068,8 +2214,13 @@ label start:
     narrator "Shapes are moving in the bleak fog of the snowdrifts, and I jab at the motion with an outstretched finger. Plumeria looks at what emerges. For once, her words fail her."
 
     scene cg spirits night
+    with fade
 
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
+
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
 
@@ -2168,6 +2319,9 @@ label start:
 
     # TODO: stop flare SFX
     scene bg pilgrims path night
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "I watch them go, panting, fighting the urge to pass out. When the fog begins to break apart, and I’m sure they’re not coming back, I drop to my knees."
 
@@ -2195,6 +2349,11 @@ label start:
     # TODO: windows rattling sfx
     # TODO: muffled, howling wind sfx
     scene bg cabin dark night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "A tiny bit of colour has returned to Plumeria’s lips as I slam the door and lay her down. That must be a good sign, right?"
 
@@ -2209,6 +2368,8 @@ label start:
     # TODO: fire roar oneshot sfx
     # TODO: fire crackling sfx
     scene bg cabin lit night
+    show foxglove at left    
+    show plumeria at right
 
     narrator "I nurse it in the kindling, building the fire until it’s fiercely licking yellow tongues across the chunks of timber."
 
@@ -2410,6 +2571,9 @@ label start:
     # Day 9
     scene bg cabin day
     with fade
+    
+    show foxglove at left    
+    with fade
 
     narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant. My back clicks horribly as I stretch from where I’ve slept on the hard floor."
 
@@ -2421,7 +2585,12 @@ label start:
 
     narrator "My transformed fingers catch the light, refracting the fire into prisms that dance around the room and some part of me notes that means they’re probably never changing back."
 
-    narrator "I take quick steps towards the door when it starts to swing open, and I have to leap backwards to avoid a flattened nose. Plumeria sticks her head through and gives me a cheery grin. With her comes a blast of cold air, sending the fire dancing wildly in its little stone prison."
+    narrator "I take quick steps towards the door when it starts to swing open, and I have to leap backwards to avoid a flattened nose."
+
+    show plumeria at right
+    with fade
+
+    narrator "Plumeria sticks her head through and gives me a cheery grin. With her comes a blast of cold air, sending the fire dancing wildly in its little stone prison."
 
     plumeria "Oop, sorry, nearly got you there."
 
@@ -2522,6 +2691,9 @@ label start:
     plumeria "Eh, I don’t mind. It saved our butts, didn’t it? If I have to buy some more absolutely grim-tasting chocolate, I can deal."
 
     scene bg pilgrims path day
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
 
@@ -2550,6 +2722,11 @@ label start:
     narrator "When we head further down, I feel lighter, somehow."
     
     scene bg streets night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "We make it down without incident aside from my growing awareness of my aches and pains."
 
@@ -2560,8 +2737,16 @@ label start:
     narrator "My Grandmother’s front door makes a welcome sight. I have to stop myself from rushing as I fumble for the latch and throw it open, stamping inside eagerly."
    
     scene bg home night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     foxglove "We’re back!"
+    
+    show grandma at center
+    with fade
 
     grandma "Ah, good."
 
@@ -2608,6 +2793,11 @@ label start:
     plumeria "R-right."
     
     scene bg bedroom night
+    with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Together, we head into the bedroom. The window is shut securely; a tiny saucer of incense is set burning on the windowsill, the acrid trickles of it tickling my nose."
 
@@ -2681,6 +2871,10 @@ label start:
     # TODO: train chug sfx
     scene bg train day
     with fade
+    
+    show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Slowly, the train pulls away from the station. My grandmother stands, watching, straight-backed and solemn."
 
@@ -2698,7 +2892,7 @@ label start:
 
     plumeria "Ah! You’re right!"
     
-    scene bg train dead god day
+    scene cg train dead god day
 
     narrator "She cranes her head round. The dead god lies, still and crystalline, across the mountain top, a petrified giant of glass."
 
