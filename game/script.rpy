@@ -3,14 +3,15 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define foxglove = Character("Me")
-define plumeria = Character("Plumeria")
-define grandma = Character("Grandmother")
-define announcer = Character("Announcer")
-define foxglove_and_plumeria = Character("Foxglove and Plumeria")
-define fennel = Character("Fennel")
-define radio = Character("Radio")
-define spirit = Character("Spirit")
+define narrator = Character(None, color="#ffffff", window_background="gui/textbox.png")
+define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png")
+define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png")
+define grandma = Character("Grandmother", color="#ffffff", window_background="gui/textbox.png")
+define announcer = Character("Announcer", color="#ffffff", window_background="gui/textbox.png")
+define foxglove_and_plumeria = Character("Foxglove and Plumeria", color="#ffffff", window_background="gui/textbox.png")
+define fennel = Character("Fennel", color="#ffffff", window_background="gui/textbox.png")
+define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png")
+define spirit = Character("Spirit", color="#ffffff", window_background="gui/textbox.png")
 
 # Declare images
 image black = "#000"
