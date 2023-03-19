@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#99ccff'
+define gui.accent_color = u'#fff'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = u'#888888'
@@ -33,7 +33,7 @@ define gui.idle_color = u'#888888'
 define gui.idle_small_color = u'#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#c1e0ff'
+define gui.hover_color = u'#fff'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -64,16 +64,16 @@ define gui.name_text_font = "fonts/Cormorant-VariableFont_wght.ttf"
 define gui.interface_text_font = "fonts/Cormorant-VariableFont_wght.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 40
 
 ## The size of character names.
 define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 40
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 36
+define gui.label_text_size = 40
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24
