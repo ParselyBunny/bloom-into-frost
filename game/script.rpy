@@ -341,9 +341,13 @@ label start:
 
     narrator "The terraced buildings are tall and narrow, whitewashed, leaning like lines of drunks above the road. Their roofs are jagged with tiles, sharp and pointed, biting like teeth up towards the clouds."
 
-    narrator "Stars peer demurely between gaps in the clouds, red, blue, white pinpricks in the night sky. The dead god is cast in slices of moonlight, quicksilver draped unmoving across the black-and-white pillars of the mountains."
+    narrator "Stars peer demurely between gaps in the clouds, red, blue, white pinpricks in the night sky."
 
-    narrator "The blue lanterns strung out above doors give the whole thing an ethereal air, like an underwater tunnel. Sound, normally carried well by clear air, seems muted. The sounds of people - laughter, talking, dogs barking - is a susurrus of distant waves."
+    narrator "The dead god is cast in slices of moonlight, quicksilver draped unmoving across the black-and-white pillars of the mountains."
+
+    narrator "The blue lanterns strung out above doors give the whole thing an ethereal air, like an underwater tunnel."
+
+    narrator "Sound, normally carried well by clear air, seems muted. The sounds of people - laughter, talking, dogs barking - is a susurrus of distant waves."
 
     narrator "For a moment, I feel weightless, my head fuzzing. I am adrift, in a deep, dark sea. I breathe in, trying to let the crisp cut of the air centre me."
 
@@ -381,9 +385,13 @@ label start:
 
     grandma "Here we are."
 
-    narrator "The house isn’t anything exceptional in this tangle of pilgrim housing. It’s still well-maintained, a thin spike of a house in cheval de frise terraces. We wait by the door as grandmother fumbles through her pockets for her keys, occasionally quietly grumbling."
+    narrator "The house isn’t anything exceptional in this tangle of pilgrim housing. It’s still well-maintained, a thin spike of a house in cheval de frise terraces."
 
-    narrator "Like many of the others, a blue lantern burns above the door. I smell the smoke of it. Incense. Heavy and cloying, it slinks into my lungs with the flickering of the sapphire light. It’s a strange smell, and not entirely pleasant."
+    narrator "We wait by the door as grandmother fumbles through her pockets for her keys, occasionally quietly grumbling."
+
+    narrator "Like many of the others, a blue lantern burns above the door. I smell the smoke of it. Incense."
+
+    narrator "Heavy and cloying, it slinks into my lungs with the flickering of the sapphire light. It’s a strange smell, and not entirely pleasant."
 
     foxglove "Um, Ma’am...?"
 
@@ -399,7 +407,9 @@ label start:
 
     foxglove "Ah, well, Grandmother, I was wondering - why the blue lanterns?"
 
-    narrator "Besides me, Plumeria is paying keen interest. The old woman pauses for a second, regarding me thoughtfully, but she suddenly snaps her fingers. I flinch at the unexpected sound, but she’s already rummaging through the chest pocket of her coat."
+    narrator "Besides me, Plumeria is paying keen interest. The old woman pauses for a second, regarding me thoughtfully, but she suddenly snaps her fingers."
+
+    narrator "I flinch at the unexpected sound, but she’s already rummaging through the chest pocket of her coat."
 
     grandma "Now I remember. That’s where I put the blasted things."
 
@@ -479,7 +489,9 @@ label start:
 
     narrator "The awkwardness returns in force once I start waking up, however. Plumeria is steadily working her way through toast painted gold with honey."
 
-    narrator "My grandmother sits as stiff as an old sentinel, carefully holding a steaming porcelain cup. I, for my part, have a double helping of no ideas on how to talk to this person to go with my own, slightly chipped, mug of hot liquid."
+    narrator "My grandmother sits as stiff as an old sentinel, carefully holding a steaming porcelain cup."
+
+    narrator "I, for my part, have a double helping of no ideas on how to talk to this person to go with my own, slightly chipped, mug of hot liquid."
 
     narrator "My grandmother sips at her tea carefully. I do the same. The tea burns my tongue a little; hot and slightly bitter."
 
@@ -555,7 +567,9 @@ label start:
 
     narrator "It’s pretty empty with the pilgrim season wound down; a lot of the shops, intended to cater to those who come god-seeking, have shuttered their doors for the time being."
 
-    narrator "We take meandering examinations through those that remain; we poke through shelves crowded with knick-knacks and baubles, debate the necessity of tii-seed oilcloth coats against foul weather, and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
+    narrator "We take meandering examinations through those that remain. We poke through shelves crowded with knick-knacks and baubles, debate the necessity of tii-seed oilcloth coats against foul weather-"
+
+    narrator "-and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
 
     scene bg streets night
     show foxglove at left    
@@ -564,7 +578,9 @@ label start:
 
     narrator "Eventually, as the sun begins to creep back down towards the horizon, we purchase steaming cups of drink and a pail full of sticks of hot, greasy mystery meat."
 
-    narrator "We settle to eat on a stone bench in a little square, a fountain half-heartedly puttering splurts of frigid water towards the heavens. I sit and listen to the pattering splashes of the falling droplets as they fail to reach the sky."
+    narrator "We settle to eat on a stone bench in a little square, a fountain half-heartedly puttering splurts of frigid water towards the heavens."
+
+    narrator "I sit and listen to the pattering splashes of the falling droplets as they fail to reach the sky."
 
     plumeria "There sure are a lot of shops selling that incense."
 
@@ -621,7 +637,9 @@ label start:
 
     narrator "She takes another long sip, closing her eyes briefly. The smell of it reaches my nose; hot and bitter. Grandmother opens her eyes, only to stare into her cup."
 
-    grandma "To be more specific, she climbed the mountain to see the spirits around, oh, three months pregnant with you, not long after she’d told me. I had been furious. Didn’t even know the father, never mind that she had been in a relationship. I was..."
+    grandma "To be more specific, she climbed the mountain to see the spirits around, oh, three months pregnant with you, not long after she’d told me."
+
+    grandma "I had been furious. Didn’t even know the father, never mind that she had been in a relationship. I was..."
 
     narrator "Her brow furrows."
 
@@ -709,7 +727,9 @@ label start:
     show foxglove at left    
     show plumeria at right
 
-    narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance. The stairs traitorously remain still and solid despite her disapproval."
+    narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance."
+
+    narrator "The stairs traitorously remain still and solid despite her disapproval."
 
     plumeria "I can't believe they don't have a cable car or something. All the priests I've ever seen have been old and fat. No way they'd climb a mountain of stairs like this."
 
@@ -815,9 +835,13 @@ label start:
     scene cg godigsfel overlook day
     with fade
 
-    narrator "Godigsfel opens itself to my sight like a flower below, rows of pointy red roofs rising like spears unto heaven and crisscrossed by white-stoned streets. At the edges, it fades into green fields and then the brown prickly ocean of the forest."
+    narrator "Godigsfel opens itself to my sight like a flower below, rows of pointy red roofs rising like spears unto heaven and crisscrossed by white-stoned streets."
 
-    narrator "The blue of the sky above is a bold, endless canvas, painted with only the barest white brush-strokes of clouds.The view is pretty good, I have to admit. The noises of the town reach here only as a shimmer of noise, any distinction to it lost."
+    narrator "At the edges, it fades into green fields and then the brown prickly ocean of the forest."
+
+    narrator "The blue of the sky above is a bold, endless canvas, painted with only the barest white brush-strokes of clouds."
+
+    narrator "The view is pretty good, I have to admit. The noises of the town reach here only as a shimmer of noise, any distinction to it lost."
 
     plumeria "Imagine how it’ll look even higher up."
 
@@ -895,7 +919,9 @@ label start:
     # "[touch it]"
     label do_touch:
 
-        narrator "I look at her for a moment longer, then give in and traipse over to touch the ancient artefact. Where a statue would have been worn smooth by the touch of a hundred thousand beseeching penitents, it has remained as whole and inviolate as the day it was cut."
+        narrator "I look at her for a moment longer, then give in and traipse over to touch the ancient artefact."
+
+        narrator "Where a statue would have been worn smooth by the touch of a hundred thousand beseeching penitents, it has remained as whole and inviolate as the day it was cut."
 
         narrator "Gingerly, I reach out and press my hand against it. Even through my gloves, it feels cold and smooth, like marble, unyieldingly solid."
 
@@ -907,7 +933,9 @@ label start:
 
         narrator "I look down at my glove, half-expecting to see the tips discoloured by contact with the divine."
 
-        narrator "Same as always; the only evidence of contact is a faint tingle that remains in the furthest reaches of my hands, so faint I’m not sure it isn’t imagined. I shake my hand to rid it of the feeling, like shedding spider web."
+        narrator "Same as always; the only evidence of contact is a faint tingle that remains in the furthest reaches of my hands, so faint I’m not sure it isn’t imagined."
+
+        narrator "I shake my hand to rid it of the feeling, like shedding spider web."
 
         foxglove "You could have warned me."
 
@@ -938,11 +966,15 @@ label start:
 
         foxglove "Aw, that’s why it’s warmer in here, isn’t it? The air is full of... toe heat."
 
-        narrator "Something about that statement sends my friend cackling with ungraceful laughter. She deliberately rubs a hand on the toe again, and with an evil expression advances on me, contaminated hand held towards me like a weapon."
+        narrator "Something about that statement sends my friend cackling with ungraceful laughter."
+
+        narrator "She deliberately rubs a hand on the toe again, and with an evil expression advances on me, contaminated hand held towards me like a weapon."
 
         foxglove "Oh my gods, you horrible woman, don’t you dare-"
 
-        narrator "She lunges, and I dart backwards, definitely not making a squeaking sound of alarm. She gives an exaggeratedly evil cackle, but stops abruptly when coughing abruptly racks my chest and brings tears to my eyes."
+        narrator "She lunges, and I dart backwards, definitely not making a squeaking sound of alarm."
+
+        narrator "She gives an exaggeratedly evil cackle, but stops abruptly when coughing abruptly racks my chest and brings tears to my eyes."
 
         jump choice_1_end
 
@@ -983,9 +1015,13 @@ label start:
     show grandma at center
     with fade
 
-    narrator "There’s no more fun going down them as there was going up. The next day I don’t do much walking. Perhaps in mercy to my aching leg muscles, it rains. Rather than snow, the sky slashes at the ground with fierce flurries of  heavy raindrops, frigid and fat."
+    narrator "There’s no more fun going down them as there was going up. The next day I don’t do much walking."
 
-    narrator "Obviously, to try to climb the mountain today would be suicide, never mind the fact it wouldn't be climbing so much as swimming. Simply stepping out of the alcove of the doorway is sufficient to saturate you to the skin."
+    narrator "Perhaps in mercy to my aching leg muscles, it rains. Rather than snow, the sky slashes at the ground with fierce flurries of  heavy raindrops, frigid and fat."
+
+    narrator "Obviously, to try to climb the mountain today would be suicide, never mind the fact it wouldn't be climbing so much as swimming."
+
+    narrator "Simply stepping out of the alcove of the doorway is sufficient to saturate you to the skin."
 
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
 
@@ -1021,7 +1057,9 @@ label start:
     # "[Pick it up]"
     label pick_up:
 
-        narrator "I look to Plumeria, and she shakes her head slightly. I reach into the box and pick it up, blinking at the weight of it. The grip is coarse against my palm, and fits neatly; all the same, I hold it awkwardly, unsure how to heft it properly."
+        narrator "I look to Plumeria, and she shakes her head slightly. I reach into the box and pick it up, blinking at the weight of it."
+
+        narrator "The grip is coarse against my palm, and fits neatly; all the same, I hold it awkwardly, unsure how to heft it properly."
 
         foxglove "It’s heavier than I expected."
 
@@ -1029,7 +1067,9 @@ label start:
 
         grandma "A gun should always be the heaviest thing in the world to carry."
 
-        narrator "She stares at the thing in my hand with a strange expression. Fondness and hate for it blended like a poison. Uncomfortable, I offer it to her, but she just gestures to the box. With some relief, I stick it back into its little prison."
+        narrator "She stares at the thing in my hand with a strange expression. Fondness and hate for it blended like a poison."
+
+        narrator "Uncomfortable, I offer it to her, but she just gestures to the box. With some relief, I stick it back into its little prison."
         
         jump choice_2_end
         
@@ -1083,9 +1123,13 @@ label start:
 
     narrator "She clicks open the case again, to look down at the weapon. One wizened finger brushed along the barrel - along the TELLEN STATE ARMOURY 1191 stamped along it."
 
-    grandma "So I don’t regret fighting to stop them. I regret, however, how it was necessary. All the lives lost, and effort expended, and those terrible hard days... I had hoped that perhaps - we could teach our children well enough they would not have to suffer the same."
+    grandma "So I don’t regret fighting to stop them. I regret, however, how it was necessary. All the lives lost, and effort expended, and those terrible hard days..."
 
-    grandma "That foolish girl suffered terribly as a result of her parentage. Having a sarran for a father certainly did her no favours. My generation, who fought and suffered in the war, all carried the pain of that war. I suppose I was lucky, in that sense."
+    grandma "I had hoped that perhaps - we could teach our children well enough they would not have to suffer the same."
+
+    grandma "That foolish girl suffered terribly as a result of her parentage. Having a sarran for a father certainly did her no favours."
+
+    grandma "My generation, who fought and suffered in the war, all carried the pain of that war. I suppose I was lucky, in that sense."
 
     narrator "She reaches up and raps a nail on the shiny brass of the cap on her broken horn."
 
@@ -1111,7 +1155,9 @@ label start:
 
     narrator "The study of old miracles and magic, the reproduction of what little can still be done. Trying to relearn how to shape godsflesh for its otherwise impossible properties."
 
-    narrator "Even back in Grandmother’s day, the magic was mostly gone from the world. It had died with the gods, all those hundreds of years ago, when they’d fought each other to the grave - or at least to utterly mortal wounds."
+    narrator "Even back in Grandmother’s day, the magic was mostly gone from the world."
+
+    narrator "It had died with the gods, all those hundreds of years ago, when they’d fought each other to the grave - or at least to utterly mortal wounds."
 
     narrator "The conversation leaves me weirdly melancholic."
     
@@ -1142,9 +1188,15 @@ label start:
 
     narrator "I wait a moment longer, but when no further answer is forthcoming I slip out and pad to the window. Outside, it’s still and dark. The storm has passed."
 
-    narrator "A few souls had emerged from their homes to light their lamps at some point, and the blue wash of their ghost lanterns flickers fitfully along the streets in irregular blooms of colour.  Condensation studs the windowpane with a hundred tiny gems."
+    narrator "A few souls had emerged from their homes to light their lamps at some point, and the blue wash of their ghost lanterns flickers fitfully along the streets in irregular blooms of colour."
 
-    narrator "The air creeping in was heavy with the scent of just-stopped rain. Bacterial blooms on tarmac. Slick stone. Wet soil. It creeps in without a sound, as if the deluge of the day had washed all the noise out of the universe. I drink it in like nectar."
+    narrator "Condensation studs the windowpane with a hundred tiny gems."
+
+    narrator "The air creeping in was heavy with the scent of just-stopped rain."
+
+    narrator "Bacterial blooms on tarmac. Slick stone. Wet soil."
+
+    narrator "It creeps in without a sound, as if the deluge of the day had washed all the noise out of the universe. I drink it in like nectar."
 
     narrator "All I can hear is Plumeria besides me, the soft rise and fall of her breathing. Finally she mutters something unintelligible. Strong arms curl around me and pull me close."
 
@@ -1192,7 +1244,9 @@ label start:
 
     plumeria "Actually, that’s a silver lining. A few weeks of this and you’ll have killer legs."
 
-    narrator "She waggles her eyebrows at me lavisciously, and I find myself thankful the flush of exertion and brisk air hides any additional blood to my cheeks. Even after two years of her playful teasing, for some reason it never fails to fluster me a little."
+    narrator "She waggles her eyebrows at me lavisciously, and I find myself thankful the flush of exertion and brisk air hides any additional blood to my cheeks."
+
+    narrator "Even after two years of her playful teasing, for some reason it never fails to fluster me a little."
 
     narrator "Maybe it’s because I never had much experience with romance growing up? Either way, I look away and speak my reply into the air."
 
@@ -1214,7 +1268,9 @@ label start:
 
     plumeria "I guess these are the orchids of Orchid’s Point. Maybe they’re like snowdrops? Late-flowering?"
 
-    narrator "I simply make a hum in response. Carefully, I step through the flower-field, desperate not to crush any of the blooms beneath my tread. Following some strange instinct, I kneel by the pond, briefly pulling off my glove to dip my fingers into it."
+    narrator "I simply make a hum in response. Carefully, I step through the flower-field, desperate not to crush any of the blooms beneath my tread."
+    
+    narrator "Following some strange instinct, I kneel by the pond, briefly pulling off my glove to dip my fingers into it."
 
     narrator "The water was sharply cold, like a liquid knife. My hand pierces the surface with barely a ripple, reaching down to grasp something gleaming dully amid the pebbles at the bottom of the pool."
 
@@ -1258,7 +1314,9 @@ label start:
 
     plumeria "Please. My nice long legs? I’ll be half-way down the mountain by the time they’ve finished turning you into an icicle."
 
-    narrator "I roll my eyes and toss the effigy coin back into the pool. It spins, once, twice, catching the light with a sharp glint, and sinks into the water with a plop. It settles back amongst the pebbles as if it had never been away."
+    narrator "I roll my eyes and toss the effigy coin back into the pool. It spins, once, twice, catching the light with a sharp glint, and sinks into the water with a plop."
+
+    narrator "It settles back amongst the pebbles as if it had never been away."
 
     plumeria "Not keeping it?"
 
@@ -1293,7 +1351,9 @@ label start:
     show plumeria at right
     with fade
 
-    narrator "Despite my tiredness that night, I sleep poorly. I toss and turn, trying to get comfortable, until Plumeria grumbles discontentedly at the disturbance. Glancing out the window, the moon peeks in through the curtains, casting a slice of the room in silver."
+    narrator "Despite my tiredness that night, I sleep poorly. I toss and turn, trying to get comfortable, until Plumeria grumbles discontentedly at the disturbance."
+
+    narrator "Glancing out the window, the moon peeks in through the curtains, casting a slice of the room in silver."
 
     scene bg home night
     show foxglove at left
@@ -1370,7 +1430,9 @@ label start:
 
     foxglove "Wow."
 
-    narrator "I try to imagine her even more fearsome in her prime and can’t picture it. Somehow, I get the feeling she’d still wipe the floor with me if it came to a fight. My eyes, adjusted to the dark, can make out her smile this time."
+    narrator "I try to imagine her even more fearsome in her prime and can’t picture it."
+
+    narrator "Somehow, I get the feeling she’d still wipe the floor with me if it came to a fight. My eyes, adjusted to the dark, can make out her smile this time."
 
     grandma "Now, it is late. Are you climbing the mountain again tomorrow?"
 
@@ -1678,7 +1740,9 @@ label start:
 
         narrator "Good luck to her, I guess...?"
 
-        narrator "I can’t help but feel a little relieved; she wasn’t bad to talk to, but I have no idea how to deal with people like that. Plume flirting with me for fun is bad enough. The aforementioned flirter watches Fennel go with an unreadable expression before she turns to me."
+        narrator "I can’t help but feel a little relieved; she wasn’t bad to talk to, but I have no idea how to deal with people like that."
+
+        narrator "Plume flirting with me for fun is bad enough. The aforementioned flirter watches Fennel go with an unreadable expression before she turns to me."
 
         plumeria "You sure meet different people in pubs, huh. You want to head off, or still up for staying?"
 
@@ -1786,7 +1850,9 @@ label start:
 
     narrator "Without the intense bitterness of the hops, I find it goes down easily from the thimble-sized glasses it comes in."
 
-    narrator "It’s deceptively strong, and soon I find my limbs a touch clumsier than before; my voice comes easier and louder, and a pleasant, fuzzy heat has settled in my bones. Glasses of varying sizes form battlements between my friend and I."
+    narrator "It’s deceptively strong, and soon I find my limbs a touch clumsier than before; my voice comes easier and louder, and a pleasant, fuzzy heat has settled in my bones."
+
+    narrator "Glasses of varying sizes form battlements between my friend and I."
 
     narrator "Plumeria, an adorable flush across her cheeks from the alcohol, grins at me. One of her hands reaches up to brush back a stray hair, and I’m struck by how pretty she is."
 
@@ -1809,13 +1875,17 @@ label start:
     show plumeria at right
     with fade
 
-    narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub. I breathe in deep, feeling it seep into the crannies of my lungs, my chest swelling with the sharpness of it like a breathed-in glacier."
+    narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub."
+
+    narrator "I breathe in deep, feeling it seep into the crannies of my lungs, my chest swelling with the sharpness of it like a breathed-in glacier."
 
     narrator "Next to me, Plumeria gives an abrupt, violent shiver, like a dog shaking itself off after a dip. I wrap her hand in mine, curling my fingers through hers, and her lips curl upwards."
 
     narrator "I don’t want her to get frostbite in her fingers, of course, which was the reason I did that."
 
-    narrator "The streets, in contrast to the pub, are quiet and serene. The sun has long since set, of course, and the stars peer down out of a night sky slatted with clouds. The blue lights of the ghost lanterns paints the world in shades of cerulean and azure."
+    narrator "The streets, in contrast to the pub, are quiet and serene. The sun has long since set, of course, and the stars peer down out of a night sky slatted with clouds."
+
+    narrator "The blue lights of the ghost lanterns paints the world in shades of cerulean and azure."
 
     foxglove "...’s pretty."
 
@@ -1890,11 +1960,15 @@ label start:
 
     narrator "I feel her grip tighten a little, keeping me pressed against her. Her heart beats against my back, thump-thump-thump, and so does mine in sequence. Plume’s voice is a soft murmur."
 
-    plumeria "I think you’ve always wanted to leave that city behind. I get the feeling, right? Fresh place, fresh start. There’s been something I wanted to ask you about, but I felt like you’d, well, frighten, I guess, if I ever did. I didn’t want you to run away."
+    plumeria "I think you’ve always wanted to leave that city behind. I get the feeling, right? Fresh place, fresh start."
+
+    plumeria "There’s been something I wanted to ask you about, but I felt like you’d, well, frighten, I guess, if I ever did. I didn’t want you to run away."
 
     foxglove "I wouldn’t run away."
 
-    plumeria "Wouldn’t you? Wasn’t this? This is what I mean by not very honest to yourself. I think you would have come here, and you would just find reasons not to come back. And you wouldn’t- you wouldn’t be doing it deliberately, not really."
+    plumeria "Wouldn’t you? Wasn’t this? This is what I mean by not very honest to yourself."
+
+    plumeria "I think you would have come here, and you would just find reasons not to come back. And you wouldn’t- you wouldn’t be doing it deliberately, not really."
 
     narrator "I can’t find words to argue against her. Was she really wrong? Truly? Despite my hesitation, she presses on."
 
@@ -1912,7 +1986,9 @@ label start:
 
     narrator "My mouth works. I want to say a dozen things, half of them contradicting. They stick and stumble on my tongue, saying nothing. My mind is a hiss of white noise. We’re friends- more- we’re- we’re-"
 
-    narrator "Plumeria smiles gently. Her eyes seem terribly distant. They’re windows into prehistoric forest, the green of leaves hiding what lies among the roots. Her voice is slow and calm, as if she didn’t want to spook an animal."
+    narrator "Plumeria smiles gently. Her eyes seem terribly distant. They’re windows into prehistoric forest, the green of leaves hiding what lies among the roots."
+
+    narrator "Her voice is slow and calm, as if she didn’t want to spook an animal."
 
     plumeria "I didn’t want to scare you away, or push you into something you didn’t really want. But you were going to go away, and I couldn’t wait any longer to see if you were ever going to do something about it."
 
@@ -2023,7 +2099,9 @@ label start:
 
     foxglove "I will, Grandmother. ...Thanks."
 
-    narrator "I open my mouth to say something more and hesitate, unsure of what I even wanted to say in the first place. I’m saved from my indecision by Plume coming out of our room, a couple of backpacks in hand and coats draped over her forearms."
+    narrator "I open my mouth to say something more and hesitate, unsure of what I even wanted to say in the first place."
+
+    narrator "I’m saved from my indecision by Plume coming out of our room, a couple of backpacks in hand and coats draped over her forearms."
 
     plumeria "Alright, let’s make a move."
 
@@ -2036,13 +2114,17 @@ label start:
     show plumeria at right
     with fade
 
-    narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps. The faint burn in my thighs from climbing is nothing in comparison to the first attempt, now, and I stomp my way up with a steady tread."
+    narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps."
+
+    narrator "The faint burn in my thighs from climbing is nothing in comparison to the first attempt, now, and I stomp my way up with a steady tread."
 
     narrator "Plume and I don’t talk much. Perhaps she can sense my determination; perhaps she’s just saving her breath for the trail."
 
     narrator "I find myself casting constant glances at the sky. It’s almost entirely clear, with only a thin grey ache of clouds in the distance, but I’ve been told enough that the weather can change in a heartbeat up the heights."
 
-    narrator "We pause for lunch at the little plateau among the orchids. Frost beads like jewelled spider webs across the leaves and fat-bodied petals. Looking at them now, I notice the fine hairs on every leaf. I guess even plants have fur if it’s cold enough."
+    narrator "We pause for lunch at the little plateau among the orchids. Frost beads like jewelled spider webs across the leaves and fat-bodied petals."
+
+    narrator "Looking at them now, I notice the fine hairs on every leaf. I guess even plants have fur if it’s cold enough."
 
     narrator "Perhaps regretting her own lack thereof, Plume is sitting with her hands curled around a cup. Steam dances from the top of it like winter ghosts."
 
@@ -2070,7 +2152,9 @@ label start:
 
     narrator "The snow on the ground becomes thicker, changing from winter precipitation to permafrost. It crunches under our steps, unmarked and unsullied before our boots."
 
-    narrator "It’s perhaps mid-afternoon by the time we reach the Aumic Temple. The mountain here had a sort of slot carved out of it, long ago, by the final battles of the gods, and the Temple sits in like a wedge in the cleft in the stone."
+    narrator "It’s perhaps mid-afternoon by the time we reach the Aumic Temple."
+
+    narrator "The mountain here had a sort of slot carved out of it, long ago, by the final battles of the gods, and the Temple sits in like a wedge in the cleft in the stone."
 
     scene bg aumic temple day
     show foxglove at left    
@@ -2089,7 +2173,9 @@ label start:
 
     narrator "I unsling my bag and tuck it in one of the chambers. No sense dragging our sleeping gear up the mountain just to bring it back down a little bit later. Plume’s still got the essentials."
 
-    narrator "With no divine toe to provide horrible but useful warmth, it’s just as cold inside as it is outside, and with time ticking, we don’t have much reason to stay. We can have a proper look at the frescoes and statues tomorrow."
+    narrator "With no divine toe to provide horrible but useful warmth, it’s just as cold inside as it is outside, and with time ticking, we don’t have much reason to stay."
+
+    narrator "We can have a proper look at the frescoes and statues tomorrow."
 
     narrator "Decided, we move on."
     
@@ -2123,7 +2209,9 @@ label start:
 
     foxglove "Spirits?"
 
-    narrator "I call, and immediately feel foolish. Only the breeze, sharp and astringent, moves the world around us. Plume waits a moment longer for ancient creatures of myth to spring out from behind a boulder, then shrugs."
+    narrator "I call, and immediately feel foolish. Only the breeze, sharp and astringent, moves the world around us."
+
+    narrator "Plume waits a moment longer for ancient creatures of myth to spring out from behind a boulder, then shrugs."
 
     plumeria "We can check tomorrow morning before we head back down."
 
@@ -2134,7 +2222,9 @@ label start:
 
     narrator "The giant body of the god lies dead and still before us. No snow settles on his crystalline flesh, melting away silently like a dream whenever flakes settle on the divine cadaver."
 
-    narrator "I can see the terrible rift in it, where something I can’t imagine had sliced open the chest of him and cast him down. A great empty hollow sits exposed where the heart would be. Was this what killed the god, in the end?"
+    narrator "I can see the terrible rift in it, where something I can’t imagine had sliced open the chest of him and cast him down."
+
+    narrator "A great empty hollow sits exposed where the heart would be. Was this what killed the god, in the end?"
 
     narrator "There’s a feeling in the air - almost a sound, but not quite. I don’t hear it with my ears, but with my soul. It feels-"
 
@@ -2142,7 +2232,9 @@ label start:
 
     narrator "Sad, perhaps. A deep and aching grief. An echo of a pain faded but never quite gone. A regret so potent it’s stained the very world and never washed away and never will."
 
-    narrator "Kalarlomoth, a thousand years destroyed, still seeps his sorrow into the mountain. It seeps into me, caught in the air like stars in the distant heavens, like dust in an abandoned home breathed in now the air was stirred."
+    narrator "Kalarlomoth, a thousand years destroyed, still seeps his sorrow into the mountain."
+
+    narrator "It seeps into me, caught in the air like stars in the distant heavens, like dust in an abandoned home breathed in now the air was stirred."
 
     narrator "My feet carry me around the colossal wreck. Finally I reach the head, the great smooth plane of the face. What I think might be eyes are closed. I don’t know if I should be glad or not for that."
 
@@ -2204,7 +2296,9 @@ label start:
 
     # TODO: the wind becomes DEAFENING here sfx
 
-    narrator "It’s not far back down the trail when the wind abruptly kicks up, hard enough I stagger against the sudden force. Plume cries out in surprise. Ice shrieks as it's pulled from the ground, whirling around us trapped in the eye of the storm."
+    narrator "It’s not far back down the trail when the wind abruptly kicks up, hard enough I stagger against the sudden force. Plume cries out in surprise."
+
+    narrator "Ice shrieks as it's pulled from the ground, whirling around us trapped in the eye of the storm."
 
     plumeria "What the h- when they say weather changed quick, I didn’t think they meant this quick!"
 
@@ -2267,15 +2361,21 @@ label start:
 
     plumeria "Get back!"
 
-    narrator "She thrusts it towards them, and they drift back a little where she jabs, floating closer where she doesn’t. She’s panting harshly, her eyes wide and terrified in the flare-light. She tugs at my shoulder."
+    narrator "She thrusts it towards them, and they drift back a little where she jabs, floating closer where she doesn’t."
+
+    narrator "She’s panting harshly, her eyes wide and terrified in the flare-light. She tugs at my shoulder."
 
     plumeria "Come on, get up! We’re going! Don’t try to stop us!"
 
     narrator "All around us, the inhuman creatures close in, the teeth in a tremendous set of jaws."
 
-    narrator "One lunges from behind, a hissing, embodied avalanche, and Plumeria cries out as she whirls. The flare strikes it in the face and it staggers back, emitting an awful, cracking shriek, a breaking ice sheet, but the flare gutters and another spirit reaches forward."
+    narrator "One lunges from behind, a hissing, embodied avalanche, and Plumeria cries out as she whirls."
 
-    narrator "It doesn’t claw or rend Plumeria. It simply places a hand on her chest. The colour drops from her face. Blue spreads on her lips like a bruise. Without a word, she collapses backwards into the snow. The flare goes out. The contrast leaves me blinded."
+    narrator "The flare strikes it in the face and it staggers back, emitting an awful, cracking shriek, a breaking ice sheet, but the flare gutters and another spirit reaches forward."
+
+    narrator "It doesn’t claw or rend Plumeria. It simply places a hand on her chest. The colour drops from her face. Blue spreads on her lips like a bruise."
+
+    narrator "Without a word, she collapses backwards into the snow. The flare goes out. The contrast leaves me blinded."
 
     foxglove "Plu-Plume..."
 
@@ -2289,7 +2389,9 @@ label start:
 
     foxglove "N-no..."
 
-    narrator "I grip the cap. It shifts, grates against the tip, ready to spark. The motion takes a thousand years. I am cold beyond cold. Plumeria is motionless. The shadows pool in her eyes and make a funeral mask of her face."
+    narrator "I grip the cap. It shifts, grates against the tip, ready to spark. The motion takes a thousand years. I am cold beyond cold."
+
+    narrator "Plumeria is motionless. The shadows pool in her eyes and make a funeral mask of her face."
 
     narrator "Oh, dead and distant gods, let her live."
     
@@ -2306,7 +2408,9 @@ label start:
 
     narrator "The spirits scream, a furious animal sound, wrenching themselves backwards in great jagged motions away from the incense, their immortal grace melting away."
 
-    narrator "I force down coughs from the acrid smoke and scream back. Abruptly I am no longer scared - no, I am, but it’s buried beneath a great red fury, that these monsters would decide I belong to them, that they’d try and hurt my dearest and most important person."
+    narrator "I force down coughs from the acrid smoke and scream back."
+
+    narrator "Abruptly I am no longer scared - no, I am, but it’s buried beneath a great red fury, that these monsters would decide I belong to them, that they’d try and hurt my dearest and most important person."
 
     narrator "I snatch up the third flare and it comes into furious crimson life beneath my grip. I hurl it at the spirits and they flinch away from it, reflexive and phobic, a brand splitting the dark."
 
@@ -2316,7 +2420,9 @@ label start:
 
     foxglove "So leave us alone!"
 
-    narrator "I wind back my arm and throw the last flare. It flies straight and true and cracks against the leading spirit’s head, bursting in a shower of ruddy incandescent sparks. The spirit screeches and retreats, and the others follow, disappearing into the mist."
+    narrator "I wind back my arm and throw the last flare. It flies straight and true and cracks against the leading spirit’s head, bursting in a shower of ruddy incandescent sparks."
+
+    narrator "The spirit screeches and retreats, and the others follow, disappearing into the mist."
 
     # TODO: stop flare SFX
     scene bg pilgrims path night
@@ -2360,13 +2466,10 @@ label start:
 
     narrator "I don’t really know. I don’t really know what to do."
 
-    # TODO: foil blanket crinkle oneshot sfx
-
     narrator "I pull out the survival blanket, unfolding the crinkling foil, and wrap Plumeria in it. I turn to the fireplace, scraping out the snow that had come down the chimney with my hand."
 
     narrator "The hewed logs from before are of course still there, and I pile them and kindling in before I strike a match. The first breaks, and the second, and I nearly scream with frustration before the third catches."
 
-    # TODO: fire roar oneshot sfx
     # TODO: fire crackling sfx
     scene bg cabin lit night
     show foxglove at left    
@@ -2420,7 +2523,9 @@ label start:
 
     plumeria "I had a dream not far off this the other night as well."
 
-    narrator "For a long moment, I’m dumbstruck. I stare at her, and she looks back, already returning to her signature look of confident amusement. A laugh shudders its way out my mouth involuntarily, and I let my head fall forward to rest against her shoulder."
+    narrator "For a long moment, I’m dumbstruck. I stare at her, and she looks back, already returning to her signature look of confident amusement."
+
+    narrator "A laugh shudders its way out my mouth involuntarily, and I let my head fall forward to rest against her shoulder."
 
     plumeria "Oh, my gods. Now I really do know you’re feeling better."
 
@@ -2434,13 +2539,17 @@ label start:
 
     foxglove "If you’d died, I would have- I don’t know. I’m just- I’m just so glad you’re not dead."
 
-    narrator "I feel her chuckle rumble in her chest. Before, there was no time for embarrassment, but now, it seems, there’s space on the clock. She pulls back to look me in the eye. The firelight frames her face through gaps in the green hair hanging down like a curtain."
+    narrator "I feel her chuckle rumble in her chest. Before, there was no time for embarrassment, but now, it seems, there’s space on the clock."
+
+    narrator "She pulls back to look me in the eye. The firelight frames her face through gaps in the green hair hanging down like a curtain."
 
     plumeria "I’m pretty glad I’m not dead, too. Same for you, too. I’m happy to see you’re not a walking ice sculpture."
 
     foxglove "Well, not for the most part, anyway."
 
-    narrator "I wiggle one of my hands up to my mouth and use my teeth to pull off a glove. She frowns down at my transfigured hand. I can see her refracted through the translucent digits, and she gently takes hold of them with her own."
+    narrator "I wiggle one of my hands up to my mouth and use my teeth to pull off a glove. She frowns down at my transfigured hand."
+
+    narrator "I can see her refracted through the translucent digits, and she gently takes hold of them with her own."
 
     plumeria "How do they feel?"
 
@@ -2491,7 +2600,9 @@ label start:
 
         narrator "She’s gently but firmly pulled my head forward. Her lips press against mine, muffling my words. They’re soft, and warm, and it sends prickles of weird heat radiating through me from the very core."
 
-        narrator "She kisses me again, and again, and again, until I’m half-dazed with it. Finally, she pulls back a little. I pant softly as my lips are freed. Her own are red and kiss-swollen. She grins, pure Plumeria mischief written on it."
+        narrator "She kisses me again, and again, and again, until I’m half-dazed with it. Finally, she pulls back a little."
+
+        narrator "I pant softly as my lips are freed. Her own are red and kiss-swollen. She grins, pure Plumeria mischief written on it."
 
         plumeria "Left you breathless, huh?"
 
@@ -2576,9 +2687,13 @@ label start:
     show foxglove at left    
     with fade
 
-    narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant. My back clicks horribly as I stretch from where I’ve slept on the hard floor."
+    narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant."
 
-    narrator "The light in the little shelter is dim, mottled red-blue from the light peeking through the door slats and the little fire burning in the hearth. Cold air whispers around my shoulders, reminding me of my nakedness and-"
+    narrator "My back clicks horribly as I stretch from where I’ve slept on the hard floor."
+
+    narrator "The light in the little shelter is dim, mottled red-blue from the light peeking through the door slats and the little fire burning in the hearth."
+
+    narrator "Cold air whispers around my shoulders, reminding me of my nakedness and-"
 
     foxglove "Plume?!"
 
@@ -2607,7 +2722,9 @@ label start:
 
     narrator "She frees up some space and pulls out a thermos flask."
 
-    plumeria "Well, it wasn’t me they wanted - I figured they’d given up. Besides, I was prepared. I put a bit of incense in here, let it fill with the smoke. If they came at me, I’d unscrew the lid, let out the smoke, and bam. No more spirits."
+    plumeria "Well, it wasn’t me they wanted - I figured they’d given up. Besides, I was prepared."
+
+    plumeria "I put a bit of incense in here, let it fill with the smoke. If they came at me, I’d unscrew the lid, let out the smoke, and bam. No more spirits."
 
     narrator "I frown at the flask."
 
@@ -2683,7 +2800,9 @@ label start:
 
     plumeria "Got to have something to stop people from nicking it to eat, I suppose."
 
-    narrator "After suffering through as much of the horrible chocolate as I can stomach, I sit back for a moment to let Plume finish hers off. Finally, even she’s had as much as she can force, and she pockets the rest with a reluctant expression."
+    narrator "After suffering through as much of the horrible chocolate as I can stomach, I sit back for a moment to let Plume finish hers off."
+
+    narrator "Finally, even she’s had as much as she can force, and she pockets the rest with a reluctant expression."
 
     foxglove "I guess we’ll need to work out who to tell to get it replaced, right? I hope it’s not too expensive."
 
@@ -2698,7 +2817,9 @@ label start:
 
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
 
-    narrator "Nothing; it hasn’t even really snowed last night, and the groundcover is still lumpy and broken from our movements. In a sudden moment of irrational doubt, I pull back a glove and peek at my crystalline fingers, just to be sure that it did happen."
+    narrator "Nothing; it hasn’t even really snowed last night, and the groundcover is still lumpy and broken from our movements."
+
+    narrator "In a sudden moment of irrational doubt, I pull back a glove and peek at my crystalline fingers, just to be sure that it did happen."
 
     narrator "As we retrace our steps back down the mountain, though, nothing appears. I look back up the mountain, over and over, and see no malignant ice-being sweeping down like an avalanche."
 
@@ -2733,7 +2854,9 @@ label start:
 
     narrator "Climbing up and down the mountain would have been enough on their own, but dragging Plume through the snow and then our... activity... afterwards had given my muscles work all of their own."
 
-    narrator "It feels profoundly weird walking through the streets with life going on as normal. It feels like people should know, somehow - but to them, we’re probably just two tourists towards the end of the season, walking arm in arm."
+    narrator "It feels profoundly weird walking through the streets with life going on as normal."
+
+    narrator "It feels like people should know, somehow - but to them, we’re probably just two tourists towards the end of the season, walking arm in arm."
 
     narrator "My Grandmother’s front door makes a welcome sight. I have to stop myself from rushing as I fumble for the latch and throw it open, stamping inside eagerly."
    
@@ -2755,7 +2878,9 @@ label start:
 
     grandma "What happened?"
 
-    narrator "Before I can offer a word in explanation, we’re shepherded into the living room and made to sit. We wait in silence while she makes cups of strong, hot tea and brings them in. She looks between us, and then adds a measured shot of brandy to each."
+    narrator "Before I can offer a word in explanation, we’re shepherded into the living room and made to sit."
+
+    narrator "We wait in silence while she makes cups of strong, hot tea and brings them in. She looks between us, and then adds a measured shot of brandy to each."
 
     grandma "Now. Talk."
 
@@ -2763,7 +2888,11 @@ label start:
 
     narrator "I talk about Plume and having to heat her up - though I leave off the precise details there, and desperately pray the tinge of my cheeks as I skip over it is blamed on the brandy."
 
-    narrator "Grandmother listens to it all with a hard frown, interrupting rarely. She makes me take off my gloves and inspects my transmuted fingers, tapping at them with a fingernail and asking what I can feel before letting them go, seemingly satisfied they’re not about to immediately drop off."
+    narrator "Grandmother listens to it all with a hard frown, interrupting rarely."
+
+    narrator "She makes me take off my gloves and inspects my transmuted fingers."
+
+    narrator "She taps at them with a fingernail, asking what I can feel before letting them go, seemingly satisfied they’re not about to immediately drop off."
 
     narrator "Finally, we finish. The room is silent, only the clock on the mantlepiece clicking and the low rustling of the fire."
 
