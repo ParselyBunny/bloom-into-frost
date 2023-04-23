@@ -22,15 +22,20 @@ image plumeria:
     "character/plumeria.png"
     zoom .38
 
+# Define "ambience" sound channel, mixed with music slider, and it loops by default
+init python:
+    renpy.music.register_channel("ambience", "music", True)
+
 
 # The game starts here.
 
 label start:
 
+    play music "audio/music/Terminal.mp3" noloop volume 6.0
+
     narrator "When I was twenty-one, I visited my grandmother for the first time."
-    
-    #play music "audio/illurock.ogg" fadeout 1.0 fadein 1.0
-    # TODO: train chug sfx
+
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 2.0
     
     scene bg train night
     with fade
@@ -85,8 +90,10 @@ label start:
 
     narrator "The sightlines to our destination are clear. The Feallan Mountains had come into view."
 
-    # "The mountains with a dead god are seen."
+    stop ambience fadeout 1.0
+
     scene bg train dead god night
+    with fade
 
     narrator "Yeah. It was an impressive sight."
 
@@ -96,11 +103,11 @@ label start:
 
     narrator "The voice of the train conductor comes over the speakers, thick and crackly to near incoherence."
 
-    # TODO: play audio of announcement
+    play sound ["<silence 0.2>", "audio/oneshot/pa scary.mp3"] volume 0.2
 
     announcer "Approaching Godigsfel station."
 
-    # TODO: Back to train. Background shows mountains.
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0
     
     scene bg train night
     with fade
@@ -132,7 +139,10 @@ label start:
     narrator "She gives a huff of amused exasperation."
     
     # TODO: train brakes SFX
-    
+
+    stop ambience fadeout 6.0
+    play ambience "audio/ambience/train station.mp3" fadein 5.0 volume 0.6
+
     scene bg train station night
     with fade
     
@@ -142,9 +152,11 @@ label start:
 
     narrator "The station wasn’t that much brighter than the train. The lights are dim and flicker fitfully, fluffy wintermoths clustering around them in frantic swirls."
 
-    narrator "The snow has stopped for the moment. The air is clear and sharp as glass. Compared to the sea air back home, the absence of salt is startlingly present. I take a moment to breathe it in"
+    narrator "The snow has stopped for the moment. The air is clear and sharp as glass. Compared to the sea air back home, the absence of salt is startlingly present. I take a moment to breathe it in."
 
     narrator "Plumeria is staring up at the lights and their attendant clouds of cottonball shaped moths, each bug fruitlessly clacking its head on the glass."
+
+    play sound [ "<silence 2.5>", "audio/oneshot/pa informative.mp3" ] volume 0.85
 
     narrator "Her breaths expand into great misty clouds that dissolve into the air."
 
@@ -214,7 +226,7 @@ label start:
 
     plumeria "And you have no sense of proper temperature."
 
-    narrator "It’s a little too small on her to actually wear it, so my coat becomes a cape instead. Without it, even I find it a little cold."
+    narrator "I consider for a second, before I slide my coat off and drape it round her shoulders. "
 
     narrator "It’s a little too small on her to actually wear it, so my coat becomes a cape instead. Without it, even I find it a little cold."
 
@@ -230,6 +242,9 @@ label start:
 
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
 
+    stop ambience fadeout 1.5
+    play music [ "<silence 1.75>", "audio/music/Harlequin.mp3" ] volume 0.5
+    # TODO: fade down noise, bring up some music?
     # "[grandmother sprite appears midsentence]"
     show grandma at center
 
@@ -475,6 +490,8 @@ label start:
     # Day 1
     scene bg bedroom day
     with fade
+
+    play music "audio/music/Danse_Morialta.mp3" loop
 
     narrator "The morning comes, as they tend to do, quicker than I expect. I’ve slept surprisingly well, even though I wake up with Plumeria’s elbow lodged in my ribs."
 
@@ -2501,6 +2518,8 @@ label start:
 
     plumeria "What’s...?"
 
+    play music "audio/music/Feather_Waltz.mp3" noloop
+
     foxglove "Plume! Oh, thank- thank the gods-"
 
     narrator "She wriggles around in my grip. At the sight of her face, colour mostly returned, heavy bags under her eyes, I feel tears begin to well up in my eyes."
@@ -3037,6 +3056,8 @@ label start:
     plumeria "I guess we won’t be back. Best not to push our luck with those spooky icicles, right?"
 
     narrator "The sheer irreverence forces a chuckle out my mouth."
+
+    play music "audio/music/Terminal.mp3" fadein 1.0 noloop
 
     foxglove "Yeah. All the same, I think I’ll see Grandmother again. Maybe once spring comes."
 
