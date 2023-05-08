@@ -25,6 +25,7 @@ image plumeria:
 # Define "ambience" sound channel, mixed with music slider, and it loops by default
 init python:
     renpy.music.register_channel("ambience", "music", True)
+    renpy.music.register_channel("ambience2", "music", True)
 
 
 # The game starts here.
@@ -35,7 +36,7 @@ label start:
 
     narrator "When I was twenty-one, I visited my grandmother for the first time."
 
-    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 2.0
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 3.0
     
     scene bg train night
     with fade
@@ -107,7 +108,7 @@ label start:
 
     announcer "Approaching Godigsfel station."
 
-    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 volume 3.0
     
     scene bg train night
     with fade
@@ -138,13 +139,10 @@ label start:
 
     narrator "She gives a huff of amused exasperation."
     
-    # TODO: train brakes SFX
-
     stop ambience fadeout 6.0
-    play ambience "audio/ambience/train station.mp3" fadein 5.0 volume 0.6
-
     scene bg train station night
     with fade
+    play ambience "audio/ambience/train station.mp3" fadein 5.0 volume 0.6
     
     show foxglove at left    
     show plumeria at right
@@ -244,7 +242,6 @@ label start:
 
     stop ambience fadeout 1.5
     play music [ "<silence 1.75>", "audio/music/Harlequin.mp3" ] volume 0.5
-    # TODO: fade down noise, bring up some music?
     # "[grandmother sprite appears midsentence]"
     show grandma at center
 
@@ -342,8 +339,10 @@ label start:
 
     narrator "We get."
     
+    stop music fadeout 1.0
     scene bg streets night
     with fade
+    play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 5.0 loop
     
     show foxglove at left    
     show plumeria at right
@@ -436,8 +435,10 @@ label start:
 
     grandma "Just an old superstition now. Now get inside, if you would."
     
+    stop music fadeout 1.0
     scene bg home night
     with fade
+    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
     
     show foxglove at left    
     show plumeria at right
@@ -478,6 +479,8 @@ label start:
     narrator "My voice is a quiet murmur."
 
     plumeria "Hmm?"
+    
+    stop music fadeout 5.0
 
     foxglove "Why did you come with me?"
 
@@ -491,7 +494,7 @@ label start:
     scene bg bedroom day
     with fade
 
-    play music "audio/music/Danse_Morialta.mp3" loop
+    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
 
     narrator "The morning comes, as they tend to do, quicker than I expect. I’ve slept surprisingly well, even though I wake up with Plumeria’s elbow lodged in my ribs."
 
@@ -544,6 +547,8 @@ label start:
 
     grandma "A key is in the biscuit tin on the side, there. Lock the door if you leave."
 
+    #TODO: hide grandma
+
     narrator "I hear her sharp steps fade."
 
     plumeria "Your grandma is the most intense old lady I’ve ever met, gods above. I thought she was about to pull my soul right out of my body just then."
@@ -567,8 +572,10 @@ label start:
     plumeria "Come on. Get ready and let’s have a look around town."
 
     # "Scene: city streets during the day"
+    stop music fadeout 1.0
     scene bg streets day
     with fade
+    play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 3.0
     
     show foxglove at left    
     show plumeria at right
@@ -588,6 +595,7 @@ label start:
 
     narrator "-and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
 
+    # music continues
     scene bg streets night
     show foxglove at left    
     show plumeria at right
@@ -616,10 +624,12 @@ label start:
     narrator "Plume laughs, a velvety chuckle. She has a nice laugh, I’ve noticed over the years we’ve spent together as roommates; easy and gentle."
 
     plumeria "I do wonder about mine, sometimes."
-    
+
     # Day 2
+    stop music fadeout 1.0
     scene bg home day
     with fade
+    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
     
     show foxglove at left    
     show plumeria at right
@@ -720,8 +730,10 @@ label start:
 
     grandma "Good."
     
+    stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
+    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0 loop
     
     show foxglove at left    
     show plumeria at right
@@ -731,16 +743,20 @@ label start:
 
     narrator "The flinty grey stone blocks, wide enough for a procession, were worn lumpy and sagging by a thousand years of footfalls; every step curved like a cross-section of a bowl towards the middle."
 
-    narrator "All the same, they look steep and horrible, and this was just the least of it. Next to them, a large board depicts the journey of any would-be faith-seekers."
-
-    plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
-
+    narrator "All the same, they look steep and horrible, and this was just the least of it."
+    
     # "A map of the Pilgrim’s Path is shown."
     scene cg pilgrims path map day
+    with fade
+    
+    narrator "Next to them, a large board depicts the journey of any would-be faith-seekers."
+
+    plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
 
     foxglove "So the stairs last all the way up to the... Chapel of the Nail? It's not, like... A toenail of it, is it?"
     
     scene bg pilgrims path day
+    with fade
     show foxglove at left    
     show plumeria at right
 
@@ -1022,10 +1038,12 @@ label start:
     narrator "I look at the time-worn stairs and remember the aches along my calves."
 
     foxglove "Alright, well. Let’s get this over with."
-    
+
     # Day 3
+    stop ambience fadeout 1.0
     scene bg home night
     with fade
+    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
     
     show foxglove at left    
     show plumeria at right
@@ -1044,9 +1062,11 @@ label start:
 
     narrator "Somehow, the conversation turns to war. My grandmother ponders for a moment, then rises and disappears into her room."
 
-    # TODO: box latching sfx
-
-    narrator "When she reemerges a few minutes later, she’s holding a small metal case. Placing it on the table carefully, she clicks the latches and flips it open."
+    narrator "When she reemerges a few minutes later, she’s holding a small metal case."
+   
+    play sound "audio/oneshot/case open.mp3" volume 1.0
+   
+    narrator "Placing it on the table carefully, she clicks the latches and flips it open."
 
     plumeria "Oh!"
 
@@ -1074,7 +1094,11 @@ label start:
     # "[Pick it up]"
     label pick_up:
 
-        narrator "I look to Plumeria, and she shakes her head slightly. I reach into the box and pick it up, blinking at the weight of it."
+        narrator "I look to Plumeria, and she shakes her head slightly."
+        
+        #play sound "audio/oneshot/gun handling.mp3" volume 1.0
+        
+        narrator "I reach into the box and pick it up, blinking at the weight of it."
 
         narrator "The grip is coarse against my palm, and fits neatly; all the same, I hold it awkwardly, unsure how to heft it properly."
 
@@ -1114,7 +1138,7 @@ label start:
 
     grandma "Hmmph. I wonder. As a reminder, perhaps."
     
-    # TODO: box latching sfx
+    play sound "audio/oneshot/case close.mp3" volume 1.0
 
     narrator "She shuts the box, the latches clack-clacking, but doesn't take it away. One hand beats a pattern on the top like it was recalling some distant marching drum."
 
@@ -1178,6 +1202,8 @@ label start:
 
     narrator "The conversation leaves me weirdly melancholic."
     
+    stop music fadeout 5.0
+    
     scene bg bedroom night
     with fade
     
@@ -1227,6 +1253,7 @@ label start:
 
     narrator "Trying to break her hold might wake her up, I reasoned. Best to lie still."
     
+    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0
     # Day 6
     scene bg pilgrims path day
     with fade
@@ -1361,8 +1388,10 @@ label start:
 
     narrator "Neither of us say anything for a while."
 
+    stop ambience fadeout 1.0
     scene bg bedroom night
     with fade
+    play music "audio/music/Danse Morialta.mp3" fadein 5.0
     
     show foxglove at left    
     show plumeria at right
@@ -1521,10 +1550,12 @@ label start:
     narrator "If she does, she doesn’t say a word. Her breathing is slow and steady."
 
     narrator "She’s asleep."
-
+    
     # Day 7
+    stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
+    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0
     
     show foxglove at left    
     show plumeria at right
@@ -1536,7 +1567,10 @@ label start:
     
     narrator "Plume picks up on it, of course, and I pretend not to see her questing looks."
 
+    stop ambience fadeout 1.0
     scene bg streets night
+    play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 5.0
+    
     show foxglove at left    
     show plumeria at right
     with fade
@@ -1561,8 +1595,11 @@ label start:
 
     narrator "Cheerfully, she strides to the door and pushes it open, letting me go first with mock gallantry."
 
-    # TODO: bar noise
+    stop music fadeout 1.0
     scene bg bar
+    with fade
+    play ambience "audio/ambience/bar chatter.mp3" fadein 5.0 loop volume 0.7
+    
     show foxglove at left    
     show plumeria at right
     with fade
@@ -1597,7 +1634,9 @@ label start:
 
     narrator "One of them only has a single woman in it, who looks up as I wander up. She considers me for a second, then gestures to the seat opposite. I hesitate a moment, then take it."
 
-    narrator "The woman is pretty cute. Obviously a northerner, with heavy, downwards-kinked horns and startling dark hair and eyes. A pale hand plays with half-empty beer glass. The pale gold fluid inside sloshes too and fro, leaving thin, foamy trails on the sides of it."
+    narrator "The woman is pretty cute. Obviously a northerner, with heavy, downwards-kinked horns and startling dark hair and eyes. A pale hand plays with half-empty beer glass."
+
+    narrator "The pale gold fluid inside sloshes too and fro, leaving thin, foamy trails on the sides of it."
 
     fennel "Hey there! Come here alone?"
 
@@ -1887,7 +1926,11 @@ label start:
 
     narrator "I work my way up from my seat, and together we head for the door, the room wobbling discourteously when I’m trying to balance."
 
+    stop ambience fadeout 1.0
     scene bg streets night
+    with fade
+    play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
+    
     show foxglove at left    
     show plumeria at right
     with fade
@@ -1916,11 +1959,13 @@ label start:
 
     narrator "But she doesn’t let go of my hand."
     
+    stop music fadeout 1.0    
     scene bg home night
+    with fade
+    play music "audio/music/Danse Morialta.mp3" fadein 5.0 loop
+
     show foxglove at left    
     show plumeria at right
-    with fade
-    
     show grandma at center
     with fade
 
@@ -1948,6 +1993,8 @@ label start:
     plumeria "...Yeah?"
 
     narrator "I glance over her way. In the soft gloom, I can only just make out the soft curves of her face. Her eyes are still shut."
+
+    stop music fadeout 5.0
 
     foxglove "Why did you really follow me here?"
 
@@ -2019,11 +2066,15 @@ label start:
 
     plumeria "No, it’s ok. It’s not something you need to be sorry for."
 
-    narrator "There’s a sort of resignation in her tone, and at it something hot and ugly jabs at my stomach. I push myself up until we’re face to face. There’s no distance at all between us. Our noses are practically rubbing. Her face fills the world."
+    narrator "There’s a sort of resignation in her tone, and at it something hot and ugly jabs at my stomach."
+    
+    narrator "I push myself up until we’re face to face. There’s no distance at all between us. Our noses are practically rubbing. Her face fills the world."
 
     foxglove "I’m not- I’m not saying no to anything, ok? Give me - I’ll give you a proper answer. But let- let me think of what to say first, please."
 
     narrator "Her hand cups my cheek, tenderly. At first I think she’s moving in to kiss me, and I shut my eyes in preparation, but she just presses her forehead against mine."
+
+    play music "audio/music/Danse Morialta.mp3" fadein 3.0
 
     narrator "When I peek, her own eyes are shut, and some of the familiar amusement has come back to her features."
 
@@ -2052,15 +2103,21 @@ label start:
 
     narrator "The radio mutters angrily. The voice of the spokesman is a hoarse, rumbling thing, seeming half-way to a snarl."
 
-    radio "...forecast to arrive within the next few days. Heavy rain or snow, depending on location. Authorities have warned those in the path of the storm to prepare. Each household should stock at least a week’s worth of food and water..."
+    radio "...forecast to arrive within the next few days. Heavy rain or snow, depending on location."
+    
+    radio "Authorities have warned those in the path of the storm to prepare. Each household should stock at least a week’s worth of food and water..."
 
     narrator "I listen to the gruff voice of the spokesman with dismay."
 
     grandma "...Hmmph. Looks like you might not be able to climb it after all. A shame, but such is as it is."
 
-    narrator "She’s seated in one of the armchairs in the main room, a cup of steaming tea gently releasing its vapours at her elbow. Her eyes are shut, listening to the radio, and she doesn’t look at us as she talks. Her tone is perfectly matter-of-fact, but I shake my head in denial."
+    narrator "She’s seated in one of the armchairs in the main room, a cup of steaming tea gently releasing its vapours at her elbow."
 
-    narrator "...Her eyes are shut. Plumeria snickers silently at me, and with a quick safety check Grandmother’s eyes are still shut, I make a rude gesture at her. She mimes an exaggerated expression of shock until I roll my eyes and she breaks out into a grin."
+    narrator "Her eyes are shut, listening to the radio, and she doesn’t look at us as she talks. Her tone is perfectly matter-of-fact, but I shake my head in denial."
+
+    narrator "...Her eyes are shut. Plumeria snickers silently at me, and with a quick safety check that Grandmother’s eyes are still shut, I make a rude gesture at her."
+
+    narrator "She mimes an exaggerated expression of shock until I roll my eyes and she breaks out into a grin."
 
     narrator "Trying to stab Plume with my eyes alone, I give a verbal answer instead."
 
@@ -2124,8 +2181,10 @@ label start:
 
     narrator "After a final goodbye, we let ourselves out."
     
+    stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
+    play ambience "audio/ambience/polar wind mild.mp3" fadein 3.0 loop volume 1.0
     
     show foxglove at left    
     show plumeria at right
@@ -2196,7 +2255,8 @@ label start:
 
     narrator "Decided, we move on."
     
-    # TODO: wind noise should increase
+    play ambience2 "audio/ambience/high wind layer.mp3" loop volume 1.0
+    
     scene bg pilgrims path day
     show foxglove at left    
     show plumeria at right
@@ -2311,7 +2371,7 @@ label start:
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
 
-    # TODO: the wind becomes DEAFENING here sfx
+    play sound "audio/oneshot/ice spirits wind.mp3" volume 1.0
 
     narrator "It’s not far back down the trail when the wind abruptly kicks up, hard enough I stagger against the sudden force. Plume cries out in surprise."
 
@@ -2335,6 +2395,8 @@ label start:
     with fade
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
+    
+    play sound "audio/oneshot/ice spirits hiss.mp3" volume 2.0
 
     narrator "Their voice - voices? - ring out about us, every syllable a violent crack of breaking ice. The sound of it is sharp, almost painful, and instinctively I shrink closer to Plumeria."
 
@@ -2344,13 +2406,15 @@ label start:
 
     foxglove "What- what are you talking about? Why did my mother come here? Why did she leave?"
     
-    # TODO: spirit hissing sfx
+    play sound "audio/oneshot/ice spirits hiss.mp3" volume 3.0
 
     narrator "The spirits around us hiss, a sibilant sound of snow sliding on snow. My heart pounds in my throat. Plumeria is staring out at the apparitions about us, her arm half-raised in front of me."
 
     plumeria "Are you going to answer her?"
 
     narrator "Her shout is attempting to be brave, but I can hear the slick undercurrent of fear in it. Her eyes are wide and flicking back and forth."
+
+    play sound "audio/oneshot/ice spirits hiss.mp3" volume 4.0
 
     narrator "The spirits hiss again."
 
@@ -2373,6 +2437,8 @@ label start:
     plumeria "She doesn’t belong to anyone!"
 
     narrator "She scrambles through her bag, spilling the contents into the snow; water bottles and snack bars, a coil of the blue incense, the four cylindrical emergency flares, absurdly candy-red against the snow."
+
+    play sound "audio/oneshot/flare.mp3" volume 1.0
 
     narrator "She snatches one up and cracks it. Abruptly the scene is cast in harsh red light. It hangs on the fog like a mist of blood and turns the spirits to ruby statues, sanguine and merciless."
 
@@ -2412,8 +2478,7 @@ label start:
 
     narrator "Oh, dead and distant gods, let her live."
     
-    # TODO: flare pop oneshot sfx
-    # TODO: flare burning sfx
+    play sound "audio/oneshot/flare.mp3" volume 1.0
 
     narrator "The flare ignites beneath my twisting grip. The monsters around me recoil and begin the lunge, but the split second is enough."
 
@@ -2421,7 +2486,7 @@ label start:
 
     narrator "I topple backwards, coughing. Where my fingers had crystallised, they sting furiously, acidic pinpricks everywhere the smoke touches, but the pain is sensation and life and I seize on it."
 
-    # TODO: spirits scream sfx
+    play sound "audio/oneshot/ice spirits death.mp3" volume 1.0
 
     narrator "The spirits scream, a furious animal sound, wrenching themselves backwards in great jagged motions away from the incense, their immortal grace melting away."
 
@@ -2441,7 +2506,6 @@ label start:
 
     narrator "The spirit screeches and retreats, and the others follow, disappearing into the mist."
 
-    # TODO: stop flare SFX
     scene bg pilgrims path night
     show foxglove at left    
     show plumeria at right
@@ -2469,11 +2533,12 @@ label start:
 
     narrator "I drag her for a thousand years until the little hut looms up. I fumble one handed with the handle, and shoulder open the door, ignoring the bloom of pain from ramming the heavy door."
 
-    # TODO: door slam oneshot sfx
-    # TODO: windows rattling sfx
-    # TODO: muffled, howling wind sfx
+    stop ambience fadeout 1.0
+    stop ambience2 fadeout 1.0
     scene bg cabin dark night
     with fade
+    play sound "audio/oneshot/door slam.mp3" volume 4.0
+    play ambience "audio/ambience/indoor high wind.mp3" fadein 3.0 loop volume 1.0
     
     show foxglove at left    
     show plumeria at right
@@ -2487,7 +2552,8 @@ label start:
 
     narrator "The hewed logs from before are of course still there, and I pile them and kindling in before I strike a match. The first breaks, and the second, and I nearly scream with frustration before the third catches."
 
-    # TODO: fire crackling sfx
+    play ambience2 "audio/ambience/fire crackle louder.mp3" fadein 2.0 loop volume 1.0
+    
     scene bg cabin lit night
     show foxglove at left    
     show plumeria at right
@@ -2510,15 +2576,19 @@ label start:
 
     foxglove "Just be okay..."
 
-    narrator "I don’t know how long I huddle against her, my eyes screwed tightly shut against the world. Slowly, she stops feeling so cold. Finally she stirs. A low, slow groan creeps out her like the hinge on a coffin."
+    narrator "I don’t know how long I huddle against her, my eyes screwed tightly shut against the world."
+
+    stop ambience fadeout 5.0
+    stop ambience2 fadeout 5.0
+    play music "audio/music/Feather Waltz.mp3" volume 5.5 loop
+
+    narrator "Slowly, she stops feeling so cold. Finally she stirs. A low, slow groan creeps out her like the hinge on a coffin."
 
     plumeria "Wha...?"
 
     foxglove "!"
 
     plumeria "What’s...?"
-
-    play music "audio/music/Feather_Waltz.mp3" noloop
 
     foxglove "Plume! Oh, thank- thank the gods-"
 
@@ -2656,7 +2726,9 @@ label start:
 
         narrator "For a moment I search for the words, but then I give a tiny shake of my head. My voice had always failed me before, so I tell her through another way."
 
-        narrator "Gently, nervously, I free my hand from her grip. I run my crystalline fingers down the back of her head, letting the soft green hair trace between my fingers. Plume is very still. Only the soft press of her chest lets me know her heart is still beating."
+        narrator "Gently, nervously, I free my hand from her grip. I run my crystalline fingers down the back of her head, letting the soft green hair trace between my fingers."
+        
+        narrator "Plume is very still. Only the soft press of her chest lets me know her heart is still beating."
 
         narrator "I listen to it, fast and excited. I guess maybe she’s nervous, too."
 
@@ -2699,6 +2771,11 @@ label start:
     # End choice 4
     label choice_4_end:
 
+    stop music fadeout 5.0
+    stop ambience fadeout 5.0
+    stop ambience2 fadeout 5.0
+    play ambience "audio/ambience/polar wind mild.mp3" fadein 8.0 loop
+    
     # Day 9
     scene bg cabin day
     with fade
@@ -2761,7 +2838,9 @@ label start:
 
     plumeria "Hey. Do you still want to go out? Last night was- well, emotions were high, right? I’m not going to hold it against you if you’ve changed your mind."
 
-    narrator "I look up at her face. She’s not smiling, her green gaze steady. I match it for a long moment. She’s putting on a brave face, but I can see the tension in the set of her jaw, the slight furrow of her brow. I smile and then reach up and lightly flick her nose."
+    narrator "I look up at her face. She’s not smiling, her green gaze steady. I match it for a long moment."
+    
+    narrator "She’s putting on a brave face, but I can see the tension in the set of her jaw, the slight furrow of her brow. I smile and then reach up and lightly flick her nose."
 
     plumeria "Wha- hey!"
 
@@ -2862,6 +2941,9 @@ label start:
 
     narrator "When we head further down, I feel lighter, somehow."
     
+    stop ambience fadeout 3.0
+    play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
+    
     scene bg streets night
     with fade
     
@@ -2878,6 +2960,9 @@ label start:
     narrator "It feels like people should know, somehow - but to them, we’re probably just two tourists towards the end of the season, walking arm in arm."
 
     narrator "My Grandmother’s front door makes a welcome sight. I have to stop myself from rushing as I fumble for the latch and throw it open, stamping inside eagerly."
+   
+    stop music fadeout 3.0
+    play music "audio/music/Danse Morialta.mp3" fadein 5.0
    
     scene bg home night
     with fade
@@ -2996,6 +3081,8 @@ label start:
 
     narrator "A moment of awkward wriggling later and we’re ensconced under the covers. My body slots into the curves of hers, her warmth pressing against me."
 
+    stop music fadeout 4.0
+
     foxglove "I’m sorry."
 
     plumeria "Hmm?"
@@ -3017,7 +3104,8 @@ label start:
     narrator "But she doesn’t seem to mind."
     
     # Day 10
-    # TODO: train chug sfx
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 3.0
+    
     scene bg train day
     with fade
     
@@ -3058,6 +3146,7 @@ label start:
     narrator "The sheer irreverence forces a chuckle out my mouth."
 
     play music "audio/music/Terminal.mp3" fadein 1.0 noloop
+    stop ambience fadeout 5.0
 
     foxglove "Yeah. All the same, I think I’ll see Grandmother again. Maybe once spring comes."
 
