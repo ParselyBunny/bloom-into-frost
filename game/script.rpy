@@ -1,17 +1,63 @@
 ﻿# The script of the game goes in this file.
 
+
+init python:
+    # Define "ambience" sound channel, mixed w/music slider, loops by default
+    
+    renpy.music.register_channel("ambience", "music", True)
+    renpy.music.register_channel("ambience2", "music", True)
+    
+    # Define typewriter FX
+    def fox_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/deepclick.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
+    def plumeria_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/buttonclick.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+    
+    def grandma_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/click.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+    
+    # fennel
+    def fennel_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/twangclick.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+    
+    # radio
+    def radio_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/radioclick.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+    
+    # spirit
+    def spirit_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/iceclick.mp3", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
 define narrator = Character(None, color="#ffffff", window_background="gui/textbox.png")
-define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png")
-define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png")
-define grandma = Character("Grandmother", color="#ffffff", window_background="gui/textbox.png")
+define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png", callback=fox_beep )
+define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png", callback=plumeria_beep)
+define grandma = Character("Grandmother", color="#ffffff", window_background="gui/textbox.png", callback=grandma_beep)
 define announcer = Character("Announcer", color="#ffffff", window_background="gui/textbox.png")
-define foxglove_and_plumeria = Character("Foxglove and Plumeria", color="#ffffff", window_background="gui/textbox.png")
-define fennel = Character("Fennel", color="#ffffff", window_background="gui/textbox.png")
-define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png")
-define spirit = Character("Spirit", color="#ffffff", window_background="gui/textbox.png")
+define fennel = Character("Fennel", color="#ffffff", window_background="gui/textbox.png", callback=fennel_beep)
+define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png", callback=radio_beep)
+define spirit = Character("Spirit", color="#ffffff", window_background="gui/textbox.png", callback=spirit_beep)
 
 # Declare images
 image black = "#000"
@@ -21,11 +67,6 @@ image foxglove:
 image plumeria:
     "character/plumeria.png"
     zoom .38
-
-# Define "ambience" sound channel, mixed with music slider, and it loops by default
-init python:
-    renpy.music.register_channel("ambience", "music", True)
-    renpy.music.register_channel("ambience2", "music", True)
 
 
 # The game starts here.
@@ -247,7 +288,9 @@ label start:
 
     grandma "Who isn’t?"
 
-    foxglove_and_plumeria "Gyaghhh!"
+    foxglove "Waaaghhh!"
+    
+    plumeria "Gyaghhh!"
 
     narrator "I clutch at my chest, heart hammering, as I take in the little old woman that’s appeared behind us."
 
@@ -295,9 +338,9 @@ label start:
 
     plumeria "Hey, it’s better than the shed, right? And besides..."
 
-    narrator "Foxglove whispers."
-
-    narrator "Foxglove whispers."
+    narrator "She nudges me with the boniest elbow in the world. I can tell that shit-eating expression."
+    
+    narrator "She’s about to say something terrible and flirtatious, like she always does when she wants to fluster me, and that will make my first impression with my grandmother."
 
     foxglove "I will end you."
 
@@ -1685,7 +1728,9 @@ label start:
 
     fennel "Charmed."
 
-    narrator "There’s a moment of silence as we drink. The beer (or is it ale? I can never remember the difference-) is dark and heavy, and faintly warm. It smells earthy, bringing to mind pine trees, and I stare into the oil-black depths of it before I take a sip."
+    narrator "There’s a moment of silence as we drink. The beer (or is it ale? I can never remember the difference-) is dark and heavy, and faintly warm."
+
+    narrator "It smells earthy, bringing to mind pine trees, and I stare into the oil-black depths of it before I take a sip."
 
     narrator "My mouth fills with the tang of hops, thick and bitter, and I fight back the urge to wince at the overbearing flavour."
 
@@ -1751,7 +1796,9 @@ label start:
 
         fennel "So, you two dating, or what?"
 
-        narrator "I choke. The pressure builds in my throat as I try to avoid hacking up a lung. Beer (or perhaps ale) merrily leaps up into my nasal cavity, stinging wildly. Fennel watches me, hand partly raised in the beginnings of assistance and an expression of amusement."
+        narrator "I choke. The pressure builds in my throat as I try to avoid hacking up a lung. Beer (or perhaps ale) merrily leaps up into my nasal cavity, stinging wildly."
+
+        narrator "Fennel watches me, hand partly raised in the beginnings of assistance and an expression of amusement."
 
         fennel "That a no, then?"
 
@@ -2058,7 +2105,7 @@ label start:
 
     foxglove "Oh, Plume."
 
-    narrator "It’s about all I can say. There’s a horrible, yawing, wretched feeling inside, swallowing anything I want to speak. I slump forwards towards her, hiding my face against her chest.."
+    narrator "It’s about all I can say. There’s a horrible, yawing, wretched feeling inside, swallowing anything I want to speak. I slump forwards towards her, hiding my face against her chest."
 
     foxglove "‘m sorry."
 
