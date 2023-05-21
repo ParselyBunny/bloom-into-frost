@@ -6,46 +6,47 @@ init python:
     
     renpy.music.register_channel("ambience", "music", True)
     renpy.music.register_channel("ambience2", "music", True)
+    renpy.music.register_channel("typewriter", "sound", True)
     
     # Define typewriter FX
     def fox_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/deepclick.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/deepclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
 
     def plumeria_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/buttonclick.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/buttonclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
     
     def grandma_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/click.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/click.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
     
     # fennel
     def fennel_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/twangclick.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/twangclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
     
     # radio
     def radio_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/radioclick.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/radioclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
     
     # spirit
     def spirit_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/iceclick.mp3", channel="sound", loop=True)
+            renpy.music.play("audio/iceclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="typewriter")
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -77,7 +78,7 @@ label start:
 
     narrator "When I was twenty-one, I visited my grandmother for the first time."
 
-    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 3.0
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 loop volume 2.0
     
     scene bg train night
     with fade
@@ -149,7 +150,7 @@ label start:
 
     announcer "Approaching Godigsfel station."
 
-    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 volume 3.0
+    play ambience "audio/ambience/chugga chugga.mp3" fadein 5.0 volume 2.0
     
     scene bg train night
     with fade
@@ -338,7 +339,7 @@ label start:
 
     plumeria "Hey, it’s better than the shed, right? And besides..."
 
-    narrator "She nudges me with the boniest elbow in the world. I can tell that shit-eating expression."
+    narrator "She nudges me with the boniest elbow in the world. I can tell that\nshit-eating expression."
     
     narrator "She’s about to say something terrible and flirtatious, like she always does when she wants to fluster me, and that will make my first impression with my grandmother."
 
@@ -458,9 +459,9 @@ label start:
 
     plumeria "How abou-"
 
-    grandma "Plumeria looks dejected."
+    grandma "No."
 
-    grandma "Plumeria looks dejected."
+    narrator "Plumeria looks dejected."
 
     foxglove "Ah, well, Grandmother, I was wondering - why the blue lanterns?"
 
@@ -590,7 +591,7 @@ label start:
 
     grandma "A key is in the biscuit tin on the side, there. Lock the door if you leave."
 
-    #TODO: hide grandma
+    hide grandma with fade
 
     narrator "I hear her sharp steps fade."
 
@@ -893,7 +894,7 @@ label start:
 
     plumeria "Oh, didn’t you know? I’m part of the university triathlon back home. This is nothing, haha!"
 
-    # "Foxglove is angry"
+    # TODO: angry expression for foxglove
 
     foxglove "..."
 
@@ -1079,6 +1080,8 @@ label start:
     narrator "Outside the air feels deliciously crisp in comparison. Looking back down at the panorama of the town below, I spend a few minutes admiring the view. Eventually, though, I have to stop delaying."
 
     narrator "I look at the time-worn stairs and remember the aches along my calves."
+    
+    narrator "BREAK"
 
     foxglove "Alright, well. Let’s get this over with."
 
@@ -1383,7 +1386,7 @@ label start:
 
     foxglove "Spirits took people as sacrifices?"
 
-    narrator "Foxglove, perhaps seeing my expression, laughs."
+    narrator "Plumeria, perhaps seeing my expression, laughs."
 
     plumeria "Children, according to stories, anyway. Anthropologically speaking, probably a good excuse for leaving unwanted kids on the hillside when you couldn’t feed them."
 
@@ -1525,7 +1528,9 @@ label start:
 
     grandma "Now, it is late. Are you climbing the mountain again tomorrow?"
 
-    foxglove "That was the plan, yeah. ...Sorry. I came all this way to visit you, and I’m spending most of it outside anyway."
+    foxglove "That was the plan, yeah."
+    
+    foxglove "...Sorry. I came all this way to visit you, and I’m spending most of it outside anyway."
 
     narrator "The old woman waves a wrinkled hand dismissively."
 
@@ -1679,7 +1684,7 @@ label start:
 
     narrator "The woman is pretty cute. Obviously a northerner, with heavy, downwards-kinked horns and startling dark hair and eyes. A pale hand plays with half-empty beer glass."
 
-    narrator "The pale gold fluid inside sloshes too and fro, leaving thin, foamy trails on the sides of it."
+    narrator "The pale gold fluid inside sloshes to and fro, leaving thin, foamy trails on the sides of it."
 
     fennel "Hey there! Come here alone?"
 
@@ -2142,7 +2147,7 @@ label start:
     plumeria "As you command. Now, come here - I still need to steal your body warmth."
 
     # day 8
-    scene bg bedroom day
+    scene bg home day
     show foxglove at left
     show plumeria at right
     show grandma at center
@@ -2288,7 +2293,7 @@ label start:
 
     narrator "The walls are covered with carved frescoes, the roof supported with angular statues of the god above. Little side chambers lead to sleeping hollows for pilgrims."
 
-    narrator "The roof is unpleasantly low. Rather than an ordinary building, it’s built like a tunnel, hewed out and repurposed, and I don’t like it much. It feels more like a crypt than a place to stay.."
+    narrator "The roof is unpleasantly low. Rather than an ordinary building, it’s built like a tunnel, hewed out and repurposed, and I don’t like it much. It feels more like a crypt than a place to stay."
 
     foxglove "Staying here tonight?"
 
@@ -2443,14 +2448,20 @@ label start:
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
     
+    spirit "YOU HAVE COME TO US ARRIVED HERE AT LAST"
+    
     play sound "audio/oneshot/ice spirits hiss.mp3" volume 2.0
 
     narrator "Their voice - voices? - ring out about us, every syllable a violent crack of breaking ice. The sound of it is sharp, almost painful, and instinctively I shrink closer to Plumeria."
 
     foxglove "You know who I am?"
+    
+    spirit "CHILD OF THE OATHMAKER OATHBREAKER LIAR"
 
     narrator "The air is so frigid, now. The fog gets thicker, like the spirits have drank the world. We are surrounded by it, like a cocoon of cold."
 
+    spirit "YOU HAVE COME TO US AT LAST"
+    
     foxglove "What- what are you talking about? Why did my mother come here? Why did she leave?"
     
     play sound "audio/oneshot/ice spirits hiss.mp3" volume 3.0
@@ -2464,12 +2475,26 @@ label start:
     play sound "audio/oneshot/ice spirits hiss.mp3" volume 4.0
 
     narrator "The spirits hiss again."
+    
+    spirit "YOU WOULD NOT LIVE"
 
     plumeria "D-don’t threaten-"
+    
+    spirit "THE CHILD WOULD NOT LIVE"
+    
+    spirit "COLD AND DEAD"
+    
+    spirit "SHE CAME TO US IN BARGAIN"
 
     foxglove "What- what bargain?! What are you talking-"
+    
+    spirit "YOU"
+    
+    spirit "LIFE FOR YOU YOUR LIFE FOR US"
 
     narrator "The lead spirit levels an icicle-like finger at my chest. I feel it like a bullet. My blood is icy slush. My organs feel frozen. My heart hammers in a glistening cage."
+
+    spirit "YOU BELONG TO US"
 
     narrator "I slump to my knees in the snow. It’s doing something. In a frantic motion I tear off my gloves. The tips of my fingers are crystalline and clear, the nails a diamond fleck. Like ice. Like a spirit."
 
@@ -2478,6 +2503,8 @@ label start:
     narrator "Plumeria crashes to her knees besides me. She grabs at my hands and looks up to scream at the wintery ghost-figures around us."
 
     plumeria "Stop it! Stop!"
+    
+    spirit "SHE IS OURS BELONGS TO US STAYS WITH US"
 
     narrator "The icy transformation is creeping further up my fingers. My toes tingle ferociously then go numb."
 
@@ -2499,6 +2526,8 @@ label start:
 
     narrator "All around us, the inhuman creatures close in, the teeth in a tremendous set of jaws."
 
+    spirit "WE WILL NOT BE ROBBED"
+    
     narrator "One lunges from behind, a hissing, embodied avalanche, and Plumeria cries out as she whirls."
 
     narrator "The flare strikes it in the face and it staggers back, emitting an awful, cracking shriek, a breaking ice sheet, but the flare gutters and another spirit reaches forward."
@@ -2516,6 +2545,8 @@ label start:
     narrator "Sight returns against the dimness of the fog. The spirits float soundlessly closer. They stare down at me, a wall of frozen bodies all around, close enough I could reach out and touch their angular forms."
 
     narrator "The air rasps daggerlike in my throat. Every breath seems to leave me more airless than before. I force my other hand to the cap of the flare."
+
+    spirit "OURS OURS OURS"
 
     foxglove "N-no..."
 
@@ -2537,6 +2568,8 @@ label start:
 
     narrator "The spirits scream, a furious animal sound, wrenching themselves backwards in great jagged motions away from the incense, their immortal grace melting away."
 
+    spirit "YOU ARE OURS"
+    
     narrator "I force down coughs from the acrid smoke and scream back."
 
     narrator "Abruptly I am no longer scared - no, I am, but it’s buried beneath a great red fury, that these monsters would decide I belong to them, that they’d try and hurt my dearest and most important person."
@@ -2696,6 +2729,8 @@ label start:
     narrator "She hesitates, and then, as delicately as if they might shatter in her grip, presses her lips to the crystal tips on my fingers. As if transferred, the heat blooms in my cheeks instead."
 
     narrator "No more delaying. I’ve survived a near-death experience. I’m already skin-to-skin. She’s been flirting with me for literally years. Come on."
+
+    foxglove "I- I have your answer. Like I promised. If you’d listen."
 
     narrator "Plumeria’s breath hitches in just a little, and then she smiles."
 
