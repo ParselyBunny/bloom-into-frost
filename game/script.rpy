@@ -1080,8 +1080,6 @@ label start:
     narrator "Outside the air feels deliciously crisp in comparison. Looking back down at the panorama of the town below, I spend a few minutes admiring the view. Eventually, though, I have to stop delaying."
 
     narrator "I look at the time-worn stairs and remember the aches along my calves."
-    
-    narrator "BREAK"
 
     foxglove "Alright, well. Let’s get this over with."
 
