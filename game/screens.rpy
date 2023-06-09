@@ -358,6 +358,9 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add gui.snow_100
+    add gui.snow_59
+    add gui.snow_25
 
     ## This empty frame darkens the main menu.
     frame:

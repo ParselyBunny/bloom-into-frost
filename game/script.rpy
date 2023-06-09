@@ -54,25 +54,40 @@ init python:
 define narrator = Character(None, color="#ffffff", window_background="gui/textbox.png")
 define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png", callback=fox_beep )
 define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png", callback=plumeria_beep)
-define grandma = Character("Grandmother", color="#ffffff", window_background="gui/textbox.png", callback=grandma_beep)
+define grandma = Character("Grandmother", color="#ffffff", window_background="gui/gdmtextbox.png", callback=grandma_beep)
 define announcer = Character("Announcer", color="#ffffff", window_background="gui/textbox.png")
-define fennel = Character("Fennel", color="#ffffff", window_background="gui/textbox.png", callback=fennel_beep)
+define fennel = Character("Fennel", color="#ffffff", window_background="gui/fnltextbox.png", callback=fennel_beep)
 define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png", callback=radio_beep)
 define spirit = Character("Spirit", color="#ffffff", window_background="gui/textbox.png", callback=spirit_beep)
 
-# Declare images
+# Define images
 image black = "#000"
 image foxglove:
     "character/foxglove.png"
     zoom .33
 image plumeria:
     "character/plumeria.png"
-    zoom .38
+    zoom .36
+image grandma:
+    "character/grandma.png"
+    zoom .45
+image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
+image snow_59 = SnowBlossom("snow_59.png", count=500, xspeed=50, yspeed=200, start=10)
+image snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, start=10)
+
+# Define transforms
+transform center:
+    xalign 0.5
+    ypos 0.05
 
 
 # The game starts here.
 
 label start:
+
+    show snow_100
+    show snow_59
+    show snow_25
 
     play music "audio/music/Terminal.mp3" noloop volume 6.0
 
@@ -240,7 +255,7 @@ label start:
 
     narrator "From the little I remember, ours say the gods took theirs for the same reasons. What a stupid thing to hate each other for. I turn my gaze away before I can be considered staring."
 
-    narrator "The only other person about is a  cute-looking girl, about my age. If this is my grandmother, she’s sure aged well. I wonder if she’s a local? Her horns have that downwards curve common in the north."
+    narrator "The only other person about is a cute-looking girl, about my age. If this is my grandmother, she’s sure aged well. I wonder if she’s a local? Her horns have that downwards curve common in the north."
 
     plumeria "Checking out girls already? You sure move fast, huh."
 
@@ -620,10 +635,6 @@ label start:
     scene bg streets day
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 3.0
-    
-    show foxglove at left    
-    show plumeria at right
-    with fade
 
     narrator "We wander along cobbled streets. They’re pretty, in a slightly worn-down sort of way; back home the city is all just concrete after the rebuilding. It’s a nice change."
 
@@ -777,7 +788,7 @@ label start:
     stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
-    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0 loop
+    play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0 loop
     
     show foxglove at left    
     show plumeria at right
@@ -1088,11 +1099,6 @@ label start:
     scene bg home night
     with fade
     play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
-    
-    show foxglove at left    
-    show plumeria at right
-    show grandma at center
-    with fade
 
     narrator "There’s no more fun going down them as there was going up. The next day I don’t do much walking."
 
@@ -1102,6 +1108,11 @@ label start:
 
     narrator "Simply stepping out of the alcove of the doorway is sufficient to saturate you to the skin."
 
+    show foxglove at left    
+    show plumeria at right
+    show grandma at center
+    with fade
+    
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
 
     narrator "Somehow, the conversation turns to war. My grandmother ponders for a moment, then rises and disappears into her room."
@@ -1297,7 +1308,7 @@ label start:
 
     narrator "Trying to break her hold might wake her up, I reasoned. Best to lie still."
     
-    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0
+    play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     # Day 6
     scene bg pilgrims path day
     with fade
@@ -1601,7 +1612,7 @@ label start:
     stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
-    play ambience "audio/ambience/polar wind mild.mp3" fadein 5.0
+    play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     
     show foxglove at left    
     show plumeria at right
@@ -2234,7 +2245,7 @@ label start:
     stop music fadeout 1.0
     scene bg pilgrims path day
     with fade
-    play ambience "audio/ambience/polar wind mild.mp3" fadein 3.0 loop volume 1.0
+    play ambience "audio/ambience/polar wind mild.ogg" fadein 3.0 loop volume 1.0
     
     show foxglove at left    
     show plumeria at right
@@ -2305,7 +2316,7 @@ label start:
 
     narrator "Decided, we move on."
     
-    play ambience2 "audio/ambience/high wind layer.mp3" loop volume 1.0
+    play ambience2 "audio/ambience/high wind layer.ogg" loop volume 1.0
     
     scene bg pilgrims path day
     show foxglove at left    
@@ -2854,7 +2865,7 @@ label start:
     stop music fadeout 5.0
     stop ambience fadeout 5.0
     stop ambience2 fadeout 5.0
-    play ambience "audio/ambience/polar wind mild.mp3" fadein 8.0 loop
+    play ambience "audio/ambience/polar wind mild.ogg" fadein 8.0 loop
     
     # Day 9
     scene bg cabin day

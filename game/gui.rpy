@@ -26,7 +26,7 @@ init python:
 define gui.accent_color = u'#fff'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#888888'
+define gui.idle_color = u'#7c81db'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -87,6 +87,9 @@ define gui.title_text_size = 75
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
+define gui.snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
+define gui.snow_59 = SnowBlossom("snow_59.png", count=500, xspeed=50, yspeed=200, start=10)
+define gui.snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, start=10)
 
 
 ## Dialogue ####################################################################
