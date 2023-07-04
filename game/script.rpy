@@ -71,6 +71,10 @@ image plumeria:
 image grandma:
     "character/grandma.png"
     zoom .45
+image fennel:
+    "character/fennel.png"
+    zoom .36
+    ypos 0.5
 image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
 image snow_59 = SnowBlossom("snow_59.png", count=500, xspeed=50, yspeed=200, start=10)
 image snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, start=10)
@@ -78,6 +82,9 @@ image snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, sta
 # Define transforms
 transform center:
     xalign 0.5
+
+transform lowright:
+    xalign 1.0
     ypos 0.05
 
 
@@ -1465,7 +1472,7 @@ label start:
     narrator "The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
 
     # "Grandmother appears suddenly."
-    show grandma at right
+    show grandma at lowright
 
     grandma "Can’t sleep?"
 
