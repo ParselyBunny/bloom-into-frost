@@ -507,22 +507,19 @@ label start:
     grandma "Just an old superstition now. Now get inside, if you would."
     
     stop music fadeout 1.0
-    scene bg home night
+    scene bg bedroom night
     with fade
-    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
+    #play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
     
-    show foxglove at left    
+    show foxglove at left
     show plumeria at right
-    show grandma at center
     with fade
 
     narrator "We aren’t provided much time to look around. Within a few minutes, we’re sheparded to the spare room and told we could talk and acquaint ourselves in the morning."
-
-    scene bg bedroom night
     
     narrator "The room itself bears the faint signs it had once been a child’s room. The walls are covered in a rather antique floral wallpaper; one side is filled with a low desk and an empty cabinet."
 
-    narrator "A vase of flowers over the fireplace had shrivelled with the change in seasons. Browning spurs of plant matter curled in on themselves like poisoned spiders."
+    narrator "A vase of flowers over the wood stove had shrivelled with the change in seasons. Browning spurs of plant matter curled in on themselves like poisoned spiders."
 
     narrator "Next to them, a stuffed doll in a white old-fashioned looking uniform sits with golden glass eyes and a remarkably smug smile."
 
