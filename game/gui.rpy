@@ -10,6 +10,8 @@ init offset = -2
 ## width and height of the game.
 init python:
     gui.init(1920, 1080)
+    config.ftfont_scale["fonts/OpenDyslexic.otf"] = 0.8
+    config.ftfont_vertical_extent_scale["fonts/OpenDyslexic.otf"] = 0.8
 
 
 
@@ -55,13 +57,13 @@ define gui.interface_text_color = u'#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/Cormorant-VariableFont_wght.ttf"
+define gui.text_font = gui.preference("font_1", "fonts/Cormorant-VariableFont_wght.ttf") 
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/Cormorant-VariableFont_wght.ttf"
+define gui.name_text_font = gui.preference("font_2", "fonts/Cormorant-VariableFont_wght.ttf")
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/Cormorant-VariableFont_wght.ttf"
+define gui.interface_text_font = gui.preference("font_3", "fonts/Cormorant-VariableFont_wght.ttf")
 
 ## The size of normal dialogue text.
 define gui.text_size = 40

@@ -751,6 +751,11 @@ screen preferences():
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
+                vbox:
+                    style_prefix "check"
+                    label _("Font")
+                    textbutton _("Default") action [gui.SetPreference("font_1", "fonts/Cormorant-VariableFont_wght.ttf"), gui.SetPreference("font_2", "fonts/Cormorant-VariableFont_wght.ttf"), gui.SetPreference("font_3", "fonts/Cormorant-VariableFont_wght.ttf")]
+                    textbutton _("OpenDyslexic") action [ gui.SetPreference("font_1", "fonts/OpenDyslexic.otf"), gui.SetPreference("font_2", "fonts/OpenDyslexic.otf"), gui.SetPreference("font_3", "fonts/OpenDyslexic.otf")]
 
             null height (4 * gui.pref_spacing)
 
