@@ -1,6 +1,30 @@
-# Renpy files
-errors.txt
-log.txt
+# macOS-related files
+.DS_Store 
+.AppleDouble 
+.LSOverride
+# Windows-related files 
+Thumbs.db 
+Thumbs.db:encryptable 
+ehthumbs.db 
+ehthumbs_vista.db 
+[Dd]esktop.ini
+
+*.rpyc 
+*.rpyb 
+*.rpymc 
+*.pyc 
+*.pyo
+
+*~ 
+*.bak 
+*.odt#
+
+saves 
+tmp 
+cache 
+env 
+_wfCache
+
+log.txt 
+errors.txt 
 traceback.txt
-game/saves/*
-game/cache/*
