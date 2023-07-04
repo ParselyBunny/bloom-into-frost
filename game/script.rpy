@@ -65,27 +65,32 @@ image black = "#000"
 image foxglove:
     "character/foxglove.png"
     zoom .33
+    ypos 0.175
 image plumeria:
     "character/plumeria.png"
     zoom .36
+    ypos 0.03
 image grandma:
     "character/grandma.png"
     zoom .45
+    ypos 0.05
 image fennel:
     "character/fennel.png"
     zoom .36
-    ypos 0.5
+    ypos 0.1
 image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
 image snow_59 = SnowBlossom("snow_59.png", count=500, xspeed=50, yspeed=200, start=10)
 image snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, start=10)
 
 # Define transforms
+transform left:
+    xalign 0.05
+
 transform center:
     xalign 0.5
 
-transform lowright:
-    xalign 1.0
-    ypos 0.05
+transform right:
+    xalign 1.05
 
 
 # The game starts here.
@@ -323,7 +328,7 @@ label start:
 
     foxglove "Um-"
 
-    narrator "Without asking, she reaches up and grabs hold of my horns. She angles my head until I’m staring down into purple eyes; the same kind of eyes I have, that my mother has."
+    narrator "Without asking, she reaches up and grabs hold of my horns. She angles my head until I’m staring up into purple eyes; the same kind of eyes I have, that my mother has."
 
     narrator "The old woman observes my face without speaking. It’s like a staring contest with a scalpel."
 
@@ -1472,7 +1477,7 @@ label start:
     narrator "The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
 
     # "Grandmother appears suddenly."
-    show grandma at lowright
+    show grandma at right
 
     grandma "Can’t sleep?"
 
@@ -1693,7 +1698,7 @@ label start:
 
     narrator "Ah, none of them are free. I hover awkwardly, hoping one of them would free up, but all the groups sitting in the booths seem pretty entrenched. Oh wait, that one at the end seems empty."
 
-    show fennel at center
+    show fennel at right
     with fade
 
     narrator "One of them only has a single woman in it, who looks up as I wander up. She considers me for a second, then gestures to the seat opposite. I hesitate a moment, then take it."
@@ -1736,7 +1741,7 @@ label start:
 
     fennel "So you came to visit? I knew you couldn’t be a local. I think I’d remember."
     
-    show plumeria at right
+    show plumeria at center
     with fade
 
     narrator "She opens her mouth, perhaps to ask more, when Plume shows up at last. She slides into the seat next to me, placing down a pair of white-crowned pints."
