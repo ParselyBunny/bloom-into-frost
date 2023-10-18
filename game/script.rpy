@@ -54,7 +54,7 @@ init python:
 define narrator = Character(None, color="#ffffff", window_background="gui/textbox.png")
 define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png", callback=fox_beep )
 define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png", callback=plumeria_beep)
-define grandma = Character("Grandmother", color="#ffffff", window_background="gui/gdmtextbox.png", callback=grandma_beep)
+define dahlia = Character("Grandmother", color="#ffffff", window_background="gui/gdmtextbox.png", callback=grandma_beep)
 define announcer = Character("Announcer", color="#ffffff", window_background="gui/textbox.png")
 define fennel = Character("Fennel", color="#ffffff", window_background="gui/fnltextbox.png", callback=fennel_beep)
 define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png", callback=radio_beep)
@@ -63,19 +63,19 @@ define spirit = Character("Spirit", color="#ffffff", window_background="gui/text
 # Define images
 image black = "#000"
 image foxglove:
-    "character/foxglove.png"
+    "character/foxglove/foxglove neutral.png"
     zoom .33
     ypos 0.175
 image plumeria:
-    "character/plumeria.png"
+    "character/plumeria/plumeria neutral.png"
     zoom .36
     ypos 0.03
-image grandma:
-    "character/grandma.png"
+image dahlia:
+    "character/dahlia/dahlia neutral.png"
     zoom .45
     ypos 0.05
 image fennel:
-    "character/fennel.png"
+    "character/fennel/fennel neutral.png"
     zoom .36
     ypos 0.1
 image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
@@ -188,23 +188,31 @@ label start:
 
     narrator "Besides me, Plumeria stirs back to groggy wakefulness."
 
-    plumeria "Hmm? Ah... are we...?"
+    show plumeria serious
+	
+	plumeria "Hmm? Ah... are we...?"
 
     narrator "She scrubs at her face with a sleeve. Her eyes, a startling malachite green, blink repeatedly at me before she turns to peer out the window."
 
     narrator "Seeing the crystalline corpse of what’s-their-name, she lets out a little gasp."
 
-    plumeria "Ahh! You should have woken me!"
+    show plumeria surprised
+
+	plumeria "Ahh! You should have woken me!"
 
     narrator "I shrug."
 
     foxglove "Why? We’re going to be here for a couple of weeks. You’ll have plenty of time to see it, and in a better light, too."
+
+	show plumeria neutral
 
     narrator "She gives an exaggerated sigh, then grins at me as she nudges me with an elbow. How is it so pointy? My gods, her horns would be blunter."
 
     plumeria "You’ve got no poetry in your soul."
 
     foxglove "Nope."
+	
+	show plumeria grin
 
     narrator "She gives a huff of amused exasperation."
     
@@ -248,10 +256,14 @@ label start:
     foxglove "That’s what she said on the phone."
 
     plumeria "You do know what she looks like, right?"
+	
+	show foxglove annoyed
 
     narrator "I give her an annoyed look. She merely laughs in reply."
 
     plumeria "I guess look around and bother old ladies until you find the right one."
+	
+	show foxglove neutral
 
     narrator "In the stained illumination of the platform lights, I throw my glances over the other figures about, shrunk in on themselves against the bite of the air."
 
@@ -269,19 +281,29 @@ label start:
 
     narrator "The only other person about is a cute-looking girl, about my age. If this is my grandmother, she’s sure aged well. I wonder if she’s a local? Her horns have that downwards curve common in the north."
 
-    plumeria "Checking out girls already? You sure move fast, huh."
+    show plumeria flirt 
+	
+	plumeria "Checking out girls already? You sure move fast, huh."
 
-    foxglove "Wha- no! I was just looking around!"
+    show foxglove flustered "Wha- no! I was just looking around!"
+	
+	show plumeria guffaw
 
     plumeria "Uh-huh."
 
     narrator "She snickers at my expense, then shivers."
+	
+	show plumeria neutral
 
     plumeria "Well, lovergirl, hurry up and find your granny before I freeze solid."
 
     narrator "Plumeria shivers as she stands still. She’s hunched in on herself, trying to bury her face into her collar against the early touch of Sister Winter. I smile, seeing a chance to get my own back."
 
-    foxglove "Is it a bit nippy out tonight?"
+    show foxglove sarcastic
+	
+	foxglove "Is it a bit nippy out tonight?"
+	
+	show plumeria annoyed
 
     narrator "I speak with excessive casualness and am immediately rewarded with a fearsome glare."
 
@@ -292,29 +314,45 @@ label start:
     foxglove "You have a twisted imagination, miss Feld."
 
     plumeria "And you have no sense of proper temperature."
+	
+	show foxglove neutral
 
     narrator "I consider for a second, before I slide my coat off and drape it round her shoulders. "
 
     narrator "It’s a little too small on her to actually wear it, so my coat becomes a cape instead. Without it, even I find it a little cold."
 
-    foxglove "Here, your majesty, so you don’t perish in the cold and I don’t have to eat your disgusting frozen toes."
+    show foxglove sarcastic
+	
+	foxglove "Here, your majesty, so you don’t perish in the cold and I don’t have to eat your disgusting frozen toes."
+	
+	show plumeria surprised
 
     plumeria "Oh! You sure?"
-
+	
+	show foxglove neutral
+	
     narrator "I simply nod. If nothing else, it’ll be encouragement to find my grandmother quicker."
+
+	show plumeria grin
 
     plumeria "Thanks. Maybe I won’t have to feed you frozen body parts after all."
 
     # "[Character models should change: protag loses coat, plu gains an extra layer.]"
+	
+	show plumeria neutral
 
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
 
     stop ambience fadeout 1.5
     play music [ "<silence 1.75>", "audio/music/Harlequin.mp3" ] volume 0.5
     # "[grandmother sprite appears midsentence]"
-    show grandma at center
+    show dahlia at center
 
-    grandma "Who isn’t?"
+    dahlia "Who isn’t?"
+	
+	show foxglove terror
+	
+	show plumeria surprised
 
     foxglove "Waaaghhh!"
     
@@ -322,9 +360,13 @@ label start:
 
     narrator "I clutch at my chest, heart hammering, as I take in the little old woman that’s appeared behind us."
 
+	show plumeria neutral
+	
+	show foxglove neutral
+
     narrator "She’s well dressed against the cold, with sharp features and a hard intelligence undimmed by age behind her eyes. One of her horns is severed in half, capped off with brass or bronze."
 
-    grandma "So you’re the daughter of that foolish girl, hmmm?"
+    dahlia "So you’re the daughter of that foolish girl, hmmm?"
 
     foxglove "Um-"
 
@@ -332,19 +374,31 @@ label start:
 
     narrator "The old woman observes my face without speaking. It’s like a staring contest with a scalpel."
 
+	show foxglove terror
+
+	// TODO: shaking FX
     foxglove "Can, can you, um, le-"
 
-    grandma "Hold still, girl!"
+	// TODO: show dahlia commanding
+    dahlia "Hold still, girl!"
 
     narrator "It is perhaps one of the most awkward moments of my life. I look sideways, beseeching Plumeria for help, trying to signal SOS by the inclination of my eyebrows."
 
+	show plumeria grin
+	
     narrator "She gives me two thumbs up. In my head, I swear eternal vengeance."
 
-    grandma "Hmm."
+	show dahlia neutral
+	
+    dahlia "Hmm."
+	
+	show foxglove neutral
 
     narrator "Abruptly she lets go and turns that sharp gaze upon Plumeria. My roommate gives a winning smile."
 
-    grandma "And who are you, hmm?"
+    dahlia "And who are you, hmm?"
+	
+	show plumeria grin
 
     plumeria "Plumeria Feld, your darling granddaughter’s roommate. Pleased to meet you, granny!"
 
@@ -352,17 +406,19 @@ label start:
 
     narrator "Against this assault of charm, however, the frown on my grandmother’s face is a minefield."
 
-    grandma "..."
+    dahlia "..."
 
     plumeria "...Mrs. Heath?"
 
-    grandma "..."
+    dahlia "..."
 
     plumeria "...Ma’am?"
+	
+	show plumeria neutral
 
     narrator "The old woman gives a tiny nod, and Plume unconsciously gives a little sigh of relief."
 
-    grandma "Hmmph. I only have one spare bed, so you’ll have to share, but you’re free to stay as well."
+    dahlia "Hmmph. I only have one spare bed, so you’ll have to share, but you’re free to stay as well."
 
     plumeria "Hey, it’s better than the shed, right? And besides..."
 
@@ -379,6 +435,8 @@ label start:
     narrator "I roll my eyes."
 
     foxglove "I think I’ll get by."
+	
+	show plumeria serious
 
     narrator "I startle as she drops her hand on my shoulder. Her expression is as solemn as the ironwork of the train station."
 
@@ -387,24 +445,36 @@ label start:
     narrator "With just as graven an expression, I nod."
 
     foxglove "I will remember this betrayal."
+	
+	narrator "..."
+	
+	show foxglove not smiling
+	
+	show plumeria guffaw
 
     narrator "We both stare at each other before she giggles and I let out a huff, shaking my head as I feel a grin pull at my cheeks."
 
     narrator "The old woman I’d come here to meet merely watches this with her unblinking gaze. Finally, she too shakes her head at the folly of youth."
 
-    grandma "Well, come along. Once it starts getting cold-"
+	show plumeria neutral
+	
+	show foxglove neutral
+
+    dahlia "Well, come along. Once it starts getting cold-"
 
     plumeria "Wait, this isn’t it getting cold?"
 
     narrator "Grandmother ignores the interruption with all the uncaring majesty of an iceberg."
 
-    grandma "-Then it tends to make these old bones ache, so come along now, you two."
+    dahlia "-Then it tends to make these old bones ache, so come along now, you two."
 
     narrator "She turns and begins striding off, her short legs deceptively eating up the distance. The few people still about clear her path like sparrows before an eagle."
 
     narrator "She doesn’t even pause as the station attendant wishes her a respectful good night, merely nodding."
 
-    grandma "You two! Get!"
+	//TODO: show dahlia commanding
+	
+    dahlia "You two! Get!"
 
     narrator "Her voice cracks out like a whip."
 
@@ -414,11 +484,6 @@ label start:
     scene bg streets night
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 5.0 loop
-    
-    show foxglove at left    
-    show plumeria at right
-    show grandma at center
-    with fade
 
     narrator "Our path from the station soon takes us from the wide main roads to the tangles of terraced houses built for pilgrims in ages past."
 
@@ -437,6 +502,10 @@ label start:
     narrator "For a moment, I feel weightless, my head fuzzing. I am adrift, in a deep, dark sea. I breathe in, trying to let the crisp cut of the air centre me."
 
     plumeria "-ve?"
+	
+	show foxglove at left    
+    show plumeria at right
+    with fade
 
     narrator "Abruptly I realise Plumeria is saying something. Now she’s leaning in, peering at my face. My grandmother is ahead, marching with a firm step that belies her age entirely."
 
@@ -468,7 +537,9 @@ label start:
 
     narrator "Plume catches me in my impromptu study, and raises an eyebrow questioningly. I’m saved from having to think of an answer when my grandmother ahead comes to a stop."
 
-    grandma "Here we are."
+    show dahlia at center
+
+    dahlia "Here we are."
 
     narrator "The house isn’t anything exceptional in this tangle of pilgrim housing. It’s still well-maintained, a thin spike of a house in cheval de frise terraces."
 
@@ -482,11 +553,15 @@ label start:
 
     narrator "At my hesitant tone, Grandmother looks up at me and I fight back the urge to twitch under that razor gaze. She stops searching through her pockets for a moment."
 
-    grandma "Hmmph. Call me Grandmother. I’ll not need my own kin to bow and scrape."
+    dahlia "Hmmph. Call me Grandmother. I’ll not need my own kin to bow and scrape."
+
+	show plumeria grin
 
     plumeria "How abou-"
 
-    grandma "No."
+    dahlia "No."
+	
+	show plumeria serious
 
     narrator "Plumeria looks dejected."
 
@@ -496,20 +571,20 @@ label start:
 
     narrator "I flinch at the unexpected sound, but she’s already rummaging through the chest pocket of her coat."
 
-    grandma "Now I remember. That’s where I put the blasted things."
+    dahlia "Now I remember. That’s where I put the blasted things."
 
     narrator "Her keys jangle in discordant chimes as she slots them into the door. She shoves it open against its attempts to wedge itself still half shut, and steps back to gesture us inside."
 
-    grandma "As for your question, girl - the lanterns are..."
+    dahlia "As for your question, girl - the lanterns are..."
 
     narrator "She trails off for a second, looking almost wistful."
 
-    grandma "Just an old superstition now. Now get inside, if you would."
+    dahlia "Just an old superstition now. Now get inside, if you would."
     
     stop music fadeout 1.0
     scene bg bedroom night
     with fade
-    #play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
+    play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
     
     show foxglove at left
     show plumeria at right
@@ -529,13 +604,15 @@ label start:
 
     foxglove "Alright. I’ll ask my grandmother if there’s a shed for you to sleep in."
 
-    plumeria "Ha. Ha ha. Real funny."
+    plumeria serious "Ha. Ha ha. Real funny."
 
-    foxglove "Aren’t I just."
+    foxglove sarcasm "Aren’t I just."
 
     narrator "She sighs and looks at the bed. We were going to be snug, certainly. Abruptly I yawn so wide my jaw cracks. Plume gives a small chuckle."
 
-    plumeria "Well its not going to get any bigger."
+    show plumeria grin 
+	
+	show plumeria "Well its not going to get any bigger."
     
     scene cg tucked into bed
     with fade
@@ -570,7 +647,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    show grandma at center
+    show dahlia at center
     with fade
 
     narrator "All the same, I’ve never been a morning person, and I feel too sleepy for any awkwardness until we’re all sat at the table, having breakfast."
@@ -587,23 +664,23 @@ label start:
 
     narrator "My roommate sounds far too cheery for a time so early. I take another sip of the tea, focusing on the floral tang of it to resist the urge to shut my eyes again."
 
-    grandma "Hmm. Since you haven’t been to Godigsfel before, you should look about the town. Learn where things are; if you’re going to stay here, you can at least pick up my groceries."
+    dahlia "Hmm. Since you haven’t been to Godigsfel before, you should look about the town. Learn where things are; if you’re going to stay here, you can at least pick up my groceries."
 
     plumeria "Dunno about her, but that’s fine with me, granny-"
 
     narrator "The look Grandmother gave her was probably similar in deadly power to what had killed the god up on the mountain."
 
-    plumeria "-Ma’am."
+    plumeria serious "-Ma’am."
 
-    grandma "Hmm."
+    dahlia "Hmm."
 
     narrator "She takes a measured swallow from her cup and looks at me."
 
-    grandma "While it’s not ideal, I do have business I need to take care of today, so I’ll leave you to your own devices. I trust you won’t make a mess."
+    dahlia "While it’s not ideal, I do have business I need to take care of today, so I’ll leave you to your own devices. I trust you won’t make a mess."
 
     narrator "She gives a meaningful look between me and Plumeria. It takes a moment to sink in what she’s implying."
 
-    foxglove "Ah - no, we’re not, not like that-"
+    foxglove flustered "Ah - no, we’re not, not like that-"
 
     narrator "Plume nods sagely, then with deliberate tones adds a single word."
 
@@ -613,9 +690,9 @@ label start:
 
     narrator "I cover my face with my hands, feeling the burning of my cheeks against my fingers. Through my mask of hands, I hear my Grandmother sigh. The chair scrapes as the old woman rises to her feet."
 
-    grandma "A key is in the biscuit tin on the side, there. Lock the door if you leave."
+    dahlia "A key is in the biscuit tin on the side, there. Lock the door if you leave."
 
-    hide grandma with fade
+    hide dahlia with fade
 
     narrator "I hear her sharp steps fade."
 
@@ -697,20 +774,20 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    show grandma at center
+    show dahlia at center
     with fade
 
     narrator "The next morning, I’m still groggy from sleep and rubbing a crick out my neck when Grandmother cuts to the chase."
 
-    grandma "You want to know why that foolish girl no longer talks to her own mother, I suppose."
+    dahlia "You want to know why that foolish girl no longer talks to her own mother, I suppose."
 
     narrator "Her face is carefully neutral. It had already become evident that Dahlia Heath was not a woman who ever minced words; she had a dialectic technique of going straight for the jugular."
 
-    grandma "This family has long held a - tradition, of sorts. We have lived in this valley for a long time."
+    dahlia "This family has long held a - tradition, of sorts. We have lived in this valley for a long time."
 
     narrator "She peers out the window, towards the looming mountains."
 
-    grandma "Yes, a very long time indeed. An oath was made, long ago in the past, when ice spirits guided our ancestors, lost in a blizzard, safely back down."
+    dahlia "Yes, a very long time indeed. An oath was made, long ago in the past, when ice spirits guided our ancestors, lost in a blizzard, safely back down."
 
     foxglove "Wait, ice spirits?"
 
@@ -718,31 +795,31 @@ label start:
 
     narrator "The old woman smiles thinly. Plumeria and I glance at each other."
 
-    grandma "Few of such things remain since the time of the gods, indeed, but these ones still live. Our history is entwined with theirs."
+    dahlia "Few of such things remain since the time of the gods, indeed, but these ones still live. Our history is entwined with theirs."
 
-    grandma "Every time one of our family was born, they would be taken up the mountain and shown to the spirits. This happened, unbroken, for a thousand years."
+    dahlia "Every time one of our family was born, they would be taken up the mountain and shown to the spirits. This happened, unbroken, for a thousand years."
 
     foxglove "Is that why...?"
 
-    grandma "Quite so. That foolish girl refused. She wanted you to have nothing to do with old spirits. Instead, she moved south, and took you with her, of course."
+    dahlia "Quite so. That foolish girl refused. She wanted you to have nothing to do with old spirits. Instead, she moved south, and took you with her, of course."
 
     narrator "She takes another long sip, closing her eyes briefly. The smell of it reaches my nose; hot and bitter. Grandmother opens her eyes, only to stare into her cup."
 
-    grandma "To be more specific, she climbed the mountain to see the spirits around, oh, three months pregnant with you, not long after she’d told me."
+    dahlia "To be more specific, she climbed the mountain to see the spirits around, oh, three months pregnant with you, not long after she’d told me."
 
-    grandma "I had been furious. Didn’t even know the father, never mind that she had been in a relationship. I was..."
+    dahlia "I had been furious. Didn’t even know the father, never mind that she had been in a relationship. I was..."
 
     narrator "Her brow furrows."
 
-    grandma "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
+    dahlia "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
 
     foxglove "I’m sorry - Mica?"
 
-    grandma "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; sarran names weren’t very popular, as you might imagine."
+    dahlia "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; sarran names weren’t very popular, as you might imagine."
 
     narrator "She pauses and sets down her tea with a hard skeleton clatter of porcelain."
 
-    grandma "Well, anyway. She walked the pilgrim’s path up to the corpse of God. Spoke to the spirits, I imagine, and three weeks after you were born, left without a word."
+    dahlia "Well, anyway. She walked the pilgrim’s path up to the corpse of God. Spoke to the spirits, I imagine, and three weeks after you were born, left without a word."
 
     narrator "Plumeria had sat through all of this. I wonder what she’s thinking, hearing all this family drama. Interested? Awkward? Surprisingly for her, her expression is carefully neutral, hiding any thoughts."
 
@@ -750,11 +827,11 @@ label start:
 
     narrator "The old woman gives a husky chuckle of laughter. It rustles like old paper, dry and brittle."
 
-    grandma "Ha. I’ve always been as stubborn as a mule, and my daughter was no different. I imagine my granddaughter is the same as well."
+    dahlia "Ha. I’ve always been as stubborn as a mule, and my daughter was no different. I imagine my granddaughter is the same as well."
 
     narrator "I can only blink back as she turns her gaze on me."
 
-    grandma "If there is any answer to it, it is between that girl and the spirits."
+    dahlia "If there is any answer to it, it is between that girl and the spirits."
 
     narrator "This is a bit much, isn’t it? I glance out the window, though the city blocks my view from where I’m sitting, in the direction of the mountain."
 
@@ -772,19 +849,19 @@ label start:
 
     narrator "My grandmother interjects calmly."
 
-    grandma "If you do, then you won’t have that long to do so. In a month or less, the winter will be deep upon us, and the mountain will be too dangerous to climb at all."
+    dahlia "If you do, then you won’t have that long to do so. In a month or less, the winter will be deep upon us, and the mountain will be too dangerous to climb at all."
 
     foxglove "Well, call it three weeks to do it, then. I can manage."
 
-    grandma "Hmm. Very well. But listen well, girl. If the weather changes and the winter storms begin, abandon your attempts."
+    dahlia "Hmm. Very well. But listen well, girl. If the weather changes and the winter storms begin, abandon your attempts."
 
-    grandma "The mountains can be terribly dangerous. I will not meet my grandchild for the first time only to see her perish before the feet of God."
+    dahlia "The mountains can be terribly dangerous. I will not meet my grandchild for the first time only to see her perish before the feet of God."
 
     narrator "Her gaze bores into me, skewering me like a bug on a hook. My words dry up in my throat. It’s all I can do to nod, and her expression softens a fraction from granite to merely sandstone."
 
     narrator "I take a second to recover, and my grandmother turns that terrible gaze upon Plumeria."
 
-    grandma "You too, girl. I will hold you responsible for her safety. Ensure it."
+    dahlia "You too, girl. I will hold you responsible for her safety. Ensure it."
 
     foxglove "I just get no respect, huh."
 
@@ -792,7 +869,7 @@ label start:
 
     plumeria "Can count on me, Ma’am."
 
-    grandma "Good."
+    dahlia "Good."
     
     stop music fadeout 1.0
     scene bg pilgrims path day
@@ -1119,7 +1196,7 @@ label start:
 
     show foxglove at left    
     show plumeria at right
-    show grandma at center
+    show dahlia at center
     with fade
     
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
@@ -1136,7 +1213,7 @@ label start:
 
     foxglove "That’s..."
 
-    grandma "A gun, yes. My service pistol during the war. I kept hold of it."
+    dahlia "A gun, yes. My service pistol during the war. I kept hold of it."
 
     narrator "Indeed, inside the box was a blocky steel revolver. It gleamed softly in the light, without a hint of rust or corrosion."
 
@@ -1144,7 +1221,7 @@ label start:
 
     narrator "Next to it, in little slotted frames, sat two rows of bullets with shiny brass casings. Ten stubby little brass fingers, tipped in lead, they sat with innocuous ease next to the gun."
 
-    grandma "You may pick it up, if you like. It doesn’t have anything in it; all the same, don’t point it at someone."
+    dahlia "You may pick it up, if you like. It doesn’t have anything in it; all the same, don’t point it at someone."
 
     ## Player choice 2: Gun
     menu:
@@ -1170,7 +1247,7 @@ label start:
 
         narrator "Grandmother let out a small laugh, absent of humour."
 
-        grandma "A gun should always be the heaviest thing in the world to carry."
+        dahlia "A gun should always be the heaviest thing in the world to carry."
 
         narrator "She stares at the thing in my hand with a strange expression. Fondness and hate for it blended like a poison."
 
@@ -1185,7 +1262,7 @@ label start:
 
         narrator "At this my Grandmother simply gives me a glance."
 
-        grandma "I suppose so. In these times of peace, and such."
+        dahlia "I suppose so. In these times of peace, and such."
 
         narrator "I can’t understand her tone - does she approve of my choice or not? Her face gives away nothing as she stares gravely down into the box, the revolver sitting innocently in the padding. Has it killed someone?"
 
@@ -1200,13 +1277,13 @@ label start:
 
     plumeria "If you don’t mind me asking, then - if you dislike them so much, why did you keep it?"
 
-    grandma "Hmmph. I wonder. As a reminder, perhaps."
+    dahlia "Hmmph. I wonder. As a reminder, perhaps."
     
     play sound "audio/oneshot/case close.mp3" volume 1.0
 
     narrator "She shuts the box, the latches clack-clacking, but doesn't take it away. One hand beats a pattern on the top like it was recalling some distant marching drum."
 
-    grandma "This gun is nothing more than a theft."
+    dahlia "This gun is nothing more than a theft."
 
     narrator "I blink at this seeming non-sequitur. Plumeria gives me a tiny confused shrug."
 
@@ -1214,37 +1291,37 @@ label start:
 
     narrator "The old woman snorts with exasperated amusement."
 
-    grandma "No, you foolish girl. No, we were allowed to keep them after we were sent home. What I mean is this - this gun and its necessity was a theft from all the people of Tellen."
+    dahlia "No, you foolish girl. No, we were allowed to keep them after we were sent home. What I mean is this - this gun and its necessity was a theft from all the people of Tellen."
 
-    grandma "A clever mind designed it. With effort, ore was mined and smelted, the steel shaped. Same with each of the bullets - made, and shaped, and filled, and once fired, gone."
+    dahlia "A clever mind designed it. With effort, ore was mined and smelted, the steel shaped. Same with each of the bullets - made, and shaped, and filled, and once fired, gone."
 
     narrator "She heaves a sigh."
 
-    grandma "It could have been a machine that helped people. A ploughshare. Iron nails. Instead, it is something that can merely destroy other people. It grows nothing and creates only corpses."
+    dahlia "It could have been a machine that helped people. A ploughshare. Iron nails. Instead, it is something that can merely destroy other people. It grows nothing and creates only corpses."
 
     foxglove "Do- do you regret fighting in the war?"
 
-    grandma "Regret? Hmm. I don’t regret fighting, no. It had to be done, after all. I suspect you’ve heard plenty about what was done in the occupied territories. Terrible things, really. Monstrous."
+    dahlia "Regret? Hmm. I don’t regret fighting, no. It had to be done, after all. I suspect you’ve heard plenty about what was done in the occupied territories. Terrible things, really. Monstrous."
 
     narrator "She clicks open the case again, to look down at the weapon. One wizened finger brushed along the barrel - along the TELLEN STATE ARMOURY 1191 stamped along it."
 
-    grandma "So I don’t regret fighting to stop them. I regret, however, how it was necessary. All the lives lost, and effort expended, and those terrible hard days..."
+    dahlia "So I don’t regret fighting to stop them. I regret, however, how it was necessary. All the lives lost, and effort expended, and those terrible hard days..."
 
-    grandma "I had hoped that perhaps - we could teach our children well enough they would not have to suffer the same."
+    dahlia "I had hoped that perhaps - we could teach our children well enough they would not have to suffer the same."
 
-    grandma "That foolish girl suffered terribly as a result of her parentage. Having a sarran for a father certainly did her no favours."
+    dahlia "That foolish girl suffered terribly as a result of her parentage. Having a sarran for a father certainly did her no favours."
 
-    grandma "My generation, who fought and suffered in the war, all carried the pain of that war. I suppose I was lucky, in that sense."
+    dahlia "My generation, who fought and suffered in the war, all carried the pain of that war. I suppose I was lucky, in that sense."
 
     narrator "She reaches up and raps a nail on the shiny brass of the cap on her broken horn."
 
-    grandma "My own wounds were slight, if permanent. Perhaps they even helped, to some extent. A visible sign that I’d sacrificed in the war."
+    dahlia "My own wounds were slight, if permanent. Perhaps they even helped, to some extent. A visible sign that I’d sacrificed in the war."
 
-    grandma "So many had wounds deeper within. They passed down that pain as a warning. But perhaps all we achieved in the end was to ensure our descendants will suffer the same, someday."
+    dahlia "So many had wounds deeper within. They passed down that pain as a warning. But perhaps all we achieved in the end was to ensure our descendants will suffer the same, someday."
 
     narrator "I open my mouth to speak, and hesitate. My grandmother makes a huff, a short sharp exhalation, and stands."
 
-    grandma "Another cup of tea?"
+    dahlia "Another cup of tea?"
 
     foxglove "-sure. Please."
 
@@ -1474,9 +1551,9 @@ label start:
     narrator "The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
 
     # "Grandmother appears suddenly."
-    show grandma at right
+    show dahlia at right
 
-    grandma "Can’t sleep?"
+    dahlia "Can’t sleep?"
 
     foxglove "Gyaah!"
 
@@ -1486,57 +1563,57 @@ label start:
 
     narrator "The old woman huffs in amusement."
 
-    grandma "In the war, I learned to avoid catching attention if I didn’t need to. Less likely to meet a bullet that way. I suppose I kept the habit."
+    dahlia "In the war, I learned to avoid catching attention if I didn’t need to. Less likely to meet a bullet that way. I suppose I kept the habit."
 
     narrator "She pauses."
 
-    grandma "Also, I’ve been sitting here since you went to bed. I find it easier to sleep in the chair, sometimes, when my bones ache too much."
+    dahlia "Also, I’ve been sitting here since you went to bed. I find it easier to sleep in the chair, sometimes, when my bones ache too much."
 
     foxglove "Oh. Did I- did I wake you? Sorry."
 
     narrator "She waves a hand dismissively."
 
-    grandma "We’re a family of light sleepers, it seems. Your mother found it terribly difficult to sleep when she was a child, too."
+    dahlia "We’re a family of light sleepers, it seems. Your mother found it terribly difficult to sleep when she was a child, too."
 
     foxglove "I’m twenty-three, Grandmother. I’m not a child."
 
     narrator "As soon as I say it, I’m aware of how childish my complaint sounds. The shadowed pool of my grandmother’s face moves in a way that might have been a smile. She chuckles, a desiccated rattle of a laugh."
 
-    grandma "Compared to me, you will be a child for a long time yet, girl. Come, sit."
+    dahlia "Compared to me, you will be a child for a long time yet, girl. Come, sit."
 
     narrator "Obediently, I perch on the edge of one of the chairs."
 
     foxglove "My mother grew up in this house, right?"
 
-    grandma "That is so, yes. She lived here until the day she left Godigsfel and I far behind and went south, though towards the end we barely spoke except in anger."
+    dahlia "That is so, yes. She lived here until the day she left Godigsfel and I far behind and went south, though towards the end we barely spoke except in anger."
 
     narrator "She sighed."
 
-    grandma "I only learned when I got a call from her, telling me she was not returning. We haven’t spoken since, of course."
+    dahlia "I only learned when I got a call from her, telling me she was not returning. We haven’t spoken since, of course."
 
     plumeria "She kept your number, though. Maybe one day she planned to call."
 
-    grandma "Hmm. Perhaps. I have her number, too. Maybe one day, I planned to as well."
+    dahlia "Hmm. Perhaps. I have her number, too. Maybe one day, I planned to as well."
 
     narrator "She laughs, sudden and startling. This time it is a bitter rasp, as if unwilling."
 
-    grandma "Hmmph. So much for the wisdom of your elders, girl. Both of us, waiting for the other to call first."
+    dahlia "Hmmph. So much for the wisdom of your elders, girl. Both of us, waiting for the other to call first."
 
     narrator "Her laughter subsides into a weary sigh."
 
-    grandma "Your mother was always very determined. She found this town stifling, I think."
+    dahlia "Your mother was always very determined. She found this town stifling, I think."
 
-    grandma "There is not much here, beyond Kalarlomoth above, and there was little enough kindness for a child of the enemy. As if she could have had any responsibility for what was done in the war."
+    dahlia "There is not much here, beyond Kalarlomoth above, and there was little enough kindness for a child of the enemy. As if she could have had any responsibility for what was done in the war."
 
     narrator "She almost snarls the word."
 
     foxglove "Did people... did people treat you badly because your hus- because Grandfather was a sarran?"
 
-    grandma "There were some who tried. But I’d earned a medal or two during the war, and Mica had spent most of it doing farm work on loan from a prison camp nearby, so it wasn’t as bad as it could have been. Also,"
+    dahlia "There were some who tried. But I’d earned a medal or two during the war, and Mica had spent most of it doing farm work on loan from a prison camp nearby, so it wasn’t as bad as it could have been. Also,"
 
     narrator "She gives a rasping chuckle."
 
-    grandma "They learned that opening their mouth to me to be impolite tended to lead to those words being spoken through broken teeth."
+    dahlia "They learned that opening their mouth to me to be impolite tended to lead to those words being spoken through broken teeth."
 
     foxglove "Wow."
 
@@ -1544,7 +1621,7 @@ label start:
 
     narrator "Somehow, I get the feeling she’d still wipe the floor with me if it came to a fight. My eyes, adjusted to the dark, can make out her smile this time."
 
-    grandma "Now, it is late. Are you climbing the mountain again tomorrow?"
+    dahlia "Now, it is late. Are you climbing the mountain again tomorrow?"
 
     foxglove "That was the plan, yeah."
     
@@ -1552,7 +1629,7 @@ label start:
 
     narrator "The old woman waves a wrinkled hand dismissively."
 
-    grandma "It’s fine. Having you and your lively girl in here constantly would drive me to distraction, anyway. I have learned to appreciate the quiet, over the years."
+    dahlia "It’s fine. Having you and your lively girl in here constantly would drive me to distraction, anyway. I have learned to appreciate the quiet, over the years."
 
     narrator "I offer a smile, though I suspect she can’t-"
 
@@ -1560,21 +1637,21 @@ label start:
 
     narrator "There’s a moment of silence. I carefully don’t look at the questioning air the shadows have taken on around my elder’s face."
 
-    grandma "...Hmm. Right. Anyway, it’s late. You should be back to bed. Do you want a nightcap?"
+    dahlia "...Hmm. Right. Anyway, it’s late. You should be back to bed. Do you want a nightcap?"
 
     foxglove "A nightcap?"
 
-    grandma "A glass of brandy does wonders, I found."
+    dahlia "A glass of brandy does wonders, I found."
 
     foxglove "I-I’ll pass, thanks."
 
-    grandma "Your choice. Go on with you, now. Leave an old woman in peace."
+    dahlia "Your choice. Go on with you, now. Leave an old woman in peace."
 
     narrator "I stand, and hesitate for a moment. The words are odd on my tongue after a lifetime, but nice to say nonetheless."
 
     foxglove "...Goodnight, Grandmother."
 
-    grandma "Goodnight, child."
+    dahlia "Goodnight, child."
     
     scene bg bedroom night
     with fade
@@ -2036,12 +2113,12 @@ label start:
 
     show foxglove at left    
     show plumeria at right
-    show grandma at center
+    show dahlia at center
     with fade
 
     narrator "We enter the house as quietly as possible, which is not very. Grandmother takes one look at us from her chair."
 
-    grandma "Youths."
+    dahlia "Youths."
 
     narrator "She shakes her head and waves us off to bed."
     
@@ -2168,7 +2245,7 @@ label start:
     scene bg home day
     show foxglove at left
     show plumeria at right
-    show grandma at center
+    show dahlia at center
     with fade
 
     narrator "The radio mutters angrily. The voice of the spokesman is a hoarse, rumbling thing, seeming half-way to a snarl."
@@ -2179,7 +2256,7 @@ label start:
 
     narrator "I listen to the gruff voice of the spokesman with dismay."
 
-    grandma "...Hmmph. Looks like you might not be able to climb it after all. A shame, but such is as it is."
+    dahlia "...Hmmph. Looks like you might not be able to climb it after all. A shame, but such is as it is."
 
     narrator "She’s seated in one of the armchairs in the main room, a cup of steaming tea gently releasing its vapours at her elbow."
 
@@ -2197,7 +2274,7 @@ label start:
 
     narrator "My grandmother frowns. Her eyes open, the crows-feet deep at the corners."
 
-    grandma "The weather can change very quickly in this region of the world. That goes double for the mountain-tops."
+    dahlia "The weather can change very quickly in this region of the world. That goes double for the mountain-tops."
 
     foxglove "I can do it, Grandmother. I know I can."
 
@@ -2207,11 +2284,11 @@ label start:
 
     narrator "The old woman pins me in her gaze for a moment longer, before she sighs. For a moment, she looks tremendously old. Tired. Weathered, like the mountain itself - worn down by a thousand storms."
 
-    grandma "Very well. You are both adults, I suppose, and can look after yourselves."
+    dahlia "Very well. You are both adults, I suppose, and can look after yourselves."
 
     narrator "She throws the battleaxe of her line-of-sight at Plumeria, who bravely doesn’t quail before the force of it."
 
-    grandma "Do you remember what I said to you, Miss Feld?"
+    dahlia "Do you remember what I said to you, Miss Feld?"
 
     plumeria "Ahaha. Ha. I sure do, Ma’am, don’t you worry."
 
@@ -2225,7 +2302,7 @@ label start:
 
     narrator "Rapidly, she retreats from the room."
 
-    grandma "Child. Are you sure?"
+    dahlia "Child. Are you sure?"
 
     narrator "I meet her gaze. Her eyes are the same violently purple as mine - undimmed by age, they glitter like amethysts in the crags of her face."
 
@@ -2235,11 +2312,11 @@ label start:
 
     narrator "Something pulls me onwards, like I was always meant to climb the mountain. I guess that’s the weight of family legacy, or something along those lines."
 
-    grandma "Hmmph. Then go on, then. I’ll see you when you get back."
+    dahlia "Hmmph. Then go on, then. I’ll see you when you get back."
 
     narrator "She pauses, and then adds:"
 
-    grandma "Be careful."
+    dahlia "Be careful."
 
     foxglove "I will, Grandmother. ...Thanks."
 
@@ -3073,20 +3150,20 @@ label start:
 
     foxglove "We’re back!"
     
-    show grandma at center
+    show dahlia at center
     with fade
 
-    grandma "Ah, good."
+    dahlia "Ah, good."
 
     narrator "She appears from the living room and stops. Her purple eyes scan us up and down, and her mouth hardens into a frown."
 
-    grandma "What happened?"
+    dahlia "What happened?"
 
     narrator "Before I can offer a word in explanation, we’re shepherded into the living room and made to sit."
 
     narrator "We wait in silence while she makes cups of strong, hot tea and brings them in. She looks between us, and then adds a measured shot of brandy to each."
 
-    grandma "Now. Talk."
+    dahlia "Now. Talk."
 
     narrator "We talk. I explain the trip up, the appearance of the spirits, what they said. I talked about driving them off with the flares and the incense."
 
@@ -3104,13 +3181,13 @@ label start:
 
     narrator "When she returns, it’s with the heavy revolver in her grip. In her wizened hands, it looks almost comically large, but she holds it with a familiar ease."
 
-    grandma "You two get some more rest. There’s no more trains running, so you’ll have to head back tomorrow."
+    dahlia "You two get some more rest. There’s no more trains running, so you’ll have to head back tomorrow."
 
     foxglove "Wait, Grandmother - are you planning to just shoot them if they show up?"
 
     narrator "The old woman’s lips curl. Above them, in the shadows of her face, her eyes are as firm and unyielding as the mountain."
 
-    grandma "I do not know what fool thing my daughter might have promised them. But I can promise this - they will not get either of you."
+    dahlia "I do not know what fool thing my daughter might have promised them. But I can promise this - they will not get either of you."
 
     narrator "It’s not a big boast. It’s simply a statement, a plain declaration that this old woman would, if necessary, face down the ancient magics of the spirits with a gun made for a war decades distant."
 
@@ -3118,11 +3195,11 @@ label start:
 
     narrator "She starts and looks at Grandmother as if expecting a thunderbolt, but Dahlia simply raises an eyebrow."
 
-    grandma "I’ll let you have that one."
+    dahlia "I’ll let you have that one."
 
     plumeria "Thanks, Gran."
 
-    grandma "Don’t push your luck."
+    dahlia "Don’t push your luck."
 
     plumeria "R-right."
     
