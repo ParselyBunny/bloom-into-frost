@@ -66,8 +66,52 @@ image foxglove:
     "character/foxglove/foxglove neutral.png"
     zoom .33
     ypos 0.175
+image foxglove annoyed:
+    "character/foxglove/foxglove annoyed.png"
+    zoom .33
+    ypos 0.175
+image foxglove flustered:
+    "character/foxglove/foxglove flustered.png"
+    zoom .33
+    ypos 0.175
+image foxglove not smiling:
+    "character/foxglove/foxglove not smiling.png"
+    zoom .33
+    ypos 0.175
+image foxglove sarcastic:
+    "character/foxglove/foxglove sarcastic.png"
+    zoom .33
+    ypos 0.175
+image foxglove terror:
+    "character/foxglove/foxglove terror.png"
+    zoom .33
+    ypos 0.175
 image plumeria:
     "character/plumeria/plumeria neutral.png"
+    zoom .36
+    ypos 0.03
+image plumeria annoyed:
+    "character/plumeria/plumeria annoyed.png"
+    zoom .36
+    ypos 0.03
+image plumeria flirt:
+    "character/plumeria/plumeria flirt.png"
+    zoom .36
+    ypos 0.03
+image plumeria grin:
+    "character/plumeria/plumeria grin.png"
+    zoom .36
+    ypos 0.03
+image plumeria guffaw:
+    "character/plumeria/plumeria guffaw.png"
+    zoom .36
+    ypos 0.03
+image plumeria serious:
+    "character/plumeria/plumeria serious.png"
+    zoom .36
+    ypos 0.03
+image plumeria surprised:
+    "character/plumeria/plumeria surprised.png"
     zoom .36
     ypos 0.03
 image dahlia:
@@ -189,8 +233,8 @@ label start:
     narrator "Besides me, Plumeria stirs back to groggy wakefulness."
 
     show plumeria serious
-	
-	plumeria "Hmm? Ah... are we...?"
+
+    plumeria "Hmm? Ah... are we...?"
 
     narrator "She scrubs at her face with a sleeve. Her eyes, a startling malachite green, blink repeatedly at me before she turns to peer out the window."
 
@@ -198,21 +242,23 @@ label start:
 
     show plumeria surprised
 
-	plumeria "Ahh! You should have woken me!"
+    plumeria "Ahh! You should have woken me!"
 
     narrator "I shrug."
 
     foxglove "Why? We’re going to be here for a couple of weeks. You’ll have plenty of time to see it, and in a better light, too."
 
-	show plumeria neutral
+    show plumeria grin
 
     narrator "She gives an exaggerated sigh, then grins at me as she nudges me with an elbow. How is it so pointy? My gods, her horns would be blunter."
 
     plumeria "You’ve got no poetry in your soul."
 
+    show foxglove sarcastic
+
     foxglove "Nope."
-	
-	show plumeria grin
+    
+    show plumeria
 
     narrator "She gives a huff of amused exasperation."
     
@@ -256,14 +302,14 @@ label start:
     foxglove "That’s what she said on the phone."
 
     plumeria "You do know what she looks like, right?"
-	
-	show foxglove annoyed
+    
+    show foxglove annoyed
 
     narrator "I give her an annoyed look. She merely laughs in reply."
 
     plumeria "I guess look around and bother old ladies until you find the right one."
-	
-	show foxglove neutral
+    
+    show foxglove
 
     narrator "In the stained illumination of the platform lights, I throw my glances over the other figures about, shrunk in on themselves against the bite of the air."
 
@@ -282,28 +328,30 @@ label start:
     narrator "The only other person about is a cute-looking girl, about my age. If this is my grandmother, she’s sure aged well. I wonder if she’s a local? Her horns have that downwards curve common in the north."
 
     show plumeria flirt 
-	
-	plumeria "Checking out girls already? You sure move fast, huh."
+    
+    plumeria "Checking out girls already? You sure move fast, huh."
 
-    show foxglove flustered "Wha- no! I was just looking around!"
-	
-	show plumeria guffaw
+    show foxglove flustered
+    
+    foxglove "Wha- no! I was just looking around!"
+    
+    show plumeria guffaw
 
     plumeria "Uh-huh."
 
     narrator "She snickers at my expense, then shivers."
-	
-	show plumeria neutral
+    
+    show plumeria
 
     plumeria "Well, lovergirl, hurry up and find your granny before I freeze solid."
 
     narrator "Plumeria shivers as she stands still. She’s hunched in on herself, trying to bury her face into her collar against the early touch of Sister Winter. I smile, seeing a chance to get my own back."
 
     show foxglove sarcastic
-	
-	foxglove "Is it a bit nippy out tonight?"
-	
-	show plumeria annoyed
+    
+    foxglove "Is it a bit nippy out tonight?"
+    
+    show plumeria annoyed
 
     narrator "I speak with excessive casualness and am immediately rewarded with a fearsome glare."
 
@@ -314,32 +362,34 @@ label start:
     foxglove "You have a twisted imagination, miss Feld."
 
     plumeria "And you have no sense of proper temperature."
-	
-	show foxglove neutral
+    
+    show foxglove
+    
+    show plumeria
 
     narrator "I consider for a second, before I slide my coat off and drape it round her shoulders. "
 
     narrator "It’s a little too small on her to actually wear it, so my coat becomes a cape instead. Without it, even I find it a little cold."
 
     show foxglove sarcastic
-	
-	foxglove "Here, your majesty, so you don’t perish in the cold and I don’t have to eat your disgusting frozen toes."
-	
-	show plumeria surprised
+    
+    foxglove "Here, your majesty, so you don’t perish in the cold and I don’t have to eat your disgusting frozen toes."
+    
+    show plumeria surprised
 
     plumeria "Oh! You sure?"
-	
-	show foxglove neutral
-	
+    
+    show foxglove
+    
     narrator "I simply nod. If nothing else, it’ll be encouragement to find my grandmother quicker."
 
-	show plumeria grin
+    show plumeria grin
 
     plumeria "Thanks. Maybe I won’t have to feed you frozen body parts after all."
 
     # "[Character models should change: protag loses coat, plu gains an extra layer.]"
-	
-	show plumeria neutral
+    
+    show plumeria
 
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
 
@@ -349,10 +399,10 @@ label start:
     show dahlia at center
 
     dahlia "Who isn’t?"
-	
-	show foxglove terror
-	
-	show plumeria surprised
+    
+    show foxglove terror
+    
+    show plumeria surprised
 
     foxglove "Waaaghhh!"
     
@@ -360,9 +410,9 @@ label start:
 
     narrator "I clutch at my chest, heart hammering, as I take in the little old woman that’s appeared behind us."
 
-	show plumeria neutral
-	
-	show foxglove neutral
+    show plumeria
+    
+    show foxglove
 
     narrator "She’s well dressed against the cold, with sharp features and a hard intelligence undimmed by age behind her eyes. One of her horns is severed in half, capped off with brass or bronze."
 
@@ -373,32 +423,32 @@ label start:
     narrator "Without asking, she reaches up and grabs hold of my horns. She angles my head until I’m staring up into purple eyes; the same kind of eyes I have, that my mother has."
 
     narrator "The old woman observes my face without speaking. It’s like a staring contest with a scalpel."
+    
+    # TODO: show foxglove nervous
 
-	show foxglove terror
-
-	// TODO: shaking FX
+    # TODO: shaking FX
     foxglove "Can, can you, um, le-"
 
-	// TODO: show dahlia commanding
+    # TODO: show dahlia commanding
     dahlia "Hold still, girl!"
 
     narrator "It is perhaps one of the most awkward moments of my life. I look sideways, beseeching Plumeria for help, trying to signal SOS by the inclination of my eyebrows."
 
-	show plumeria grin
-	
+    show plumeria grin
+    
     narrator "She gives me two thumbs up. In my head, I swear eternal vengeance."
 
-	show dahlia neutral
-	
+    show dahlia
+    
     dahlia "Hmm."
-	
-	show foxglove neutral
+    
+    show foxglove
 
     narrator "Abruptly she lets go and turns that sharp gaze upon Plumeria. My roommate gives a winning smile."
 
     dahlia "And who are you, hmm?"
-	
-	show plumeria grin
+    
+    show plumeria grin
 
     plumeria "Plumeria Feld, your darling granddaughter’s roommate. Pleased to meet you, granny!"
 
@@ -407,18 +457,22 @@ label start:
     narrator "Against this assault of charm, however, the frown on my grandmother’s face is a minefield."
 
     dahlia "..."
+    
+    show plumeria serious
 
     plumeria "...Mrs. Heath?"
 
     dahlia "..."
 
     plumeria "...Ma’am?"
-	
-	show plumeria neutral
+    
+    show plumeria
 
     narrator "The old woman gives a tiny nod, and Plume unconsciously gives a little sigh of relief."
 
     dahlia "Hmmph. I only have one spare bed, so you’ll have to share, but you’re free to stay as well."
+
+    show plumeria flirt
 
     plumeria "Hey, it’s better than the shed, right? And besides..."
 
@@ -426,17 +480,27 @@ label start:
     
     narrator "She’s about to say something terrible and flirtatious, like she always does when she wants to fluster me, and that will make my first impression with my grandmother."
 
+    show foxglove annoyed
+
     foxglove "I will end you."
 
     narrator "Smoothly she switches tracks."
+    
+    show plumeria
+    
+    show foxglove
 
     plumeria "...You don’t mind, right?"
 
     narrator "I roll my eyes."
+    
+    show foxglove sarcastic
 
     foxglove "I think I’ll get by."
-	
-	show plumeria serious
+    
+    show foxglove
+    
+    show plumeria serious
 
     narrator "I startle as she drops her hand on my shoulder. Her expression is as solemn as the ironwork of the train station."
 
@@ -444,21 +508,23 @@ label start:
 
     narrator "With just as graven an expression, I nod."
 
+    show foxglove sarcastic
+
     foxglove "I will remember this betrayal."
-	
-	narrator "..."
-	
-	show foxglove not smiling
-	
-	show plumeria guffaw
+    
+    narrator "..."
+    
+    show foxglove not smiling
+    
+    show plumeria guffaw
 
     narrator "We both stare at each other before she giggles and I let out a huff, shaking my head as I feel a grin pull at my cheeks."
 
     narrator "The old woman I’d come here to meet merely watches this with her unblinking gaze. Finally, she too shakes her head at the folly of youth."
 
-	show plumeria neutral
-	
-	show foxglove neutral
+    show plumeria
+    
+    show foxglove
 
     dahlia "Well, come along. Once it starts getting cold-"
 
@@ -472,8 +538,8 @@ label start:
 
     narrator "She doesn’t even pause as the station attendant wishes her a respectful good night, merely nodding."
 
-	//TODO: show dahlia commanding
-	
+    #TODO: show dahlia commanding
+    
     dahlia "You two! Get!"
 
     narrator "Her voice cracks out like a whip."
@@ -502,9 +568,9 @@ label start:
     narrator "For a moment, I feel weightless, my head fuzzing. I am adrift, in a deep, dark sea. I breathe in, trying to let the crisp cut of the air centre me."
 
     plumeria "-ve?"
-	
-	show foxglove at left    
-    show plumeria at right
+    
+    show foxglove at left    
+    show plumeria surprised at right
     with fade
 
     narrator "Abruptly I realise Plumeria is saying something. Now she’s leaning in, peering at my face. My grandmother is ahead, marching with a firm step that belies her age entirely."
@@ -514,6 +580,8 @@ label start:
     narrator "Ah, I’m getting distracted. My head is still a little foggy."
 
     foxglove "Hmm? Sorry, I missed what you were saying."
+    
+    show plumeria
 
     narrator "Plume searches my expression for a moment, before they give a small smile."
 
@@ -555,15 +623,17 @@ label start:
 
     dahlia "Hmmph. Call me Grandmother. I’ll not need my own kin to bow and scrape."
 
-	show plumeria grin
+    show plumeria grin
 
     plumeria "How abou-"
 
     dahlia "No."
-	
-	show plumeria serious
+    
+    show plumeria serious
 
     narrator "Plumeria looks dejected."
+
+    show plumeria
 
     foxglove "Ah, well, Grandmother, I was wondering - why the blue lanterns?"
 
@@ -602,17 +672,25 @@ label start:
 
     narrator "Yeah, that’s another way I can guess it used to be a child’s room. The bed is not large, in the same way I am not tall."
 
+    show foxglove sarcastic
+
     foxglove "Alright. I’ll ask my grandmother if there’s a shed for you to sleep in."
 
-    plumeria serious "Ha. Ha ha. Real funny."
+    show plumeria grin
 
-    foxglove sarcasm "Aren’t I just."
+    plumeria "Ha. Ha ha. Real funny."
+
+    foxglove "Aren’t I just."
+    
+    show plumeria
+    
+    show foxglove
 
     narrator "She sighs and looks at the bed. We were going to be snug, certainly. Abruptly I yawn so wide my jaw cracks. Plume gives a small chuckle."
 
     show plumeria grin 
-	
-	show plumeria "Well its not going to get any bigger."
+    
+    plumeria "Well its not going to get any bigger."
     
     scene cg tucked into bed
     with fade
