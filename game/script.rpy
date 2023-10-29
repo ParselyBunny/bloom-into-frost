@@ -135,6 +135,14 @@ transform center:
 
 transform right:
     xalign 1.05
+    
+transform right_sitting:
+    xalign 1.025
+    ypos 0.25
+    
+transform left_sitting:
+    xalign 0.05
+    ypos 0.3
 
 
 # The game starts here.
@@ -154,7 +162,7 @@ label start:
     scene bg train night
     with fade
     
-    show foxglove at left
+    show foxglove at left_sitting
     with fade
 
     narrator "The rattle of the train is constant and soothing. It’s creeping into winter, and flakes of snow dance microsecond ballets in the lights from the train windows."
@@ -165,7 +173,7 @@ label start:
 
     narrator "The dim lights in the train are too dark to read by. Next to me, Plumeria dozes fitfully."
     
-    show plumeria at right
+    show plumeria at right_sitting
     with fade
 
     narrator "She is a tall, curvy woman, with elegant upwards horns and mossy green hair, a student in the university back home."
@@ -707,11 +715,13 @@ label start:
 
     foxglove "Why did you come with me?"
 
-    narrator "She is silent for a long moment, breathing slow and steady, and I begin to wonder if she’d fallen asleep. Finally, without opening her eyes, she speaks, low enough I could barely hear."
+    narrator "She is silent for a long moment, breathing slow and steady, and I begin to wonder if she’d 
+        fallen asleep. Finally, without opening her eyes, she speaks, low enough I could barely hear."
 
     plumeria "I just felt like it, was all. Wanted to see the north."
 
-    narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into a still pond, I fall asleep."
+    narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into 
+        a still pond, I fall asleep."
 
     # Day 1
     scene bg bedroom day
