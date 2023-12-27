@@ -2,6 +2,9 @@
 
 
 init python:
+    import random
+    import math
+
     # Define "ambience" sound channel, mixed w/music slider, loops by default
     
     renpy.music.register_channel("ambience", "music", True)
@@ -47,6 +50,53 @@ init python:
             renpy.music.play("audio/iceclick.mp3", channel="typewriter", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="typewriter")
+    
+    # Source: https://www.reddit.com/r/RenPy/comments/17o8vaf/made_a_firefly_effect/
+    # This one updates the fly position everyframe
+    fly = None
+    def firefly_update(st):
+        for i in fireflies_sprites:
+            fly = i[0]
+            fly.y = fly.y - 5 * i[4]
+
+            # fly_xposition = start_position + (sin(fly.yposition / 180 * oscillate_intensity) * direction)
+            if fly.y < -100:
+                fly.y = 1200 + renpy.random.uniform(0,600)
+            if i[5] == 2:
+                sine = math.sin(fly.y / 180.0 * i[3]) * -1
+            else:
+                sine = math.sin(fly.y / 180.0 * i[3])
+            if sine == 0:
+                sine = 0.1
+            sined = 250 * i[2] * sine
+            fly.x = i[1] + sined
+        return 0.01
+
+    # To summon the fireflies
+    random.seed()
+    fireflies = SpriteManager(update=firefly_update)
+    fireflies_sprites = [ ]
+    fireflies_pos = None
+
+    # Since there isn't any way to change the size, I had to make multiple images of fireflies with different size LMAO
+    fireflyimages = [Image("/images/blue-small-42.png"), Image("/images/blue-small-67.png"), Image("/images/blue-small-100.png")]
+    for i in range(100):
+        imagerand = renpy.random.randint(0,len(fireflyimages) - 1)
+        newfly = fireflies.create(fireflyimages[imagerand])
+        # 0 = the fly
+        # 1 = the xpos
+        # 2 = sinetensity
+        # 3 = sinspeed
+        fireflies_sprites.append([newfly,renpy.random.randint(-200, 1900),renpy.random.uniform(0.3,1.0),renpy.random.uniform(0.5,1.0),renpy.random.uniform(0.4,1.0),renpy.random.randint(1,2)])
+
+    n = 0
+    for i in fireflies_sprites:
+        i[0].y = 1200 + n
+        n = n + renpy.random.uniform(0,600)
+
+    del fly
+    del newfly
+    del i
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -558,6 +608,7 @@ label start:
     scene bg streets night
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 5.0 loop
+    show expression fireflies as fireflies
 
     narrator "Our path from the station soon takes us from the wide main roads to the tangles of terraced houses built for pilgrims in ages past."
 
@@ -659,6 +710,7 @@ label start:
 
     dahlia "Just an old superstition now. Now get inside, if you would."
     
+    hide fireflies
     stop music fadeout 1.0
     scene bg bedroom night
     with fade
