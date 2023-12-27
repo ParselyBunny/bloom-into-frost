@@ -122,9 +122,9 @@ image fennel:
     "character/fennel/fennel neutral.png"
     zoom .36
     ypos 0.1
-image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=200, start=10)
-image snow_59 = SnowBlossom("snow_59.png", count=500, xspeed=50, yspeed=200, start=10)
-image snow_25 = SnowBlossom("snow_25.png", count=500, xspeed=50, yspeed=200, start=10)
+image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=220, start=10)
+image snow_59  = SnowBlossom("snow_59.png",  count=500, xspeed=50, yspeed=175, start=10)
+image snow_25  = SnowBlossom("snow_25.png",  count=500, xspeed=50, yspeed=100, start=10)
 
 # Define transforms
 transform left:
