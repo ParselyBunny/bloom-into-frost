@@ -1184,7 +1184,7 @@ label start:
 
     narrator "The arched ribs of the ceiling give the impression of standing in the chest of some half-buried primaeval skeleton."
 
-    narrator "It’s lit only by the blue light of ghost lanterns with their faintly repellent incense; a hundred years of burnt offerings gives an indelible taste to the air."
+    narrator "It’s lit only by the blue light of the blue-flamed candles with their faintly repellent incense; a hundred years of burnt offerings gives an indelible taste to the air."
 
     narrator "It’s warmer in here than outside, and combined with the incense it makes it vaguely cloying. We’re the only ones here; every sound echoes strangely."
 
