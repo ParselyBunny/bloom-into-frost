@@ -101,81 +101,260 @@ init python:
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define narrator = Character(None, color="#ffffff", window_background="gui/textbox.png")
-define foxglove = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png", callback=fox_beep )
-define plumeria = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png", callback=plumeria_beep)
-define dahlia = Character("Grandmother", color="#ffffff", window_background="gui/gdmtextbox.png", callback=grandma_beep)
+define narrator  = Character(None, color="#ffffff", window_background="gui/textbox.png")
+define foxglove  = Character("Me", color="#ffffff", window_background="gui/fxgtextbox.png", callback=fox_beep )
+define plumeria  = Character("Plumeria", color="#ffffff", window_background="gui/plutextbox.png", callback=plumeria_beep)
+define dahlia    = Character("Grandmother", color="#ffffff", window_background="gui/gdmtextbox.png", callback=grandma_beep)
 define announcer = Character("Announcer", color="#ffffff", window_background="gui/textbox.png")
-define fennel = Character("Fennel", color="#ffffff", window_background="gui/fnltextbox.png", callback=fennel_beep)
-define radio = Character("Radio", color="#ffffff", window_background="gui/textbox.png", callback=radio_beep)
-define spirit = Character("Spirit", color="#ffffff", window_background="gui/textbox.png", callback=spirit_beep)
+define fennel    = Character("Fennel", color="#ffffff", window_background="gui/fnltextbox.png", callback=fennel_beep)
+define radio     = Character("Radio", color="#ffffff", window_background="gui/textbox.png", callback=radio_beep)
+define spirit    = Character("Spirit", color="#ffffff", window_background="gui/textbox.png", callback=spirit_beep)
 
 # Define images
 image black = "#000"
-image foxglove:
-    "character/foxglove/foxglove neutral.png"
+
+layeredimage foxglove:
+    always "character/foxglove/foxglove neutral.png"
     zoom .33
     ypos 0.175
-image foxglove annoyed:
-    "character/foxglove/foxglove annoyed.png"
+    
+    group breath:
+        pos(1200,750) # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove neutral:
+    always "character/foxglove/foxglove neutral.png"
     zoom .33
     ypos 0.175
-image foxglove flustered:
-    "character/foxglove/foxglove flustered.png"
+    
+    group breath:
+        pos(1200,750) # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove annoyed:
+    always "character/foxglove/foxglove annoyed.png"
     zoom .33
     ypos 0.175
-image foxglove not smiling:
-    "character/foxglove/foxglove not smiling.png"
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove flustered:
+    always "character/foxglove/foxglove flustered.png"
     zoom .33
     ypos 0.175
-image foxglove sarcastic:
-    "character/foxglove/foxglove sarcastic.png"
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove not smiling:
+    always "character/foxglove/foxglove not smiling.png"
     zoom .33
     ypos 0.175
-image foxglove terror:
-    "character/foxglove/foxglove terror.png"
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove sarcastic:
+    always "character/foxglove/foxglove sarcastic.png"
     zoom .33
     ypos 0.175
-image plumeria:
-    "character/plumeria/plumeria neutral.png"
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove terror:
+    always "character/foxglove/foxglove terror.png"
+    zoom .33
+    ypos 0.175
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+            
+layeredimage plumeria:
+    always "character/plumeria/plumeria neutral.png"
     zoom .36
     ypos 0.03
-image plumeria annoyed:
-    "character/plumeria/plumeria annoyed.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria neutral:
+    always "character/plumeria/plumeria neutral.png"
     zoom .36
     ypos 0.03
-image plumeria flirt:
-    "character/plumeria/plumeria flirt.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria annoyed:
+    always "character/plumeria/plumeria annoyed.png"
     zoom .36
     ypos 0.03
-image plumeria grin:
-    "character/plumeria/plumeria grin.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria flirt:
+    always "character/plumeria/plumeria flirt.png"
     zoom .36
     ypos 0.03
-image plumeria guffaw:
-    "character/plumeria/plumeria guffaw.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria grin:
+    always "character/plumeria/plumeria grin.png"
     zoom .36
     ypos 0.03
-image plumeria serious:
-    "character/plumeria/plumeria serious.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria guffaw:
+    always "character/plumeria/plumeria guffaw.png"
     zoom .36
     ypos 0.03
-image plumeria surprised:
-    "character/plumeria/plumeria surprised.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria serious:
+    always "character/plumeria/plumeria serious.png"
     zoom .36
     ypos 0.03
-image dahlia:
-    "character/dahlia/dahlia neutral.png"
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria surprised:
+    always "character/plumeria/plumeria surprised.png"
+    zoom .36
+    ypos 0.03
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+    
+layeredimage dahlia:
+    always "character/dahlia/dahlia neutral.png"
     zoom .45
     ypos 0.05
-image fennel:
-    "character/fennel/fennel neutral.png"
+    
+    group breath:
+        pos(640,760)  # Line up with mouth.
+        zoom 1.1      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage dahlia neutral:
+    always "character/dahlia/dahlia neutral.png"
+    zoom .45
+    ypos 0.05
+    
+    group breath:
+        pos(640,760)  # Line up with mouth.
+        zoom 1.1      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage dahlia commanding:
+    always "character/dahlia/dahlia commanding.png"
+    zoom .45
+    ypos 0.05
+    
+    group breath:
+        pos(640,760)  # Line up with mouth.
+        zoom 1.1      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+    
+layeredimage fennel:
+    always "character/fennel/fennel neutral.png"
     zoom .36
     ypos 0.1
+    
 image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=220, start=10)
 image snow_59  = SnowBlossom("snow_59.png",  count=500, xspeed=50, yspeed=175, start=10)
 image snow_25  = SnowBlossom("snow_25.png",  count=500, xspeed=50, yspeed=100, start=10)
 
+image frost_particles = Composite(
+    (200,200),
+    (0,0), At("frost_breath/p2.png", frost_particles(0.0)),
+    (0,0), At("frost_breath/p3.png", frost_particles(0.1)),
+    (0,0), At("frost_breath/p4.png", frost_particles(0.2)),
+    (0,0), At("frost_breath/p1.png", frost_particles(0.3)),
+    (0,0), At("frost_breath/p5.png", frost_particles(0.4)))
+image frost_breath:
+    "frost_particles"
+    choice:
+        pause 6.0
+    choice:
+        pause 7.0
+    choice:
+        pause 8.0
+    repeat
+    
 # Define transforms
 transform left:
     xalign 0.05
@@ -193,6 +372,35 @@ transform right_sitting:
 transform left_sitting:
     xalign 0.05
     ypos 0.3
+    
+transform frost_particles(delay):
+
+    zoom 2.0 alpha 0.0 yoffset 0 xoffset 0 rotate 0
+
+    pause delay
+
+    parallel:
+        linear 2.0 alpha 0.5
+        linear 2.0 alpha 0.0
+
+    parallel:
+        easein 4.0 xoffset -150
+
+    parallel:
+        choice:
+            easein 4.0 yoffset 10
+        choice:
+            easein 4.0 yoffset 0
+        choice:
+            easein 4.0 yoffset -10
+
+    parallel:
+        choice:
+            easein 4.0 rotate 5
+        choice:
+            easein 4.0 rotate 0
+        choice:
+            easein 4.0 rotate -5
 
 
 # The game starts here.
@@ -222,9 +430,6 @@ label start:
     narrator "I’ve always preferred the cold. Heat has a tendency to leave me listless and sluggish."
 
     narrator "The dim lights in the train are too dark to read by. Next to me, Plumeria dozes fitfully."
-    
-    show plumeria at right_sitting
-    with fade
 
     narrator "She is a tall, curvy woman, with elegant upwards horns and mossy green hair, a student in the university back home."
 
@@ -264,7 +469,7 @@ label start:
 
     stop ambience fadeout 1.0
 
-    scene bg train dead god night
+    scene cg train dead god night
     with fade
 
     narrator "Yeah. It was an impressive sight."
@@ -284,13 +489,13 @@ label start:
     scene bg train night
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove at left_sitting    
     with fade
 
     narrator "Besides me, Plumeria stirs back to groggy wakefulness."
 
-    show plumeria serious
+    show plumeria serious at right_sitting
+    with fade
 
     plumeria "Hmm? Ah... are we...?"
 
@@ -306,7 +511,7 @@ label start:
 
     foxglove "Why? We’re going to be here for a couple of weeks. You’ll have plenty of time to see it, and in a better light, too."
 
-    show plumeria grin
+    show plumeria flirt
 
     narrator "She gives an exaggerated sigh, then grins at me as she nudges me with an elbow. How is it so pointy? My gods, her horns would be blunter."
 
@@ -316,17 +521,17 @@ label start:
 
     foxglove "Nope."
     
-    show plumeria
+    show plumeria grin
 
     narrator "She gives a huff of amused exasperation."
     
     stop ambience fadeout 6.0
-    scene bg train station night
+    scene bg train station
     with fade
     play ambience "audio/ambience/train station.mp3" fadein 5.0 volume 0.6
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "The station wasn’t that much brighter than the train. The lights are dim and flicker fitfully, fluffy wintermoths clustering around them in frantic swirls."
@@ -362,16 +567,20 @@ label start:
     plumeria "You do know what she looks like, right?"
     
     show foxglove annoyed
+    
+    show plumeria grin
 
     narrator "I give her an annoyed look. She merely laughs in reply."
 
     plumeria "I guess look around and bother old ladies until you find the right one."
     
-    show foxglove
+    show foxglove neutral
+    
+    show plumeria neutral
 
     narrator "In the stained illumination of the platform lights, I throw my glances over the other figures about, shrunk in on themselves against the bite of the air."
 
-    narrator "Never minding bothering the right old lady, there doesn’t seem to be one to bother at all.The cavernous station is almost empty."
+    narrator "Never minding bothering the right old lady, there doesn’t seem to be one to bother at all. The cavernous station is almost empty."
 
     narrator "An old man dribbles smoke from a cigarette, ungloved fingers stained yellow with age and tobacco. He’s the right sort of age group, wrong everything else. Especially since he’s holding a train ticket."
 
@@ -399,7 +608,7 @@ label start:
 
     narrator "She snickers at my expense, then shivers."
     
-    show plumeria
+    show plumeria neutral
 
     plumeria "Well, lovergirl, hurry up and find your granny before I freeze solid."
 
@@ -421,9 +630,9 @@ label start:
 
     plumeria "And you have no sense of proper temperature."
     
-    show foxglove
+    show foxglove neutral
     
-    show plumeria
+    show plumeria neutral
 
     narrator "I consider for a second, before I slide my coat off and drape it round her shoulders. "
 
@@ -437,7 +646,7 @@ label start:
 
     plumeria "Oh! You sure?"
     
-    show foxglove
+    show foxglove neutral
     
     narrator "I simply nod. If nothing else, it’ll be encouragement to find my grandmother quicker."
 
@@ -447,14 +656,14 @@ label start:
 
     # "[Character models should change: protag loses coat, plu gains an extra layer.]"
     
-    show plumeria
+    show plumeria neutral
 
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
 
     stop ambience fadeout 1.5
     play music [ "<silence 1.75>", "audio/music/Harlequin.mp3" ] volume 0.5
     # "[grandmother sprite appears midsentence]"
-    show dahlia at center
+    show dahlia breath at center
 
     dahlia "Who isn’t?"
     
@@ -468,9 +677,9 @@ label start:
 
     narrator "I clutch at my chest, heart hammering, as I take in the little old woman that’s appeared behind us."
 
-    show plumeria
+    show plumeria neutral
     
-    show foxglove
+    show foxglove neutral
 
     narrator "She’s well dressed against the cold, with sharp features and a hard intelligence undimmed by age behind her eyes. One of her horns is severed in half, capped off with brass or bronze."
 
@@ -487,7 +696,7 @@ label start:
     # TODO: shaking FX
     foxglove "Can, can you, um, le-"
 
-    # TODO: show dahlia commanding
+    show dahlia commanding
     dahlia "Hold still, girl!"
 
     narrator "It is perhaps one of the most awkward moments of my life. I look sideways, beseeching Plumeria for help, trying to signal SOS by the inclination of my eyebrows."
@@ -496,11 +705,11 @@ label start:
     
     narrator "She gives me two thumbs up. In my head, I swear eternal vengeance."
 
-    show dahlia
+    show dahlia neutral
     
     dahlia "Hmm."
     
-    show foxglove
+    show foxglove neutral
 
     narrator "Abruptly she lets go and turns that sharp gaze upon Plumeria. My roommate gives a winning smile."
 
@@ -524,7 +733,7 @@ label start:
 
     plumeria "...Ma’am?"
     
-    show plumeria
+    show plumeria neutral
 
     narrator "The old woman gives a tiny nod, and Plume unconsciously gives a little sigh of relief."
 
@@ -544,9 +753,9 @@ label start:
 
     narrator "Smoothly she switches tracks."
     
-    show plumeria
+    show plumeria neutral
     
-    show foxglove
+    show foxglove neutral
 
     plumeria "...You don’t mind, right?"
 
@@ -556,7 +765,7 @@ label start:
 
     foxglove "I think I’ll get by."
     
-    show foxglove
+    show foxglove neutral
     
     show plumeria serious
 
@@ -580,9 +789,9 @@ label start:
 
     narrator "The old woman I’d come here to meet merely watches this with her unblinking gaze. Finally, she too shakes her head at the folly of youth."
 
-    show plumeria
+    show plumeria neutral
     
-    show foxglove
+    show foxglove neutral
 
     dahlia "Well, come along. Once it starts getting cold-"
 
@@ -596,7 +805,7 @@ label start:
 
     narrator "She doesn’t even pause as the station attendant wishes her a respectful good night, merely nodding."
 
-    #TODO: show dahlia commanding
+    show dahlia commanding
     
     dahlia "You two! Get!"
 
@@ -628,8 +837,8 @@ label start:
 
     plumeria "-ve?"
     
-    show foxglove at left    
-    show plumeria surprised at right
+    show foxglove breath at left    
+    show plumeria surprised breath at right
     with fade
 
     narrator "Abruptly I realise Plumeria is saying something. Now she’s leaning in, peering at my face. My grandmother is ahead, marching with a firm step that belies her age entirely."
@@ -640,7 +849,7 @@ label start:
 
     foxglove "Hmm? Sorry, I missed what you were saying."
     
-    show plumeria
+    show plumeria neutral
 
     narrator "Plume searches my expression for a moment, before they give a small smile."
 
@@ -664,7 +873,8 @@ label start:
 
     narrator "Plume catches me in my impromptu study, and raises an eyebrow questioningly. I’m saved from having to think of an answer when my grandmother ahead comes to a stop."
 
-    show dahlia at center
+    show dahlia breath at center
+    with fade
 
     dahlia "Here we are."
 
@@ -692,7 +902,7 @@ label start:
 
     narrator "Plumeria looks dejected."
 
-    show plumeria
+    show plumeria neutral
 
     foxglove "Ah, well, Grandmother, I was wondering - why the blue lanterns?"
 
@@ -742,9 +952,9 @@ label start:
 
     foxglove "Aren’t I just."
     
-    show plumeria
+    show plumeria neutral
     
-    show foxglove
+    show foxglove neutral
 
     narrator "She sighs and looks at the bed. We were going to be snug, certainly. Abruptly I yawn so wide my jaw cracks. Plume gives a small chuckle."
 
@@ -752,7 +962,7 @@ label start:
     
     plumeria "Well its not going to get any bigger."
     
-    scene cg tucked into bed
+    scene cg tucked into bed 1
     with fade
 
     #Scene fades to showing them tucked in bed. It’s crowded and they look uncomfortable. Horn caps on.
@@ -760,6 +970,8 @@ label start:
     foxglove "Hey, Plume."
 
     narrator "My voice is a quiet murmur."
+    
+    scene cg tucked into bed 2
 
     plumeria "Hmm?"
     
@@ -768,12 +980,16 @@ label start:
     foxglove "Why did you come with me?"
 
     narrator "She is silent for a long moment, breathing slow and steady, and I begin to wonder if she’d 
-        fallen asleep. Finally, without opening her eyes, she speaks, low enough I could barely hear."
+        fallen asleep. Finally, she speaks, low enough I could barely hear."
 
     plumeria "I just felt like it, was all. Wanted to see the north."
+    
+    scene cg tucked into bed 3
 
     narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into 
         a still pond, I fall asleep."
+
+    ### END OF DEMO ###
 
     # Day 1
     scene bg bedroom day
@@ -878,8 +1094,8 @@ label start:
 
     # music continues
     scene bg streets night
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "Eventually, as the sun begins to creep back down towards the horizon, we purchase steaming cups of drink and a pail full of sticks of hot, greasy mystery meat."
@@ -1016,8 +1232,8 @@ label start:
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0 loop
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
@@ -1038,8 +1254,8 @@ label start:
     
     scene bg pilgrims path day
     with fade
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance."
 
@@ -1105,8 +1321,8 @@ label start:
 
     # scene change
     scene bg pilgrims path day
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "We climb... and climb... and climb."
@@ -1539,8 +1755,8 @@ label start:
     scene bg pilgrims path day
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "And so the days passed. Each day, we would climb the mountain for a while, seeking higher and higher heights."
@@ -1840,8 +2056,8 @@ label start:
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "The next day, climbing the mountain, my heart isn’t in it."
@@ -1854,8 +2070,8 @@ label start:
     scene bg streets night
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 5.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
     
     narrator "The sun has already begun to go down as we begin heading back through the streets. Part way back, Plumeria hesitates."
@@ -2218,8 +2434,8 @@ label start:
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub."
@@ -2473,8 +2689,8 @@ label start:
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 3.0 loop volume 1.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps."
@@ -2545,8 +2761,8 @@ label start:
     play ambience2 "audio/ambience/high wind layer.ogg" loop volume 1.0
     
     scene bg pilgrims path day
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "The last portion of the climb is viciously steep. We don’t walk but clamber awkwardly, scrambling over dyed-white stone."
@@ -2652,8 +2868,8 @@ label start:
     plumeria "No argument from me there. Damn, but it’s getting cold."
     
     scene bg pilgrims path night
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
@@ -2677,8 +2893,8 @@ label start:
 
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
 
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
@@ -2822,8 +3038,7 @@ label start:
     narrator "The spirit screeches and retreats, and the others follow, disappearing into the mist."
 
     scene bg pilgrims path night
-    show foxglove at left    
-    show plumeria at right
+    show foxglove terror breath at center
     with fade
 
     narrator "I watch them go, panting, fighting the urge to pass out. When the fog begins to break apart, and I’m sure they’re not coming back, I drop to my knees."
@@ -2855,8 +3070,7 @@ label start:
     play sound "audio/oneshot/door slam.mp3" volume 4.0
     play ambience "audio/ambience/indoor high wind.mp3" fadein 3.0 loop volume 1.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left
     with fade
 
     narrator "A tiny bit of colour has returned to Plumeria’s lips as I slam the door and lay her down. That must be a good sign, right?"
@@ -2870,8 +3084,12 @@ label start:
     play ambience2 "audio/ambience/fire crackle louder.mp3" fadein 2.0 loop volume 1.0
     
     scene bg cabin lit night
-    show foxglove at left    
-    show plumeria at right
+    
+    show foxglove at left
+    with fade
+    
+    hide breath
+    with fade
 
     narrator "I nurse it in the kindling, building the fire until it’s fiercely licking yellow tongues across the chunks of timber."
 
@@ -2898,6 +3116,9 @@ label start:
     play music "audio/music/Feather Waltz.mp3" volume 5.5 loop
 
     narrator "Slowly, she stops feeling so cold. Finally she stirs. A low, slow groan creeps out her like the hinge on a coffin."
+
+    show plumeria at right
+    with fade
 
     plumeria "Wha...?"
 
@@ -3226,8 +3447,8 @@ label start:
     plumeria "Eh, I don’t mind. It saved our butts, didn’t it? If I have to buy some more absolutely grim-tasting chocolate, I can deal."
 
     scene bg pilgrims path day
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
@@ -3264,8 +3485,8 @@ label start:
     scene bg streets night
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with fade
 
     narrator "We make it down without incident aside from my growing awareness of my aches and pains."
