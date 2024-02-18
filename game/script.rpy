@@ -673,12 +673,16 @@ label start:
 
     plumeria "Thanks. Maybe I won’t have to feed you frozen body parts after all."
 
+    narrator "And isn’t that what friendship is all about."
+
     # "[Character models should change: protag loses coat, plu gains an extra layer.]"
     
     show plumeria neutral
     with dissolve
 
     narrator "I frown. It was pretty clear that my grandmother was either invisible or absent."
+
+    foxglove "Hey, Plume, I don’t think she’s here. Maybe she’s waiting outside the st-"
 
     stop ambience fadeout 1.5
     play music [ "<silence 1.75>", "audio/music/Harlequin.mp3" ] volume 0.5
@@ -776,7 +780,7 @@ label start:
 
     plumeria "Hey, it’s better than the shed, right? And besides..."
 
-    narrator "She nudges me with the boniest elbow in the world. I can tell that\nshit-eating expression."
+    narrator "She nudges me with the boniest elbow in the world. I can tell that shit-eating expression."
     
     narrator "She’s about to say something terrible and flirtatious, like she always does when she wants to fluster me, and that will make my first impression with my grandmother."
 
@@ -1025,7 +1029,7 @@ label start:
     show plumeria grin
     with dissolve
     
-    plumeria "Well its not going to get any bigger."
+    plumeria "Well, it's not going to get any bigger."
     
     play sound ["<silence 0.2>", "audio/oneshot/cloth rustle.mp3"] volume 5.0
     
