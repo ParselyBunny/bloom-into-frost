@@ -1079,7 +1079,7 @@ label start:
     show foxglove at left    
     show plumeria at right
     show dahlia at center
-    with fade
+    with dissolve
 
     narrator "All the same, I’ve never been a morning person, and I feel too sleepy for any awkwardness until we’re all sat at the table, having breakfast."
 
@@ -1123,7 +1123,7 @@ label start:
 
     dahlia "A key is in the biscuit tin on the side, there. Lock the door if you leave."
 
-    hide dahlia with fade
+    hide dahlia with dissolve
 
     narrator "I hear her sharp steps fade."
 
@@ -1171,7 +1171,7 @@ label start:
     scene bg streets night
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Eventually, as the sun begins to creep back down towards the horizon, we purchase steaming cups of drink and a pail full of sticks of hot, greasy mystery meat."
 
@@ -1206,7 +1206,7 @@ label start:
     show foxglove at left    
     show plumeria at right
     show dahlia at center
-    with fade
+    with dissolve
 
     narrator "The next morning, I’m still groggy from sleep and rubbing a crick out my neck when Grandmother cuts to the chase."
 
@@ -1309,7 +1309,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
 
@@ -1329,8 +1329,10 @@ label start:
     
     scene bg pilgrims path day
     with fade
+    
     show foxglove at left    
     show plumeria at right
+    with dissolve
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance."
 
@@ -1398,7 +1400,7 @@ label start:
     scene bg pilgrims path day
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "We climb... and climb... and climb."
 
@@ -1469,7 +1471,7 @@ label start:
     scene bg chapel of the nail
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "The Chapel of the Nail turns out to be bigger than I expected. Inside, the rough-carved stone of the walls extends back into the rock of the mountain itself."
 
@@ -1628,7 +1630,7 @@ label start:
     show foxglove at left    
     show plumeria at right
     show dahlia at center
-    with fade
+    with dissolve
     
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
 
@@ -1780,12 +1782,12 @@ label start:
     with fade
     
     show foxglove at left
-    with fade
+    with dissolve
     
     narrator "Eventually, I head off to sleep, and not long later, Plumeria pads in to join me."
     
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Within the bedroom I shared, the air tonight seems thick with heat. Unpleasantly so."
 
@@ -1832,7 +1834,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "And so the days passed. Each day, we would climb the mountain for a while, seeking higher and higher heights."
 
@@ -1967,7 +1969,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Despite my tiredness that night, I sleep poorly. I toss and turn, trying to get comfortable, until Plumeria grumbles discontentedly at the disturbance."
 
@@ -1975,7 +1977,7 @@ label start:
 
     scene bg home night
     show foxglove at left
-    with fade
+    with dissolve
 
     narrator "I slip out the covers and stand, padding through into the next room. I stand for a moment, letting my eyes adjust to the dim shapes coalescing into furniture."
 
@@ -2089,7 +2091,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "I pad carefully back into the little bedroom I’m sharing with Plume. With my eyes adjusted to the dark, I can pick out the curves of her limbs amid the sheets, the mossy bloom of her hair on the pillow."
 
@@ -2133,7 +2135,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "The next day, climbing the mountain, my heart isn’t in it."
     
@@ -2147,7 +2149,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
     
     narrator "The sun has already begun to go down as we begin heading back through the streets. Part way back, Plumeria hesitates."
 
@@ -2176,7 +2178,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "I walk into a wave of solid noise. It crashes against my eardrums, and I rock back on my heels, momentarily stunned by the sheer assault of talking, laughing, clattering."
 
@@ -2197,14 +2199,14 @@ label start:
     plumeria "Alright! I’ll get us drinks, you get us a booth!"
     
     hide plumeria
-    with fade
+    with dissolve
 
     narrator "She splits off from me as I shuffle towards the cluster of walled-off tables. Full, full, full..."
 
     narrator "Ah, none of them are free. I hover awkwardly, hoping one of them would free up, but all the groups sitting in the booths seem pretty entrenched. Oh wait, that one at the end seems empty."
 
     show fennel at right
-    with fade
+    with dissolve
 
     narrator "One of them only has a single woman in it, who looks up as I wander up. She considers me for a second, then gestures to the seat opposite. I hesitate a moment, then take it."
 
@@ -2247,7 +2249,7 @@ label start:
     fennel "So you came to visit? I knew you couldn’t be a local. I think I’d remember."
     
     show plumeria at center
-    with fade
+    with dissolve
 
     narrator "She opens her mouth, perhaps to ask more, when Plume shows up at last. She slides into the seat next to me, placing down a pair of white-crowned pints."
 
@@ -2368,7 +2370,7 @@ label start:
         foxglove "Oh, um, bye."
         
         hide fennel
-        with fade
+        with dissolve
 
         narrator "She winks and is gone, to try her game elsewhere."
 
@@ -2511,7 +2513,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub."
 
@@ -2545,7 +2547,7 @@ label start:
     show foxglove at left    
     show plumeria at right
     show dahlia at center
-    with fade
+    with dissolve
 
     narrator "We enter the house as quietly as possible, which is not very. Grandmother takes one look at us from her chair."
 
@@ -2556,7 +2558,7 @@ label start:
     scene bg bedroom night
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "I lie tucked against Plume, the sheets heavy and piled high. I can still feel the fizz of the alcohol in my fingertips, in my head, like a distant cloud. I can only just see the ceiling of the room."
 
@@ -2677,7 +2679,7 @@ label start:
     show foxglove at left
     show plumeria at right
     show dahlia at center
-    with fade
+    with dissolve
 
     narrator "The radio mutters angrily. The voice of the spokesman is a hoarse, rumbling thing, seeming half-way to a snarl."
 
@@ -2766,7 +2768,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps."
 
@@ -2813,7 +2815,7 @@ label start:
     scene bg aumic temple day
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Like the Chapel of the Nail, it’s half underground. We force open the heavy wooden door, staring into the cool dark inside."
 
@@ -2838,7 +2840,7 @@ label start:
     scene bg pilgrims path day
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "The last portion of the climb is viciously steep. We don’t walk but clamber awkwardly, scrambling over dyed-white stone."
 
@@ -2945,7 +2947,7 @@ label start:
     scene bg pilgrims path night
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
 
@@ -2970,7 +2972,7 @@ label start:
 
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
     
@@ -3115,7 +3117,7 @@ label start:
     scene bg pilgrims path night
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "I watch them go, panting, fighting the urge to pass out. When the fog begins to break apart, and I’m sure they’re not coming back, I drop to my knees."
 
@@ -3148,7 +3150,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "A tiny bit of colour has returned to Plumeria’s lips as I slam the door and lay her down. That must be a good sign, right?"
 
@@ -3389,7 +3391,7 @@ label start:
     with fade
     
     show foxglove at left    
-    with fade
+    with dissolve
 
     narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant."
 
@@ -3408,7 +3410,7 @@ label start:
     narrator "I take quick steps towards the door when it starts to swing open, and I have to leap backwards to avoid a flattened nose."
 
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Plumeria sticks her head through and gives me a cheery grin. With her comes a blast of cold air, sending the fire dancing wildly in its little stone prison."
 
@@ -3517,9 +3519,11 @@ label start:
     plumeria "Eh, I don’t mind. It saved our butts, didn’t it? If I have to buy some more absolutely grim-tasting chocolate, I can deal."
 
     scene bg pilgrims path day
+    with fade
+    
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
 
@@ -3557,7 +3561,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "We make it down without incident aside from my growing awareness of my aches and pains."
 
@@ -3577,12 +3581,12 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     foxglove "We’re back!"
     
     show dahlia at center
-    with fade
+    with dissolve
 
     dahlia "Ah, good."
 
@@ -3639,7 +3643,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Together, we head into the bedroom. The window is shut securely; a tiny saucer of incense is set burning on the windowsill, the acrid trickles of it tickling my nose."
 
@@ -3719,7 +3723,7 @@ label start:
     
     show foxglove at left    
     show plumeria at right
-    with fade
+    with dissolve
 
     narrator "Slowly, the train pulls away from the station. My grandmother stands, watching, straight-backed and solemn."
 
