@@ -3770,6 +3770,8 @@ label start:
     with fade
 
     narrator "-and is gone."
+    
+    pause 3.0
 
     return
     
