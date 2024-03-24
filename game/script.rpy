@@ -442,7 +442,7 @@ label start:
 
     narrator "People were never kind to half-horns, or to single mothers – and my mother had been both."
 
-    narrator "People had never forgiven our historical enemies, the hornless sarran, and the half-horns beget between our two peoples received hatred in their stead."
+    narrator "People had never forgiven our historical enemies, the hornless Sarran, and the half-horns beget between our two peoples received hatred in their stead."
 
     narrator "I was fortunate, in that sense – my horns were large enough that I escaped that particular form of judgement. I was simply bullied for being the child of a half-horn."
 
@@ -591,9 +591,9 @@ label start:
 
     narrator "An old man dribbles smoke from a cigarette, ungloved fingers stained yellow with age and tobacco. He’s the right sort of age group, wrong everything else. Especially since he’s holding a train ticket."
 
-    narrator "Leaning against a pillar is a sarran in a suit. He looks tired and impatient."
+    narrator "Leaning against a pillar is a Sarran in a suit. He looks tired and impatient."
 
-    narrator "Guess he must be taking one of the night trains, probably all the way south to Sarrand. You don’t see many sarrans back home; the scars the occupied areas earned during the war never healed well."
+    narrator "Guess he must be taking one of the night trains, probably all the way south to Sarrand. You don’t see many Sarrans back home; the scars the occupied areas earned during the war never healed well."
 
     narrator "It’s a little weird how they don’t have horns. Their scriptures say the gods gave tellarns horns so we could never hide our wicked natures."
 
@@ -1075,33 +1075,42 @@ label start:
     narrator "The morning comes, as they tend to do, quicker than I expect. I’ve slept surprisingly well, even though I wake up with Plumeria’s elbow lodged in my ribs."
 
     scene bg home day
+    with fade
     
-    show foxglove at left    
-    show plumeria at right
-    show dahlia at center
+    show foxglove at left
     with dissolve
 
     narrator "All the same, I’ve never been a morning person, and I feel too sleepy for any awkwardness until we’re all sat at the table, having breakfast."
+    
+    show plumeria at center
+    with dissolve
 
     narrator "The awkwardness returns in force once I start waking up, however. Plumeria is steadily working her way through toast painted gold with honey."
+    
+    show dahlia at right
+    with dissolve
 
     narrator "My grandmother sits as stiff as an old sentinel, carefully holding a steaming porcelain cup."
 
     narrator "I, for my part, have a double helping of no ideas on how to talk to this person to go with my own, slightly chipped, mug of hot liquid."
 
     narrator "My grandmother sips at her tea carefully. I do the same. The tea burns my tongue a little; hot and slightly bitter."
+    
+    show plumeria grin
 
     plumeria "So what’s the plan for today?"
 
     narrator "My roommate sounds far too cheery for a time so early. I take another sip of the tea, focusing on the floral tang of it to resist the urge to shut my eyes again."
 
     dahlia "Hmm. Since you haven’t been to Godigsfel before, you should look about the town. Learn where things are; if you’re going to stay here, you can at least pick up my groceries."
+    
+    show plumeria guffaw
 
     plumeria "Dunno about her, but that’s fine with me, granny-"
 
     narrator "The look Grandmother gave her was probably similar in deadly power to what had killed the god up on the mountain."
 
-    plumeria serious "-Ma’am."
+    show plumeria serious "-Ma’am."
 
     dahlia "Hmm."
 
@@ -1111,11 +1120,11 @@ label start:
 
     narrator "She gives a meaningful look between me and Plumeria. It takes a moment to sink in what she’s implying."
 
-    foxglove flustered "Ah - no, we’re not, not like that-"
+    show foxglove flustered "Ah - no, we’re not, not like that-"
 
     narrator "Plume nods sagely, then with deliberate tones adds a single word."
 
-    plumeria "Yet."
+    show plumeria flirt "Yet."
 
     foxglove "Aaagh!"
 
@@ -1127,25 +1136,29 @@ label start:
 
     narrator "I hear her sharp steps fade."
 
-    plumeria "Your grandma is the most intense old lady I’ve ever met, gods above. I thought she was about to pull my soul right out of my body just then."
+    plumeria neutral "Your grandma is the most intense old lady I’ve ever met, gods above. I thought she was about to pull my soul right out of my body just then."
+    
+    show foxglove annoyed
 
     narrator "In a single fierce motion I level a finger at my friend."
 
     foxglove "You!"
 
-    plumeria "Me."
+    show plumeria grin "Me."
 
     foxglove "‘Yet’? ‘Yet’?! Oh my gods, Plume, that’s my grandmother you’re making innuendo in front of!"
-
+    
     narrator "Rather than look apologetic, Plumeria gives me a look so self-satisfied you could call it a cat."
 
     plumeria "Made you wake up, didn’t it?"
 
-    foxglove "You’re awful."
+    show foxglove not smiling "You’re awful."
+
+    show plumeria guffaw
 
     narrator "Plume just laughs."
 
-    plumeria "Come on. Get ready and let’s have a look around town."
+    show plumeria neutral "Come on. Get ready and let’s have a look around town."
 
     # "Scene: city streets during the day"
     stop music fadeout 1.0
@@ -1169,6 +1182,7 @@ label start:
 
     # music continues
     scene bg streets night
+    with fade
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -1178,20 +1192,30 @@ label start:
     narrator "We settle to eat on a stone bench in a little square, a fountain half-heartedly puttering splurts of frigid water towards the heavens."
 
     narrator "I sit and listen to the pattering splashes of the falling droplets as they fail to reach the sky."
+    
+    show plumeria at right
+    with dissolve
 
     plumeria "There sure are a lot of shops selling that incense."
+    
+    show foxglove at left
+    with dissolve
 
-    foxglove "I wish they didn’t. Stuff smells awful."
+    foxglove annoyed "I wish they didn’t. Stuff smells awful."
+    
+    show plumeria surprised
 
     narrator "Plume looks at me, mildly surprised."
 
     plumeria "Really? Seemed quite nice to me. Sort of floral."
 
-    foxglove "Huh."
+    foxglove neutral "Huh."
 
-    plumeria "The people here must really love the stuff, at any rate. Nearly every house here has a lantern of the stuff outside their door."
+    plumeria neutral "The people here must really love the stuff, at any rate. Nearly every house here has a lantern of the stuff outside their door."
 
-    foxglove "I guess there’s no accounting for taste."
+    show foxglove sarcastic "I guess there’s no accounting for taste."
+    
+    show plumeria guffaw
 
     narrator "Plume laughs, a velvety chuckle. She has a nice laugh, I’ve noticed over the years we’ve spent together as roommates; easy and gentle."
 
@@ -1211,7 +1235,7 @@ label start:
     narrator "The next morning, I’m still groggy from sleep and rubbing a crick out my neck when Grandmother cuts to the chase."
 
     dahlia "You want to know why that foolish girl no longer talks to her own mother, I suppose."
-
+    
     narrator "Her face is carefully neutral. It had already become evident that Dahlia Heath was not a woman who ever minced words; she had a dialectic technique of going straight for the jugular."
 
     dahlia "This family has long held a - tradition, of sorts. We have lived in this valley for a long time."
@@ -1220,9 +1244,9 @@ label start:
 
     dahlia "Yes, a very long time indeed. An oath was made, long ago in the past, when ice spirits guided our ancestors, lost in a blizzard, safely back down."
 
-    foxglove "Wait, ice spirits?"
+    foxglove frown "Wait, ice spirits?"
 
-    plumeria "Those still exist? I thought..."
+    plumeria serious "Those still exist? I thought..."
 
     narrator "The old woman smiles thinly. Plumeria and I glance at each other."
 
@@ -1242,11 +1266,11 @@ label start:
 
     narrator "Her brow furrows."
 
-    dahlia "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
+    dahlia commanding "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
 
     foxglove "I’m sorry - Mica?"
 
-    dahlia "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; sarran names weren’t very popular, as you might imagine."
+    dahlia neutral "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; Sarran names weren’t very popular, as you might imagine."
 
     narrator "She pauses and sets down her tea with a hard skeleton clatter of porcelain."
 
@@ -1742,7 +1766,7 @@ label start:
 
     dahlia "I had hoped that perhaps - we could teach our children well enough they would not have to suffer the same."
 
-    dahlia "That foolish girl suffered terribly as a result of her parentage. Having a sarran for a father certainly did her no favours."
+    dahlia "That foolish girl suffered terribly as a result of her parentage. Having a Sarran for a father certainly did her no favours."
 
     dahlia "My generation, who fought and suffered in the war, all carried the pain of that war. I suppose I was lucky, in that sense."
 
@@ -1781,13 +1805,9 @@ label start:
     scene bg bedroom night
     with fade
     
-    show foxglove at left
-    with dissolve
-    
     narrator "Eventually, I head off to sleep, and not long later, Plumeria pads in to join me."
     
-    show plumeria at right
-    with dissolve
+    scene cg tucked into bed 1
 
     narrator "Within the bedroom I shared, the air tonight seems thick with heat. Unpleasantly so."
 
@@ -1815,7 +1835,7 @@ label start:
 
     narrator "It creeps in without a sound, as if the deluge of the day had washed all the noise out of the universe. I drink it in like nectar."
 
-    narrator "All I can hear is Plumeria besides me, the soft rise and fall of her breathing. Finally she mutters something unintelligible. Strong arms curl around me and pull me close."
+    narrator "All I can hear is Plumeria beside me, the soft rise and fall of her breathing. Finally she mutters something unintelligible. Strong arms curl around me and pull me close."
 
     foxglove "Plume...?!"
 
@@ -1826,6 +1846,11 @@ label start:
     narrator "My heart beats strangely fast. Being grabbed must have startled me more than I thought."
 
     narrator "Trying to break her hold might wake her up, I reasoned. Best to lie still."
+    
+    scene black
+    with fade
+    
+    pause 3.0
     
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     # Day 6
@@ -2040,7 +2065,7 @@ label start:
 
     narrator "She almost snarls the word."
 
-    foxglove "Did people... did people treat you badly because your hus- because Grandfather was a sarran?"
+    foxglove "Did people... did people treat you badly because your hus- because Grandfather was a Sarran?"
 
     dahlia "There were some who tried. But I’d earned a medal or two during the war, and Mica had spent most of it doing farm work on loan from a prison camp nearby, so it wasn’t as bad as it could have been. Also,"
 
