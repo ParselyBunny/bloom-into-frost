@@ -411,11 +411,13 @@ label start:
     
     stop music fadeout 5.0
 
+    # Show snow effect
     show snow_100
     show snow_59
     show snow_25
-    show black onlayer screens
     
+    # Mask the snow and fade it in
+    show black onlayer screens
     hide black onlayer screens with Fade(0.0, 6.5, 5.0)
 
     play music "audio/music/Terminal.mp3" noloop volume 6.0
@@ -465,6 +467,9 @@ label start:
     stop ambience fadeout 1.0
 
     scene cg train dead god night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
 
     narrator "Yeah. It was an impressive sight."
@@ -719,7 +724,8 @@ label start:
 
     narrator "The old woman observes my face without speaking. It’s like a staring contest with a scalpel."
     
-    # TODO: show foxglove nervous
+    show foxglove flustered
+    with dissolve
 
     # TODO: shaking FX
     foxglove "Can, can you, um, le-"
@@ -887,7 +893,6 @@ label start:
     plumeria "-ve?"
     
     show foxglove breath at left
-    with dissolve    
     show plumeria surprised breath at right
     with dissolve
 
@@ -944,12 +949,14 @@ label start:
     dahlia "Hmmph. Call me Grandmother. I’ll not need my own kin to bow and scrape."
 
     show plumeria grin
+    with dissolve
 
     plumeria "How abou-"
 
     dahlia "No."
     
     show plumeria serious
+    with dissolve
 
     narrator "Plumeria looks dejected."
 
@@ -975,6 +982,7 @@ label start:
     hide fireflies
     scene black
     with fade
+    
     stop music fadeout 1.0
     pause 1.5
     
@@ -1097,6 +1105,7 @@ label start:
     narrator "My grandmother sips at her tea carefully. I do the same. The tea burns my tongue a little; hot and slightly bitter."
     
     show plumeria grin
+    with dissolve
 
     plumeria "So what’s the plan for today?"
 
@@ -1105,12 +1114,16 @@ label start:
     dahlia "Hmm. Since you haven’t been to Godigsfel before, you should look about the town. Learn where things are; if you’re going to stay here, you can at least pick up my groceries."
     
     show plumeria guffaw
+    with dissolve
 
     plumeria "Dunno about her, but that’s fine with me, granny-"
 
     narrator "The look Grandmother gave her was probably similar in deadly power to what had killed the god up on the mountain."
 
-    show plumeria serious "-Ma’am."
+    show plumeria serious
+    with dissolve
+    
+    plumeria "-Ma’am."
 
     dahlia "Hmm."
 
@@ -1120,11 +1133,17 @@ label start:
 
     narrator "She gives a meaningful look between me and Plumeria. It takes a moment to sink in what she’s implying."
 
-    show foxglove flustered "Ah - no, we’re not, not like that-"
+    show foxglove flustered
+    with dissolve
+    
+    foxglove "Ah - no, we’re not, not like that-"
 
     narrator "Plume nods sagely, then with deliberate tones adds a single word."
 
-    show plumeria flirt "Yet."
+    show plumeria flirt
+    with dissolve
+    
+    plumeria "Yet."
 
     foxglove "Aaagh!"
 
@@ -1136,15 +1155,22 @@ label start:
 
     narrator "I hear her sharp steps fade."
 
-    plumeria neutral "Your grandma is the most intense old lady I’ve ever met, gods above. I thought she was about to pull my soul right out of my body just then."
+    show plumeria neutral
+    with dissolve
+    
+    plumeria "Your grandma is the most intense old lady I’ve ever met, gods above. I thought she was about to pull my soul right out of my body just then."
     
     show foxglove annoyed
+    with dissolve
 
     narrator "In a single fierce motion I level a finger at my friend."
 
     foxglove "You!"
 
-    show plumeria grin "Me."
+    show plumeria grin
+    with dissolve
+
+    plumeria "Me."
 
     foxglove "‘Yet’? ‘Yet’?! Oh my gods, Plume, that’s my grandmother you’re making innuendo in front of!"
     
@@ -1152,17 +1178,25 @@ label start:
 
     plumeria "Made you wake up, didn’t it?"
 
-    show foxglove not smiling "You’re awful."
+    show foxglove not smiling
+    with dissolve
+    
+    foxglove "You’re awful."
 
     show plumeria guffaw
+    with dissolve
 
     narrator "Plume just laughs."
 
     show plumeria neutral "Come on. Get ready and let’s have a look around town."
+    with dissolve
 
     # "Scene: city streets during the day"
     stop music fadeout 1.0
     scene bg streets day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 3.0
 
@@ -1181,8 +1215,13 @@ label start:
     narrator "-and laugh at the supposed certificates of authenticity for crystalline fragments claimed to be part of the dead god above."
 
     # music continues
+    
     scene bg streets night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
+    
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -1201,21 +1240,35 @@ label start:
     show foxglove at left
     with dissolve
 
-    foxglove annoyed "I wish they didn’t. Stuff smells awful."
+    show foxglove annoyed
+    with dissolve
+    
+    foxglove "I wish they didn’t. Stuff smells awful."
     
     show plumeria surprised
+    with dissolve
 
     narrator "Plume looks at me, mildly surprised."
 
     plumeria "Really? Seemed quite nice to me. Sort of floral."
 
-    foxglove neutral "Huh."
+    show foxglove neutral
+    with dissolve
+    
+    foxglove "Huh."
 
-    plumeria neutral "The people here must really love the stuff, at any rate. Nearly every house here has a lantern of the stuff outside their door."
+    show plumeria neutral
+    with dissolve
+    
+    plumeria "The people here must really love the stuff, at any rate. Nearly every house here has a lantern of the stuff outside their door."
 
-    show foxglove sarcastic "I guess there’s no accounting for taste."
+    show foxglove sarcastic
+    with dissolve
+    
+    foxglove "I guess there’s no accounting for taste."
     
     show plumeria guffaw
+    with dissolve
 
     narrator "Plume laughs, a velvety chuckle. She has a nice laugh, I’ve noticed over the years we’ve spent together as roommates; easy and gentle."
 
@@ -1244,9 +1297,15 @@ label start:
 
     dahlia "Yes, a very long time indeed. An oath was made, long ago in the past, when ice spirits guided our ancestors, lost in a blizzard, safely back down."
 
-    foxglove frown "Wait, ice spirits?"
+    show foxglove frown
+    with dissolve
+    
+    foxglove "Wait, ice spirits?"
 
-    plumeria serious "Those still exist? I thought..."
+    show plumeria serious
+    with dissolve
+    
+    plumeria "Those still exist? I thought..."
 
     narrator "The old woman smiles thinly. Plumeria and I glance at each other."
 
@@ -1266,11 +1325,17 @@ label start:
 
     narrator "Her brow furrows."
 
-    dahlia commanding "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
+    show dahlia commanding
+    with dissolve
+
+    dahlia "Hmmph. A damned fool, I suppose. That girl had no one to support her but me. Mica had already passed away by that point."
 
     foxglove "I’m sorry - Mica?"
 
-    dahlia neutral "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; Sarran names weren’t very popular, as you might imagine."
+    show dahlia neutral
+    with dissolve
+
+    dahlia "Ah. Your grandfather. Mica Lepidoli. We used my surname after the marriage; Sarran names weren’t very popular, as you might imagine."
 
     narrator "She pauses and sets down her tea with a hard skeleton clatter of porcelain."
 
@@ -1290,6 +1355,9 @@ label start:
 
     narrator "This is a bit much, isn’t it? I glance out the window, though the city blocks my view from where I’m sitting, in the direction of the mountain."
 
+    show foxglove neutral
+    with dissolve
+    
     foxglove "Then I’ll climb the mountain and talk to them myself."
 
     narrator "The words are out before I can think about them, but somehow I feel certain about it. Grandmother simply watches me, her face still and giving nothing away. Plumeria, for her part, is looking doubtful."
@@ -1300,6 +1368,9 @@ label start:
 
     plumeria "We went jogging once and you threw up. After you refused to ever do it with me again. Three months isn’t heavily pregnant, either."
 
+    show foxglove frown
+    with dissolve
+    
     foxglove "Look, that was- that was then, right? This is now. I can build up to it."
 
     narrator "My grandmother interjects calmly."
@@ -1318,6 +1389,9 @@ label start:
 
     dahlia "You too, girl. I will hold you responsible for her safety. Ensure it."
 
+    show foxglove sarcastic
+    with dissolve
+    
     foxglove "I just get no respect, huh."
 
     narrator "I’m ignored. Plumeria, with the same expression of a bug facing the taxidermist’s spike, gives a wilted thumbs-up."
@@ -1326,14 +1400,18 @@ label start:
 
     dahlia "Good."
     
+    scene black
+    with fade
+    
+    pause 3.0
+    
     stop music fadeout 1.0
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0 loop
-    
-    show foxglove at left    
-    show plumeria at right
-    with dissolve
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
 
@@ -1341,31 +1419,46 @@ label start:
 
     narrator "All the same, they look steep and horrible, and this was just the least of it."
     
-    # "A map of the Pilgrim’s Path is shown."
+    narrator "Next to them, a large board depicts the journey of any would-be faith-seekers."
+    
     scene cg pilgrims path map day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     
-    narrator "Next to them, a large board depicts the journey of any would-be faith-seekers."
+    show foxglove breath at left
+    show plumeria breath at right
+    with dissolve
 
     plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
 
     foxglove "So the stairs last all the way up to the... Chapel of the Nail? It's not, like... A toenail of it, is it?"
     
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath serious at right
     with dissolve
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance."
 
     narrator "The stairs traitorously remain still and solid despite her disapproval."
 
+    show plumeria annoyed
+    with dissolve
+    
     plumeria "I can't believe they don't have a cable car or something. All the priests I've ever seen have been old and fat. No way they'd climb a mountain of stairs like this."
 
     foxglove "I guess a cable car isn’t very holy."
 
+    show plumeria neutral
+    with dissolve
+    
     plumeria "Well, anyway. Up these, then it’s following a trail, right?"
 
     foxglove "Yeah. Up to... Orchid’s Point, up past that, there’s another temple, the Aumic Temple, and then you’re at the big guy himself."
@@ -1388,42 +1481,80 @@ label start:
 
     narrator "I take the first step and stop, feeling as though I should say something momentous and important to mark the beginning of my climb. Nothing comes to mind."
 
+    show plumeria grin
+    with dissolve
+    
     plumeria "Tired already, huh?"
 
+    show foxglove sarcastic
+    with dissolve
+    
     foxglove "Wha- no! Tired of you being a butt, maybe."
 
     plumeria "Uh-huh."
 
     narrator "She gazes at me doubtfully."
 
+    show plumeria neutral
+    with dissolve
+    
     plumeria "We don't have to climb the mountain. We could just say we did and find a pub instead. That'll have ice and spirits, too."
+    
+    show foxglove annoyed
+    with dissolve
 
     narrator "I sigh."
 
     foxglove "Ok, fine, let's climb this stupid rock. I was trying to think of something cool to say-"
 
+    show plumeria guffaw
+    with dissolve
+
     narrator "Plume snorts inelegantly in amusement."
 
+    show foxglove neutral
+    with dissolve
+    
     foxglove "What?"
 
+    show plumeria grin
+    with dissolve
+    
     plumeria "No, no, nothing. Don't let me stop you. Lay upon me your inspirational words, oh most wordiest of wordsmiths."
 
+    show foxglove flustered 
+    with dissolve
+    
     foxglove "I was trying to think of some, alright?"
 
+    show plumeria serious
+    with dissolve
+    
     plumeria "It's ok. I'll wait."
 
     narrator "She stares at me expectantly. A tiny smile plays around her lips as she tries to force her face into mocking neutrality. The pressure builds. Come on, think of something - I have to say something at this point!"
 
     narrator "How about - about - ah, it's pointless. She's actively grinning now, enjoying my consternation."
 
+    show foxglove annoyed
+    with dissolve
+    
     foxglove "Forget it! How about this: let's climb this before I kick your butt so hard Kalarlomoth comes back to life just to say 'damn, that's a kicked butt', huh?"
+    
+    show plumeria grin
+    with dissolve
 
     narrator "She simply laughs and begins climbing the stairs, playfully nudging me with her shoulder as she goes past."
 
-    # scene change
+    # Later that day...
     scene bg pilgrims path day
-    show foxglove at left    
-    show plumeria at right
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
+    
+    show foxglove breath annoyed at left    
+    show plumeria breath at right
     with dissolve
 
     narrator "We climb... and climb... and climb."
@@ -1448,13 +1579,23 @@ label start:
 
     plumeria "Oh, didn’t you know? I’m part of the university triathlon back home. This is nothing, haha!"
 
-    # TODO: angry expression for foxglove
-
+    show foxglove angry
+    with dissolve
+    
     foxglove "..."
+    
+    show plumeria guffaw
+    with dissolve
 
     narrator "Plumeria just laughs, the clear notes of her merriment ringing in the crisp air."
 
+    show plumeria neutral
+    with dissolve
+    
     plumeria "Anyway, you said good news first, right? Good news: we’re pretty much here."
+    
+    show foxglove neutral
+    with dissolve
 
     narrator "Abruptly I realise the stairs level off only a little bit above into a charming little plaza surrounding a mosaic. A squat chapel is built into the mountain like a blister of stonework and stained glass."
 
@@ -1462,8 +1603,11 @@ label start:
 
     narrator "Her voice is soft. She’s looking past me, back the way we came. I turn to look, and-"
 
-    # "Splash screen of the town below"
+    # Splash screen of the town below
     scene cg godigsfel overlook day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
 
     narrator "Godigsfel opens itself to my sight like a flower below, rows of pointy red roofs rising like spears unto heaven and crisscrossed by white-stoned streets."
@@ -1493,6 +1637,8 @@ label start:
     narrator "The thought of heading down immediately is far too daunting, so after resting for a bit we take a look around the little church built into the mountainside."
 
     scene bg chapel of the nail
+    with fade
+    
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -1507,6 +1653,9 @@ label start:
 
     narrator "At the far end lies the namesake nail, and-"
 
+    show plumeria annoyed
+    with dissolve
+    
     plumeria "Oh, that’s so gross."
 
     narrator "It’s a nail, but the toe is still attached. It sits like a hunk of crystal on a pedestal, the stone before it worn smooth with the imprint of a million kneeling pilgrims."
@@ -1517,24 +1666,42 @@ label start:
 
     foxglove "You think whatever killed him cut it off, or people did to bring it down here?"
 
+    show plumeria serious
+    with dissolve
+    
     plumeria "Well, there used to be ways of shaping god-flesh, I think. But we can’t do it anymore. Even odds, really."
+    
+    show plumeria annoyed
+    with dissolve
 
     narrator "She pulls an exaggerated expression of disgust."
 
     plumeria "You’d think they could have chosen a better bit to bring down to worship, though."
 
+    show foxglove sarcastic
+    with dissolve
+    
     foxglove "I guess the ancients were feet people."
 
     narrator "Plumeria, in a sort of horrified fascination, steps closer to it. She reaches out a hand and touches the deity’s severed digit, brushing her fingertips across dermis and cuticle."
 
+    show plumeria surprised
+    with dissolve
+    
     plumeria "Oh, that’s kind of weird."
 
     foxglove "Weird as touching dead god toe?"
 
     plumeria "Hush, you. Come try it."
 
+    show foxglove neutral
+    with dissolve
+
     narrator "I give her a look, and she makes an impatient beckoning gesture."
 
+    show plumeria neutral
+    with dissolve
+    
     plumeria "It’s not gross, just kind of strange."
 
     ## Player choice 1; touch the toe or not
@@ -1555,12 +1722,18 @@ label start:
         narrator "Where a statue would have been worn smooth by the touch of a hundred thousand beseeching penitents, it has remained as whole and inviolate as the day it was cut."
 
         narrator "Gingerly, I reach out and press my hand against it. Even through my gloves, it feels cold and smooth, like marble, unyieldingly solid."
+        
+        show plumeria flustered
+        with dissolve
 
         narrator "I poke at the crystalline flesh surrounding the diamond plate of the nail itself and snatch back my hand, the spasmodic reflex of the fingertip in the flame."
 
         foxglove "It’s- warm, and-"
 
         plumeria "Weird, right? Like static."
+        
+        show foxglove neutral
+        with dissolve
 
         narrator "I look down at my glove, half-expecting to see the tips discoloured by contact with the divine."
 
@@ -1572,6 +1745,9 @@ label start:
 
         narrator "My grumble has no real heat in it, and Plumeria just grins."
 
+        show plumeria grin
+        with dissolve
+        
         plumeria "Then you wouldn’t have touched it, would you? And now you can say you poked one of the gods themselves."
 
         foxglove "Lucky me."
@@ -1583,6 +1759,9 @@ label start:
     # "[Don’t touch it]"
     label dont_touch:
 
+        show foxglove neutral
+        with dissolve
+        
         narrator "I shake my head."
 
         foxglove "I’m good, thanks. There’s probably been a million grubby hands rubbing all over it for years."
@@ -1592,10 +1771,16 @@ label start:
         plumeria "Aw, too bad. It’s sort of tingly, you know? Warmer than you’d think, too."
 
         foxglove "Well, now I’m doubly glad I didn’t. That sounds even worse than I expected."
+        
+        show foxglove annoyed
+        with dissolve
 
         narrator "Something occurs to me, and I pull an expression of distaste."
 
         foxglove "Aw, that’s why it’s warmer in here, isn’t it? The air is full of... toe heat."
+        
+        show plumeria guffaw
+        with dissolve
 
         narrator "Something about that statement sends my friend cackling with ungraceful laughter."
 
@@ -1604,6 +1789,10 @@ label start:
         foxglove "Oh my gods, you horrible woman, don’t you dare-"
 
         narrator "She lunges, and I dart backwards, definitely not making a squeaking sound of alarm."
+        
+        show foxglove neutral
+        show plumeria surprised
+        with dissolve
 
         narrator "She gives an exaggeratedly evil cackle, but stops abruptly when coughing abruptly racks my chest and brings tears to my eyes."
 
@@ -1611,6 +1800,10 @@ label start:
 
     # End choice 1
     label choice_1_end:
+    
+    show foxglove neutral
+    show plumeria surprised
+    with dissolve
 
     plumeria "You alright?"
 
@@ -1619,8 +1812,14 @@ label start:
     narrator "I head for the door, and Plumeria trots to catch up, her longer legs easily carrying her to my side."
 
     foxglove "Maybe I’m a little allergic to it or something."
+    
+    show plumeria grin
+    with dissolve
 
     plumeria "Maybe you’re actually a ghost and we never realised."
+    
+    show foxglove sarcastic
+    with dissolve
 
     narrator "I waggle my fingers at her, making a sound like the most half-hearted spectre in existence."
 
@@ -1629,7 +1828,14 @@ label start:
     plumeria "Consider me spooked."
     
     scene cg godigsfel overlook day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
+    
+    show foxglove breath at left
+    show plumeria breath at right
+    with dissolve
 
     narrator "Outside the air feels deliciously crisp in comparison. Looking back down at the panorama of the town below, I spend a few minutes admiring the view. Eventually, though, I have to stop delaying."
 
@@ -1639,7 +1845,7 @@ label start:
 
     # Day 3
     stop ambience fadeout 1.0
-    scene bg home night
+    scene bg home night lit
     with fade
     play music "audio/music/Danse Morialta.mp3" loop fadein 3.0
 
@@ -1657,8 +1863,14 @@ label start:
     with dissolve
     
     narrator "Instead we stay inside, raising our voices over the racket of watery teeth chattering on the window frames."
+    
+    hide dahlia
+    with dissolve
 
     narrator "Somehow, the conversation turns to war. My grandmother ponders for a moment, then rises and disappears into her room."
+    
+    show dahlia at center
+    with dissolve
 
     narrator "When she reemerges a few minutes later, she’s holding a small metal case."
    
@@ -1666,11 +1878,17 @@ label start:
    
     narrator "Placing it on the table carefully, she clicks the latches and flips it open."
 
+    show plumeria surprised
+    with dissolve
+    
     plumeria "Oh!"
-
+    
     foxglove "That’s..."
 
     dahlia "A gun, yes. My service pistol during the war. I kept hold of it."
+    
+    show plumeria serious
+    with dissolve
 
     narrator "Indeed, inside the box was a blocky steel revolver. It gleamed softly in the light, without a hint of rust or corrosion."
 
@@ -1691,10 +1909,9 @@ label start:
 
     # "[Pick it up]"
     label pick_up:
-
         narrator "I look to Plumeria, and she shakes her head slightly."
         
-        #play sound "audio/oneshot/gun handling.mp3" volume 1.0
+        play sound "audio/oneshot/cloth rustle.mp3" volume 1.0
         
         narrator "I reach into the box and pick it up, blinking at the weight of it."
 
@@ -1759,6 +1976,8 @@ label start:
     foxglove "Do- do you regret fighting in the war?"
 
     dahlia "Regret? Hmm. I don’t regret fighting, no. It had to be done, after all. I suspect you’ve heard plenty about what was done in the occupied territories. Terrible things, really. Monstrous."
+    
+    play sound "audio/oneshot/case open.mp3" volume 1.0
 
     narrator "She clicks open the case again, to look down at the weapon. One wizened finger brushed along the barrel - along the TELLEN STATE ARMOURY 1191 stamped along it."
 
@@ -1791,6 +2010,9 @@ label start:
     foxglove "No kidding."
 
     narrator "When she returns with three cups of steaming, fragrant tea, the conversation moves on to other things. Plume spends a while trying to explain her field of study at the university, back home."
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "The study of old miracles and magic, the reproduction of what little can still be done. Trying to relearn how to shape godsflesh for its otherwise impossible properties."
 
@@ -1855,11 +2077,10 @@ label start:
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     # Day 6
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
-    
-    show foxglove at left    
-    show plumeria at right
-    with dissolve
 
     narrator "And so the days passed. Each day, we would climb the mountain for a while, seeking higher and higher heights."
 
@@ -1868,10 +2089,16 @@ label start:
     narrator "I’m a little surprised to find it easier than the stairs. The path is, like everything else on the mountain, long worn into the sides of it; only short, squishy moss grows along the trail here."
 
     narrator "No trees grow this high; only a few knobbly shrubs and clusters of whispering bracken. Their long strand-like fronds are studded with pellets of frost where dew has frozen into diamonds."
+       
+    show plumeria at right
+    with dissolve
 
     narrator "They shudder in the cold wind. So does Plumeria, the breeze running ethereal fingers through her green hair."
 
     plumeria "Gah! That cuts right through you."
+    
+    show foxglove at left
+    with dissolve
 
     narrator "She gives me a sideways glance and shakes her head."
 
@@ -2000,7 +2227,7 @@ label start:
 
     narrator "Glancing out the window, the moon peeks in through the curtains, casting a slice of the room in silver."
 
-    scene bg home night
+    scene bg home night dark
     show foxglove at left
     with dissolve
 
@@ -2008,7 +2235,7 @@ label start:
 
     narrator "The ashes in the fireplace still give off a faint heat, the fire now just a few lonely embers amidst the ash."
 
-    # "Grandmother appears suddenly."
+    # Grandmother appears suddenly
     show dahlia at right
 
     dahlia "Can’t sleep?"
@@ -2155,6 +2382,9 @@ label start:
     # Day 7
     stop music fadeout 1.0
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     
@@ -2170,6 +2400,10 @@ label start:
 
     stop ambience fadeout 1.0
     scene bg streets night
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 5.0
     
     show foxglove at left    
@@ -2533,6 +2767,9 @@ label start:
 
     stop ambience fadeout 1.0
     scene bg streets night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
     
@@ -2565,7 +2802,7 @@ label start:
     narrator "But she doesn’t let go of my hand."
     
     stop music fadeout 1.0    
-    scene bg home night
+    scene bg home night dark
     with fade
     play music "audio/music/Danse Morialta.mp3" fadein 5.0 loop
 
@@ -2701,6 +2938,8 @@ label start:
 
     # day 8
     scene bg home day
+    with fade
+    
     show foxglove at left
     show plumeria at right
     show dahlia at center
@@ -2788,6 +3027,9 @@ label start:
     
     stop music fadeout 1.0
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 3.0 loop volume 1.0
     
@@ -2863,6 +3105,11 @@ label start:
     play ambience2 "audio/ambience/high wind layer.ogg" loop volume 1.0
     
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
+    
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -2900,6 +3147,9 @@ label start:
     foxglove "I guess. Maybe they’re not around any more."
     
     scene cg the dead god dusk
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
 
     narrator "The giant body of the god lies dead and still before us. No snow settles on his crystalline flesh, melting away silently like a dream whenever flakes settle on the divine cadaver."
@@ -2943,6 +3193,9 @@ label start:
     plumeria "You alright?"
     
     scene cg godigsfel overlook night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
 
     narrator "Not trusting words, I simply nod. Looking out from the mountain, the sun is low in the sky. It paints the canvas of the sky in hues of purples and reds like a bruise."
@@ -2970,6 +3223,11 @@ label start:
     plumeria "No argument from me there. Damn, but it’s getting cold."
     
     scene bg pilgrims path night
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
+    
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -2991,6 +3249,9 @@ label start:
     narrator "Shapes are moving in the bleak fog of the snowdrifts, and I jab at the motion with an outstretched finger. Plumeria looks at what emerges. For once, her words fail her."
 
     scene cg spirits night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
 
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
@@ -3140,6 +3401,11 @@ label start:
     narrator "The spirit screeches and retreats, and the others follow, disappearing into the mist."
 
     scene bg pilgrims path night
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
+    
     show foxglove at left    
     show plumeria at right
     with dissolve
@@ -3188,6 +3454,8 @@ label start:
     play ambience2 "audio/ambience/fire crackle louder.mp3" fadein 2.0 loop volume 1.0
     
     scene bg cabin lit night
+    with fade
+    
     show foxglove at left    
     show plumeria at right
 
@@ -3544,6 +3812,9 @@ label start:
     plumeria "Eh, I don’t mind. It saved our butts, didn’t it? If I have to buy some more absolutely grim-tasting chocolate, I can deal."
 
     scene bg pilgrims path day
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     
     show foxglove at left    
@@ -3582,6 +3853,9 @@ label start:
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
     
     scene bg streets night
+    show snow_100
+    show snow_59
+    show snow_25
     with fade
     
     show foxglove at left    
@@ -3601,7 +3875,7 @@ label start:
     stop music fadeout 3.0
     play music "audio/music/Danse Morialta.mp3" fadein 5.0
    
-    scene bg home night
+    scene bg home night lit
     with fade
     
     show foxglove at left    
