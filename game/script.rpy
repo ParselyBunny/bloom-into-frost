@@ -2091,28 +2091,47 @@ label start:
     narrator "No trees grow this high; only a few knobbly shrubs and clusters of whispering bracken. Their long strand-like fronds are studded with pellets of frost where dew has frozen into diamonds."
        
     show plumeria at right
+    show foxglove at left
     with dissolve
 
     narrator "They shudder in the cold wind. So does Plumeria, the breeze running ethereal fingers through her green hair."
 
     plumeria "Gah! That cuts right through you."
     
-    show foxglove at left
+    narrator "She gives me a sideways glance and shakes her head."
+    
+    show plumeria surprised
     with dissolve
 
-    narrator "She gives me a sideways glance and shakes her head."
-
     plumeria "I’ll never understand how you don’t feel chilly in moments like this."
+    
+    show foxglove sarcastic
+    with dissolve
 
     foxglove "Where there’s no sense there’s no feeling, I suppose."
+    
+    show plumeria guffaw
+    with dissolve
 
     narrator "She snorts inelegantly as she steps around a mossy hillock. Rocks project from the moss and the ferns underfoot like jagged teeth as we follow a winding path."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "Next time we go up I’m going to wear more underlayers. Gods, though, it’s cold enough. Perhaps your spirits can be nice and meet us halfway."
+    
+    show foxglove neutral
+    with dissolve
 
     foxglove "It’d sure save my thigh muscles if they did."
+    
+    show plumeria flirt
+    with dissolve
 
     plumeria "Actually, that’s a silver lining. A few weeks of this and you’ll have killer legs."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "She waggles her eyebrows at me lavisciously, and I find myself thankful the flush of exertion and brisk air hides any additional blood to my cheeks."
 
@@ -2121,20 +2140,33 @@ label start:
     narrator "Maybe it’s because I never had much experience with romance growing up? Either way, I look away and speak my reply into the air."
 
     foxglove "Yeah, well, at the moment they’re more killed than killer."
+    
+    show plumeria neutral
+    show foxglove neutral
+    with dissolve
 
     narrator "I hear her amusement, but she doesn’t say anything. For another long while we’re quiet. I find myself enjoying the crisp cleanness of the air and the soft crunch of frosty moss crushing underfoot."
 
     narrator "All this time, we’ve not seen a single other person along the trail. I’m glad Plumeria came along, even if I’m not sure why. The climb up the mountain would certainly be lonelier without her presence."
 
     narrator "Sooner than I expected, the trail levels out onto a small plateau."
+    
+    # TODO: be nice to have foxglove surprised here
+    show plumeria surprised
+    with dissolve
 
     foxglove "Oh, wow."
 
     plumeria "They’re beautiful."
+    
+    # TODO: should there be a CG here?
 
     narrator "Across the plateau, silvery-white flowers are in bloom, a shin-high sea of moon-shaded petals. They ripple in the winds like waves on a lunar ocean."
 
     narrator "At the centre a small trickle of water coming from higher up, rimmed in by ice, feeds a small pool of glass-clear water."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "I guess these are the orchids of Orchid’s Point. Maybe they’re like snowdrops? Late-flowering?"
 
@@ -2149,6 +2181,9 @@ label start:
     foxglove "Hmm."
 
     narrator "Plumeria watches this with bemusement."
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "What on earth are you doing?"
 
@@ -2165,30 +2200,51 @@ label start:
     narrator "A prickle of unease runs through me."
 
     foxglove "Spirits took people as sacrifices?"
+    
+    show plumeria guffaw
+    with dissolve
 
     narrator "Plumeria, perhaps seeing my expression, laughs."
-
+    
     plumeria "Children, according to stories, anyway. Anthropologically speaking, probably a good excuse for leaving unwanted kids on the hillside when you couldn’t feed them."
 
+    show plumeria grin
+    with dissolve
+    
     narrator "University student. Right. She grins, teasing."
 
-    plumeria "What, did you mum never threaten that the spirits would snatch you away if you didn’t go to bed as a kid?"
+    plumeria "What, did your mum never threaten that the spirits would snatch you away if you didn’t go to bed as a kid?"
 
     foxglove "Ah- no. She didn’t."
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "I see her smile hitch. She scratches at the back of her head awkwardly, but I speak before she can say anything, and if my tone is a little louder and faster than necessary, she doesn’t comment on it."
 
     foxglove "Anyway, if they do want one, you’ll volunteer bravely, right?"
+    
+    show foxglove sarcastic
+    with dissolve
 
     narrator "I give my best taunting smile back, and she grins again, wide and relieved."
+    
+    show plumeria grin
+    with dissolve
 
     plumeria "Please. My nice long legs? I’ll be half-way down the mountain by the time they’ve finished turning you into an icicle."
 
     narrator "I roll my eyes and toss the effigy coin back into the pool. It spins, once, twice, catching the light with a sharp glint, and sinks into the water with a plop."
 
     narrator "It settles back amongst the pebbles as if it had never been away."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "Not keeping it?"
+    
+    show foxglove neutral
+    with dissolve
 
     foxglove "If we’re meeting them, probably best not to have robbed them beforehand."
 
@@ -2203,8 +2259,14 @@ label start:
     narrator "We perch ourselves on the rocks and share out a thermos of hot tea. I sip at it, holding the grassy taste of it on my tongue as I watch the susurration of the winter blooms."
 
     narrator "This high, the sounds from the town have faded into nothing; it’s as if Plumeria and I are alone in the world."
+    
+    show foxglove flustered
+    with dissolve
 
     foxglove "Hey, Plume."
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "Hmm?"
 
@@ -2239,16 +2301,25 @@ label start:
     show dahlia at right
 
     dahlia "Can’t sleep?"
+    
+    # TODO: foxglove shaking
+    show foxglove terror
 
     foxglove "Gyaah!"
 
     narrator "My grandmother, seated in one of the plush armchairs close to the fireplace, watches impassively in the gloom as I try to calm my thundering heart."
+    
+    show foxglove annoyed
+    with dissolve
 
     foxglove "How- how do you keep doing that?"
 
     narrator "The old woman huffs in amusement."
 
     dahlia "In the war, I learned to avoid catching attention if I didn’t need to. Less likely to meet a bullet that way. I suppose I kept the habit."
+    
+    show foxglove neutral
+    with dissolve
 
     narrator "She pauses."
 
@@ -2315,6 +2386,9 @@ label start:
     narrator "The old woman waves a wrinkled hand dismissively."
 
     dahlia "It’s fine. Having you and your lively girl in here constantly would drive me to distraction, anyway. I have learned to appreciate the quiet, over the years."
+    
+    show foxglove not smiling
+    with dissolve
 
     narrator "I offer a smile, though I suspect she can’t-"
 
@@ -2323,6 +2397,9 @@ label start:
     narrator "There’s a moment of silence. I carefully don’t look at the questioning air the shadows have taken on around my elder’s face."
 
     dahlia "...Hmm. Right. Anyway, it’s late. You should be back to bed. Do you want a nightcap?"
+    
+    show foxglove neutral
+    with dissolve
 
     foxglove "A nightcap?"
 
@@ -2340,10 +2417,6 @@ label start:
     
     scene bg bedroom night
     with fade
-    
-    show foxglove at left    
-    show plumeria at right
-    with dissolve
 
     narrator "I pad carefully back into the little bedroom I’m sharing with Plume. With my eyes adjusted to the dark, I can pick out the curves of her limbs amid the sheets, the mossy bloom of her hair on the pillow."
 
@@ -2364,6 +2437,8 @@ label start:
     narrator "My guilty jolt sends me stumbling. I creep back forwards, embarrassment replacing my previous feelings."
 
     plumeria "Get in."
+    
+    # TODO: show them in bed?
 
     narrator "Her voice is low and thick with sleep. Without an excuse, I obediently enter the pile of blankets. I squeak as she pulls me nearer without warning."
 
@@ -2388,8 +2463,8 @@ label start:
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria serious breath at right
     with dissolve
 
     narrator "The next day, climbing the mountain, my heart isn’t in it."
@@ -2406,8 +2481,10 @@ label start:
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 5.0
     
-    show foxglove at left    
-    show plumeria at right
+    # TODO: show fireflies
+    
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
     
     narrator "The sun has already begun to go down as we begin heading back through the streets. Part way back, Plumeria hesitates."
@@ -2423,6 +2500,9 @@ label start:
     narrator "In this quiet religious town, it makes sense the liveliest place would be the one with all the booze."
 
     foxglove "...Sure, why not. I could do with a drink."
+    
+    show plumeria guffaw
+    with dissolve
 
     narrator "Plume gives a small whoop and punches the air in triumph."
 
@@ -2448,12 +2528,17 @@ label start:
     narrator "Plumeria’s mouth moves, but the background racket smears the words into illegibility."
 
     foxglove "What?"
+    
+    # TODO: can i make plumeria slide over to foxglove?
 
     narrator "She grins and leans in closer. Her green hair brushes against my cheek, and I fight the urge to twitch at the ticklish sensation."
 
     plumeria "I guess they prefer gin to gods, huh? Prefer a booth?"
 
     narrator "I nod fervently, and I feel more than hear her laughter."
+    
+    show plumeria guffaw
+    with dissolve
 
     plumeria "Alright! I’ll get us drinks, you get us a booth!"
     
@@ -2472,10 +2557,16 @@ label start:
     narrator "The woman is pretty cute. Obviously a northerner, with heavy, downwards-kinked horns and startling dark hair and eyes. A pale hand plays with half-empty beer glass."
 
     narrator "The pale gold fluid inside sloshes to and fro, leaving thin, foamy trails on the sides of it."
+    
+    show fennel smug
+    with dissolve
 
     fennel "Hey there! Come here alone?"
 
     foxglove "Oh! Um, no, I came with- my friend, she’s getting some drinks."
+    
+    show fennel neutral
+    with dissolve
 
     fennel "Ah, too bad. I was meeting someone here, and I think I’ve been ditched."
 
@@ -2484,6 +2575,9 @@ label start:
     fennel "Too bad for them. Fennel!"
 
     foxglove "Eh?"
+    
+    show fennel smug
+    with dissolve
 
     narrator "She smiles, showing a thin sliver of white teeth."
 
@@ -2492,6 +2586,9 @@ label start:
     foxglove "Oh, right, yeah."
 
     narrator "I laugh, feeling the flush of embarrassment on my cheeks, and tell her my name. To my surprise, she looks thoughtful."
+    
+    show fennel neutral
+    with dissolve
 
     fennel "You related to that old lady living on Armiger Street?"
 
@@ -2517,18 +2614,33 @@ label start:
     foxglove "Uh, Fennel- this is my friend, Plumeria. Plume, this is Fennel."
 
     narrator "The two are looking at each other, taking the other in. Fennel raises her glass in a small salute."
+    
+    show fennel smug
+    with dissolve
 
     fennel "Charmed."
+    
+    show fennel neutral
+    with dissolve
 
     narrator "There’s a moment of silence as we drink. The beer (or is it ale? I can never remember the difference-) is dark and heavy, and faintly warm."
 
     narrator "It smells earthy, bringing to mind pine trees, and I stare into the oil-black depths of it before I take a sip."
+    
+    show foxglove annoyed
+    with dissolve
 
     narrator "My mouth fills with the tang of hops, thick and bitter, and I fight back the urge to wince at the overbearing flavour."
+    
+    show plumeria surprised
+    with dissolve
 
     narrator "Plume notices anyway, and raises a questioning eyebrow."
 
     plumeria "Not a fan?"
+    
+    show foxglove neutral
+    with dissolve
 
     foxglove "Honestly, it’s a little strong for my tastes."
 
@@ -2537,12 +2649,21 @@ label start:
     fennel "You can have mine, if you want. Should be a bit more drinkable if you something milder."
 
     narrator "Perhaps she misinterprets my look of surprise, for she spreads her hands and smiles. She’s wearing a subtle lipstick; I only notice now, seeing the mark it’s left on the glass."
+    
+    show fennel smug
+    with dissolve
 
     fennel "I promise I haven’t spat in it, if that’s what you’re worried about."
 
     foxglove "Oh- no, that’s not it-"
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "Plume cuts in."
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "I can just get you another. It’s not a big deal."
 
@@ -2557,7 +2678,7 @@ label start:
         "Refuse the drink.":
             jump refuse_drink
 
-    # "[Accept the drink]"
+    # Accept the drink
     label accept_drink:
 
         foxglove "Um, well, cheers."
@@ -2573,12 +2694,21 @@ label start:
         plumeria "Seems pretty nice to me. Honestly, compared to some of the things I’ve drank at university parties, this is nothing."
 
         fennel "You’re a university student?"
+        
+        show plumeria grin
+        with dissolve
 
         narrator "Plume, perhaps sensing an opportunity, grins. She waves her glass in emphasis, narrowly avoiding painting the already-sticky tabletop with a fresh layer of awful."
 
         plumeria "Yup. Thaumaturgical History. That is to say- the study of magic back when it was strong and people had magic and miracles just squirting out of every orifice."
+        
+        show foxglove sarcastic
+        with dissolve
 
         foxglove "I’m consistently amazed at your ability to say the worst things ever. You’d think I’d get used to it, but it never seems to happen."
+        
+        show plumeria flirt
+        with dissolve
 
         plumeria "Please, call me amazing more."
 
@@ -2587,12 +2717,23 @@ label start:
         narrator "Fennel looks between the two of us as we banter, dark eyes flicking to and fro. I’m just taking a sip when she asks a question."
 
         fennel "So, you two dating, or what?"
+        
+        show foxglove annoyed
+        show plumeria surprised
+        with dissolve
 
         narrator "I choke. The pressure builds in my throat as I try to avoid hacking up a lung. Beer (or perhaps ale) merrily leaps up into my nasal cavity, stinging wildly."
+        
+        show fennel smug
+        show foxglove neutral
+        with dissolve
 
         narrator "Fennel watches me, hand partly raised in the beginnings of assistance and an expression of amusement."
 
         fennel "That a no, then?"
+        
+        show plumeria neutral
+        with dissolve
 
         narrator "I clear my throat a couple of times, trying to find my voice. I wave off Plumeria’s concern as it becomes evident I’m not about to choke to death in a dingy pub in Godigsfel."
 
@@ -2612,13 +2753,22 @@ label start:
 
         foxglove "Couldn’t afford the fees."
 
+        show fennel neutral
+        with dissolve
+        
         fennel "That’s tough. Not like there’s one in this town, to be fair, so I’m in the same boat. Thought about heading down the tracks to someplace else, but this little town is still home, you know?"
 
         narrator "She rolls the pint glass in her palms, back and forth, dark liquid inside rising and falling as steady as dusk. Foam hisses silently against the glass."
+        
+        show plumeria grin
+        with dissolve
 
         plumeria "I’ve always felt it’s more the people than the place that makes a home. So even if you’d have left me at home, I’d still have come along."
 
         narrator "She grins at me. Fennel gives her a look, slightly exasperated, before she sighs."
+        
+        show plumeria neutral
+        with dissolve
 
         fennel "Guess I really do have no luck today. Alright, well."
 
@@ -2651,8 +2801,14 @@ label start:
     label refuse_drink:
 
         foxglove "Ah- thanks, but I wouldn’t want to deprive you or anything."
+        
+        show fennel smug
+        with dissolve
 
         fennel "Suit yourself, cutie."
+        
+        show fennel neutral
+        with dissolve
 
         narrator "Fennel takes a sip, shrugging lightly."
 
@@ -2661,18 +2817,30 @@ label start:
         plumeria "Alright. Got any preferences?"
 
         foxglove "Something light, I guess? You can practically chew this one."
+        
+        show plumeria guffaw
+        with dissolve
 
         narrator "She laughs and throws a mock salute."
 
         plumeria "Aye-aye, ma’am. Save my chair."
+        
+        hide plumeria
+        with dissolve
 
         narrator "After she’s departed to battle her way through the crowd at the bar, Fennel leans in towards me."
 
         fennel "So are you two, you know, together?"
+        
+        show foxglove flustered
+        with dissolve
 
         narrator "The question brings inadvertent heat to my cheeks. To cover, I take another sip of the thick black ale. Yeah, it still tastes grim. Bad move."
 
         foxglove "Ah, no, we’re not - she’s just- we’re just friends."
+        
+        show fennel smug
+        with dissolve
 
         fennel "Uh-huh."
 
@@ -2693,20 +2861,36 @@ label start:
         narrator "She leans forward. Her voice has lowered to a husky tone."
 
         fennel "So how about it, cutie?"
+        
+        # TODO: shake everyone
+        show plumeria serious at center
+        show foxglove neutral
+        show fennel neutral
 
         narrator "A drink slams on the table with a thud. Golden liquid slops from the glass, adding fresh layers of stickiness to the tabletop."
 
         plumeria "How about what?"
+        
+        show plumeria annoyed
+        show fennel angry
+        show foxglove neutral
+        with dissolve
 
         narrator "She’s frowning down at the local girl. Fennel scowls back, obviously displeased to be interrupted. I take a second to try to cool the flames off my cheeks."
 
         fennel "What’s your problem?"
+        
+        show plumeria neutral
+        with dissolve
 
         narrator "Plumeria thuds herself down in the seat, close enough to me our shoulders brush. She smiles at Fennel."
 
         plumeria "Nothing at all. How about what, now?"
 
         narrator "The two stare at each other for a long moment, the tension increasingly thick, before the local girl lets out a loud and irritated sigh."
+        
+        show plumeria serious
+        with dissolve
 
         fennel "Ah, what the hell. This night really is a bust."
 
@@ -2715,20 +2899,36 @@ label start:
         fennel "At least fuck if you’re going to be possessive. Hey, cutie, let me know if you get bored with greenie here. See you around."
 
         hide fennel
+        with dissolve
 
         narrator "With a farewell flick of her fingers, Fennel stalks off into the crowds, heading towards the bar. Plume watches her go, frowning, then visibly shakes it off."
+        
+        show plumeria neutral
+        with dissolve
 
         plumeria "Friendly locals, huh?"
+        
+        show foxglove not smiling
+        with dissolve
 
         narrator "She pauses for a second as I give her back a weak smile. We very carefully do not talk about Fennel’s parting shots."
 
         plumeria "Sorry I spilled some of your drink. Well, if you still want it. We could head out if you want."
 
         foxglove "Consider it part of the experience, I guess. Maybe if we’re lucky there’ll be a bar fight and you can knock out someone with a barstool."
+        
+        show plumeria guffaw
+        with dissolve
 
         narrator "This forces a laugh out of her - an inelegant snort that widens her eyes in delighted surprise."
+        
+        show plumeria grin
+        with dissolve
 
         plumeria "Well, you’ll have to back me up. Get ‘em in the kidneys with a broken bottle or something."
+        
+        show foxglove sarcastic
+        with dissolve
 
         foxglove "It’s a plan."
 
@@ -2740,6 +2940,10 @@ label start:
 
     ## End choice 3
     label choice_3_end:
+    
+    show plumeria grin
+    show foxglove sarcastic
+    with dissolve
 
     narrator "We sip at the beers, trying a new variety each glass, before we swap to a different local speciality; a smooth, mellow gin brewed with the little blue winterberries found up the mountain."
 
@@ -2748,6 +2952,9 @@ label start:
     narrator "It’s deceptively strong, and soon I find my limbs a touch clumsier than before; my voice comes easier and louder, and a pleasant, fuzzy heat has settled in my bones."
 
     narrator "Glasses of varying sizes form battlements between my friend and I."
+    
+    show plumeria flustered
+    with dissolve
 
     narrator "Plumeria, an adorable flush across her cheeks from the alcohol, grins at me. One of her hands reaches up to brush back a stray hair, and I’m struck by how pretty she is."
 
