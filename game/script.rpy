@@ -333,6 +333,18 @@ layeredimage fennel:
     always "character/fennel/fennel neutral.png"
     zoom .36
     ypos 0.1
+layeredimage fennel neutral:
+    always "character/fennel/fennel neutral.png"
+    zoom .36
+    ypos 0.1
+layeredimage fennel smug:
+    always "character/fennel/fennel smug.png"
+    zoom .36
+    ypos 0.1
+layeredimage fennel angry:
+    always "character/fennel/fennel angry.png"
+    zoom .36
+    ypos 0.1
     
 image snow_100 = SnowBlossom("snow_100.png", count=500, xspeed=50, yspeed=220, start=10)
 image snow_59  = SnowBlossom("snow_59.png",  count=500, xspeed=50, yspeed=175, start=10)
@@ -372,6 +384,21 @@ transform right_sitting:
 transform left_sitting:
     xalign 0.05
     ypos 0.3
+    
+transform shake:
+    ease .06 yoffset 24
+    ease .06 yoffset -24
+    ease .05 yoffset 20
+    ease .05 yoffset -20
+    ease .04 yoffset 16
+    ease .04 yoffset -16
+    ease .03 yoffset 12
+    ease .03 yoffset -12
+    ease .02 yoffset 8
+    ease .02 yoffset -8
+    ease .01 yoffset 4
+    ease .01 yoffset -4
+    ease .01 yoffset 0
     
 transform frost_particles(delay):
 
@@ -727,7 +754,7 @@ label start:
     show foxglove flustered
     with dissolve
 
-    # TODO: shaking FX
+    show foxglove at shake
     foxglove "Can, can you, um, le-"
 
     show dahlia commanding
@@ -1050,13 +1077,14 @@ label start:
     pause 1.0
     
     scene cg tucked into bed 1
-    with dissolve
+    with fade
 
     foxglove "Hey, Plume."
 
     narrator "My voice is a quiet murmur."
     
     scene cg tucked into bed 2
+    with dissolve
 
     plumeria "Hmm?"
     
@@ -1070,6 +1098,7 @@ label start:
     plumeria "I just felt like it, was all. Wanted to see the north."
     
     scene cg tucked into bed 3
+    with dissolve
 
     narrator "She doesn’t say anything more, and neither do I. I listen to our breathing until, like sinking into 
         a still pond, I fall asleep."
@@ -2151,7 +2180,6 @@ label start:
 
     narrator "Sooner than I expected, the trail levels out onto a small plateau."
     
-    # TODO: be nice to have foxglove surprised here
     show plumeria surprised
     with dissolve
 
@@ -2302,8 +2330,7 @@ label start:
 
     dahlia "Can’t sleep?"
     
-    # TODO: foxglove shaking
-    show foxglove terror
+    show foxglove terror at shake
 
     foxglove "Gyaah!"
 
@@ -2438,7 +2465,8 @@ label start:
 
     plumeria "Get in."
     
-    # TODO: show them in bed?
+    show cg tucked into bed 1
+    with dissolve
 
     narrator "Her voice is low and thick with sleep. Without an excuse, I obediently enter the pile of blankets. I squeak as she pulls me nearer without warning."
 
@@ -2480,8 +2508,7 @@ label start:
     show snow_25
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" loop fadein 5.0
-    
-    # TODO: show fireflies
+    show expression fireflies as fireflies
     
     show foxglove breath at left    
     show plumeria breath at right
@@ -2529,7 +2556,8 @@ label start:
 
     foxglove "What?"
     
-    # TODO: can i make plumeria slide over to foxglove?
+    show plumeria at center
+    with move
 
     narrator "She grins and leans in closer. Her green hair brushes against my cheek, and I fight the urge to twitch at the ticklish sensation."
 
@@ -2862,10 +2890,12 @@ label start:
 
         fennel "So how about it, cutie?"
         
-        # TODO: shake everyone
         show plumeria serious at center
         show foxglove neutral
         show fennel neutral
+        with vpunch
+        
+        play sound "audio/oneshot/door slam.mp3" volume 8.0
 
         narrator "A drink slams on the table with a thud. Golden liquid slops from the glass, adding fresh layers of stickiness to the tabletop."
 
@@ -2957,6 +2987,9 @@ label start:
     with dissolve
 
     narrator "Plumeria, an adorable flush across her cheeks from the alcohol, grins at me. One of her hands reaches up to brush back a stray hair, and I’m struck by how pretty she is."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "Inside, my heart makes a complicated motion. I want to reach up and brush my hand through that green hair. I want to-"
 
@@ -2967,6 +3000,9 @@ label start:
     narrator "Her words are fond, tone dripping with fake exasperation."
 
     plumeria "C’mon, you terrible lush."
+    
+    show foxglove sarcastic
+    with dissolve
 
     narrator "She overbalances when she tries to stand up, and has to lunge to grab the table edge or fall over. It sets me off giggling, and her defensive what only makes me giggle harder."
 
@@ -2979,16 +3015,23 @@ label start:
     show snow_25
     with fade
     play music "audio/music/Trio for Piano, Cello, and Clarinet.mp3" fadein 3.0 loop
+    show expression fireflies as fireflies
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
-
+    
     narrator "The outside, cool and damp, is like stepping into another world after the stifling sweat and heavy heat of the pub."
 
     narrator "I breathe in deep, feeling it seep into the crannies of my lungs, my chest swelling with the sharpness of it like a breathed-in glacier."
+    
+    show plumeria grin
+    with dissolve
 
     narrator "Next to me, Plumeria gives an abrupt, violent shiver, like a dog shaking itself off after a dip. I wrap her hand in mine, curling my fingers through hers, and her lips curl upwards."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "I don’t want her to get frostbite in her fingers, of course, which was the reason I did that."
 
@@ -2997,6 +3040,9 @@ label start:
     narrator "The blue lights of the ghost lanterns paints the world in shades of cerulean and azure."
 
     foxglove "...’s pretty."
+    
+    show plumeria flustered
+    with dissolve
 
     narrator "Plume looks my way, amusement in her expression. The booze has given her a pretty flush across the cheeks, and she nudges against me for no real reason I can tell."
 
@@ -3024,10 +3070,8 @@ label start:
 
     narrator "She shakes her head and waves us off to bed."
     
-    scene bg bedroom night
-    show foxglove at left    
-    show plumeria at right
-    with dissolve
+    scene cg tucked into bed 1
+    with fade
 
     narrator "I lie tucked against Plume, the sheets heavy and piled high. I can still feel the fizz of the alcohol in my fingertips, in my head, like a distant cloud. I can only just see the ceiling of the room."
 
@@ -3046,6 +3090,9 @@ label start:
     stop music fadeout 5.0
 
     foxglove "Why did you really follow me here?"
+    
+    scene cg tucked into bed 2
+    with dissolve
 
     narrator "Plume merely hums. I wait for a proper answer before she abruptly opens her eyes. She looks at me sideways, her eye a thin slice of emerald in the dark."
 
@@ -3054,6 +3101,9 @@ label start:
     foxglove "What? Of course I was going to come back."
 
     narrator "She hums again, a doubtful tone to it."
+    
+    show cg tucked into bed 3
+    with dissolve
 
     plumeria "You’re not a very good liar, I don’t think. Even if you don’t realise you’re lying."
 
@@ -3072,6 +3122,9 @@ label start:
     foxglove "...Explain."
 
     narrator "I feel her grip tighten a little, keeping me pressed against her. Her heart beats against my back, thump-thump-thump, and so does mine in sequence. Plume’s voice is a soft murmur."
+    
+    show cg tucked into bed 2
+    with dissolve
 
     plumeria "I think you’ve always wanted to leave that city behind. I get the feeling, right? Fresh place, fresh start."
 
@@ -3088,6 +3141,11 @@ label start:
     plumeria "Alright, then. I’ll ask you this: what are we?"
 
     foxglove "Wh-what do you mean?"
+    
+    play sound ["<silence 0.2>", "audio/oneshot/cloth rustle.mp3"] volume 5.0
+    
+    show bg bedroom night
+    with fade
 
     narrator "Her grip loosens. I wriggle free and turn to face her. She’s propped herself up on one elbow, the sheets falling from around her shoulders like a shroud."
 
@@ -3138,6 +3196,9 @@ label start:
     plumeria "Alright. Well, it is late. Do you want me to go? I can sleep in one of the armchairs if you’d like."
 
     foxglove "Ah, no, no! Stay. Please."
+    
+    show cg tucked into bed 2
+    with dissolve
 
     narrator "She simply smiles."
 
@@ -3167,12 +3228,18 @@ label start:
     narrator "Her eyes are shut, listening to the radio, and she doesn’t look at us as she talks. Her tone is perfectly matter-of-fact, but I shake my head in denial."
 
     narrator "...Her eyes are shut. Plumeria snickers silently at me, and with a quick safety check that Grandmother’s eyes are still shut, I make a rude gesture at her."
+    
+    show plumeria grin
+    with dissolve
 
     narrator "She mimes an exaggerated expression of shock until I roll my eyes and she breaks out into a grin."
 
     narrator "Trying to stab Plume with my eyes alone, I give a verbal answer instead."
 
     foxglove "There’s still time. Arriving within the next few days, it said. So as long as we reach the top today, it’s not a problem. We’ll be up and down before any bad weather arrives."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "I guess. We might have to stay overnight. There’s a little cabin at the top, if I remember correctly. Climb up, say hello to your icy friends, climb down in the morning. Should work."
 
@@ -3189,20 +3256,35 @@ label start:
     narrator "The old woman pins me in her gaze for a moment longer, before she sighs. For a moment, she looks tremendously old. Tired. Weathered, like the mountain itself - worn down by a thousand storms."
 
     dahlia "Very well. You are both adults, I suppose, and can look after yourselves."
+    
+    show dahlia commanding
+    with dissolve
 
     narrator "She throws the battleaxe of her line-of-sight at Plumeria, who bravely doesn’t quail before the force of it."
 
     dahlia "Do you remember what I said to you, Miss Feld?"
+    
+    show plumeria serious
+    with dissolve
 
     plumeria "Ahaha. Ha. I sure do, Ma’am, don’t you worry."
+    
+    show dahlia neutral
+    with dissolve
 
     narrator "Her slightly nervous laughter ratchets itself like the mechanical splutters of a failing engine as I glance out the window. The sky aches with gloomy grey clouds, but the air itself is still and dry."
 
     foxglove "Well, if time is short, I don’t want to delay. We’ll head out in a minute, then?"
 
     narrator "Plume grabs the lifeline with unconcealed relief."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "Yeah, sounds like a plan. I’ll just grab our kit from our room."
+    
+    hide plumeria
+    with dissolve
 
     narrator "Rapidly, she retreats from the room."
 
@@ -3225,6 +3307,9 @@ label start:
     foxglove "I will, Grandmother. ...Thanks."
 
     narrator "I open my mouth to say something more and hesitate, unsure of what I even wanted to say in the first place."
+    
+    show plumeria at right
+    with dissolve
 
     narrator "I’m saved from my indecision by Plume coming out of our room, a couple of backpacks in hand and coats draped over her forearms."
 
@@ -3240,8 +3325,8 @@ label start:
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 3.0 loop volume 1.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath surprised at right
     with dissolve
 
     narrator "We set a hard pace. The cobbles of the roads fade to the weary worn surface of the steps."
@@ -3263,8 +3348,14 @@ label start:
     narrator "Now we’ve stopped for a bit, I can tell she’s right. The sweat of the exertion of the rapid climb clings to me unpleasantly, sapping my heat like tiny icy ticks."
 
     narrator "I shudder, more at the imagery my brain conjures of that than the actual temperature, but Plume notices."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "Wow. If you’re shivering, it really must be cold. If I freeze solid, I give you permission to market me as the world’s most beautiful ice sculpture."
+    
+    show foxglove sarcastic
+    with dissolve
 
     narrator "I roll my eyes and in retaliation inflict the image I’m picturing on her, and she pulls a disgusted face. She casts a wary gaze on the vegetation around us."
 
@@ -3275,6 +3366,10 @@ label start:
     narrator "She slops the dregs of her cup out onto the ground and rises to her feet, carefully brushing herself off."
 
     plumeria "Well, no point sitting about. We've still got a big rock to climb."
+    
+    hide plumeria
+    hide foxglove
+    with dissolve
 
     narrator "And so we do."
 
@@ -3287,8 +3382,8 @@ label start:
     narrator "The mountain here had a sort of slot carved out of it, long ago, by the final battles of the gods, and the Temple sits in like a wedge in the cleft in the stone."
 
     scene bg aumic temple day
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
 
     narrator "Like the Chapel of the Nail, it’s half underground. We force open the heavy wooden door, staring into the cool dark inside."
@@ -3317,8 +3412,8 @@ label start:
     show snow_25
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
 
     narrator "The last portion of the climb is viciously steep. We don’t walk but clamber awkwardly, scrambling over dyed-white stone."
@@ -3339,7 +3434,7 @@ label start:
 
     narrator "I let Plumeria pull me up onto a crag and look. The ground here is flatter, a little plateau near the peak of the mountain."
 
-    narrator "Draped across the terrain is a corpse. The corpse, perhaps. This close, the body has a sort of lumpenness to it - as if it was shaped out of clay a little less delicately, less detailed, than us."
+    narrator "Draped across the terrain is a corpse. {i}The{/i} corpse, perhaps. This close, the body has a sort of lumpenness to it - as if it was shaped out of clay a little less delicately, less detailed, than us."
 
     narrator "No spirits appear. It’s just us and Kalarlomoth."
 
@@ -3435,11 +3530,15 @@ label start:
     show snow_25
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
 
     narrator "I give the dead god a final look, examining the silent gasp of the expression one last time, looking for something- I don’t know. But whatever it is, I can't find it, and finally I turn away."
+    
+    show plumeria annoyed
+    show foxglove annoyed
+    with dissolve
 
     play sound "audio/oneshot/ice spirits wind.mp3" volume 1.0
 
@@ -3450,6 +3549,9 @@ label start:
     plumeria "What the h- when they say weather changed quick, I didn’t think they meant this quick!"
 
     narrator "Her voice trembles even as she tries to make a joke of it."
+    
+    show foxglove terror
+    with dissolve
 
     foxglove "Plume! Look!"
 
@@ -3463,8 +3565,8 @@ label start:
 
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
 
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath terror at left    
+    show plumeria breath terror at right
     with dissolve
 
     plumeria "Oh, my gods. Spirits- they actually exist-"
@@ -3522,6 +3624,8 @@ label start:
     foxglove "Ah- ahhh-"
 
     narrator "Plumeria crashes to her knees besides me. She grabs at my hands and looks up to scream at the wintery ghost-figures around us."
+    
+    show plumeria terror at shake
 
     plumeria "Stop it! Stop!"
     
@@ -3549,13 +3653,21 @@ label start:
 
     spirit "WE WILL NOT BE ROBBED"
     
+    show plumeria terror at shake
+    
     narrator "One lunges from behind, a hissing, embodied avalanche, and Plumeria cries out as she whirls."
 
     narrator "The flare strikes it in the face and it staggers back, emitting an awful, cracking shriek, a breaking ice sheet, but the flare gutters and another spirit reaches forward."
 
     narrator "It doesn’t claw or rend Plumeria. It simply places a hand on her chest. The colour drops from her face. Blue spreads on her lips like a bruise."
+    
+    hide plumeria
+    with dissolve
 
     narrator "Without a word, she collapses backwards into the snow. The flare goes out. The contrast leaves me blinded."
+    
+    show foxglove terror at center
+    with move
 
     foxglove "Plu-Plume..."
 
@@ -3613,8 +3725,7 @@ label start:
     show snow_25
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath terror at center
     with dissolve
 
     narrator "I watch them go, panting, fighting the urge to pass out. When the fog begins to break apart, and I’m sure they’re not coming back, I drop to my knees."
@@ -3646,8 +3757,7 @@ label start:
     play sound "audio/oneshot/door slam.mp3" volume 4.0
     play ambience "audio/ambience/indoor high wind.mp3" fadein 3.0 loop volume 1.0
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove breath terror at center
     with dissolve
 
     narrator "A tiny bit of colour has returned to Plumeria’s lips as I slam the door and lay her down. That must be a good sign, right?"
@@ -3663,14 +3773,17 @@ label start:
     scene bg cabin lit night
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove terror at center
+    with dissolve
 
     narrator "I nurse it in the kindling, building the fire until it’s fiercely licking yellow tongues across the chunks of timber."
 
     narrator "I check back on Plume. My fingers are still changed, and I can’t feel heat or cold with them, so I press my forehead against hers. Still freezing cold."
 
     narrator "I remember what I see in films in this sort of situation, and I pray that it’s not just made up, that I won’t do more harm than good."
+    
+    hide foxglove
+    with dissolve
 
     narrator "There’s no room for embarrassment, and I mutter an apology as I strip us both and huddle under the blanket with her, cradling her between my arms in a reflection of the previous night."
 
@@ -3699,6 +3812,12 @@ label start:
     plumeria "What’s...?"
 
     foxglove "Plume! Oh, thank- thank the gods-"
+    
+    show foxglove terror at left
+    with move
+    
+    show plumeria serious at right
+    with dissolve
 
     narrator "She wriggles around in my grip. At the sight of her face, colour mostly returned, heavy bags under her eyes, I feel tears begin to well up in my eyes."
 
@@ -3709,26 +3828,47 @@ label start:
     plumeria "Hey, hey, it’s okay. I mean, I feel terrible, but-"
 
     narrator "She blinks and looks around at the inside of the little cabin, then down at the slivers of bare flesh she can see beneath the blanket. Her eyebrows raise, but what she chooses to ask is:"
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "We got away?"
-
+    
     foxglove "The- the incense. It drove them off, and I threw the other flares at them. And I dragged you back here, and you were so cold, and I didn’t know what to do, so I-"
 
     plumeria "Hey, it’s ok. You did good. Besides..."
+    
+    show plumeria grin
+    with dissolve
 
     narrator "She grins up at me, unsteady but alive, alive, alive."
 
     plumeria "I had a dream not far off this the other night as well."
+    
+    show foxglove weary
+    with dissolve
 
     narrator "For a long moment, I’m dumbstruck. I stare at her, and she looks back, already returning to her signature look of confident amusement."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "A laugh shudders its way out my mouth involuntarily, and I let my head fall forward to rest against her shoulder."
 
     plumeria "Oh, my gods. Now I really do know you’re feeling better."
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "She laughs, then quiets. I feel her hand wrap around my back, pulling me closer."
+    
+    show plumeria serious
+    with dissolve
 
     plumeria "I thought I’d die."
+    
+    show foxglove frown
+    with dissolve
 
     narrator "Her voice is a tiny thing, terribly delicate. She whispers, because trying to say it louder would break it apart."
 
@@ -3747,18 +3887,27 @@ label start:
     narrator "I wiggle one of my hands up to my mouth and use my teeth to pull off a glove. She frowns down at my transfigured hand."
 
     narrator "I can see her refracted through the translucent digits, and she gently takes hold of them with her own."
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "How do they feel?"
 
     foxglove "Not much of anything, to be honest. I can barely tell you’re touching them. Are they... well, cold?"
 
     plumeria "Yeah. Not quite as cold as ice, I don’t think."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "She hesitates, and then, as delicately as if they might shatter in her grip, presses her lips to the crystal tips on my fingers. As if transferred, the heat blooms in my cheeks instead."
 
     narrator "No more delaying. I’ve survived a near-death experience. I’m already skin-to-skin. She’s been flirting with me for literally years. Come on."
 
     foxglove "I- I have your answer. Like I promised. If you’d listen."
+    
+    show plumeria flustered
+    with dissolve
 
     narrator "Plumeria’s breath hitches in just a little, and then she smiles."
 
@@ -3790,22 +3939,38 @@ label start:
         narrator "Come on. Say it, already."
 
         foxglove "I guess I love you, Plumeria."
+        
+        show plumeria grin
+        with dissolve
 
         narrator "Plume smiles, wide and almost proud. She curls her hands around the back of my neck, cradling my head. Her voice is low, a husky whisper, and the sound of it lights fires inside I don’t have a name for."
 
         plumeria "Can I give my answer to that, now?"
 
         foxglove "Y-yea- mmfh!"
+        
+        show plumeria flustered
+        with dissolve
 
         narrator "She’s gently but firmly pulled my head forward. Her lips press against mine, muffling my words. They’re soft, and warm, and it sends prickles of weird heat radiating through me from the very core."
 
         narrator "She kisses me again, and again, and again, until I’m half-dazed with it. Finally, she pulls back a little."
 
         narrator "I pant softly as my lips are freed. Her own are red and kiss-swollen. She grins, pure Plumeria mischief written on it."
+        
+        show plumeria guffaw
+        with dissolve
 
         plumeria "Left you breathless, huh?"
+        
+        show foxglove not smiling
+        with dissolve
 
         foxglove "Oh my gods, you dork."
+        
+        show plumeria flustered
+        show foxglove flustered
+        with dissolve
 
         narrator "She chuckles and steals another. She glances down, at our bare bodies beneath the crinkly aluminium blanket, deliberately dwelling at where we’re pressed together."
 
@@ -3865,10 +4030,16 @@ label start:
         plumeria "You sure?"
 
         foxglove "Y-yeah. I want this."
+        
+        show plumeria flirt
+        with dissolve
 
         narrator "She pauses mischievously, grinning at me through her reddened cheeks and quickened breaths."
 
         plumeria "I should have suggested mountain climbing sooner if this was the outco-"
+        
+        show plumeria flustered
+        with dissolve
 
         narrator "With an exasperated giggle, I seal her lips with my own. I wrap my arms around her, pulling her closer, closer, and I feel her hands trace across my shoulders, my back, and down."
 
@@ -3890,7 +4061,7 @@ label start:
     scene bg cabin day
     with fade
     
-    show foxglove at left    
+    show foxglove at center
     with dissolve
 
     narrator "Consciousness comes slowly, like meltwater dripping from ice. There’s aches in my arms and legs like I’ve run a marathon; other places, too, in ways that aren’t entirely unpleasant."
@@ -3900,6 +4071,9 @@ label start:
     narrator "The light in the little shelter is dim, mottled red-blue from the light peeking through the door slats and the little fire burning in the hearth."
 
     narrator "Cold air whispers around my shoulders, reminding me of my nakedness and-"
+    
+    show foxglove terror
+    with dissolve
 
     foxglove "Plume?!"
 
@@ -3908,8 +4082,11 @@ label start:
     narrator "My transformed fingers catch the light, refracting the fire into prisms that dance around the room and some part of me notes that means they’re probably never changing back."
 
     narrator "I take quick steps towards the door when it starts to swing open, and I have to leap backwards to avoid a flattened nose."
+    
+    show foxglove at left
+    with move
 
-    show plumeria at right
+    show plumeria grin at right
     with dissolve
 
     narrator "Plumeria sticks her head through and gives me a cheery grin. With her comes a blast of cold air, sending the fire dancing wildly in its little stone prison."
@@ -3917,64 +4094,116 @@ label start:
     plumeria "Oop, sorry, nearly got you there."
 
     foxglove "Plume! Gods, I woke up and you weren’t here-"
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "Seeing my worry, her expression softens. She steps in and swings the door shut behind her, cutting out the wind."
 
     plumeria "Hey, hey, it’s fine. I just headed up and fetched your gloves. You were still sleeping, and I figured you needed it after, well, everything. Spirits and afterwards."
+    
+    show plumeria flirt
+    show foxglove flustered
+    with dissolve
 
     narrator "She waggles her eyebrows lasciviously and I find myself blushing, but I step forward and hug her. My head thumps against her chest. She chuckles, and her arms encircle me."
 
     foxglove "I wasn’t the one who nearly died, dummy. What if they’d come back?"
+    
+    show plumeria neutral
+    with dissolve
 
     narrator "She frees up some space and pulls out a thermos flask."
 
     plumeria "Well, it wasn’t me they wanted - I figured they’d given up. Besides, I was prepared."
 
     plumeria "I put a bit of incense in here, let it fill with the smoke. If they came at me, I’d unscrew the lid, let out the smoke, and bam. No more spirits."
+    
+    show foxglove frown
+    with dissolve
 
     narrator "I frown at the flask."
 
     foxglove "What if it hadn’t worked?"
+    
+    show plumeria grin
+    with dissolve
 
     narrator "My friend - girlfriend now, I suppose? - shrugs easily."
 
     plumeria "Then you’d have had to come and rescue me. It worked out pretty well for me last time, after all."
+    
+    show foxglove not smiling
+    with dissolve
 
     narrator "I force down a laugh and bury my head in her chest again."
 
     foxglove "Oh my gods, you horndog, is that all you can think about now?"
+    
+    show plumeria guffaw
+    with dissolve
 
     narrator "She laughs again, clear and ringing, like bells, then quietens. When she speaks again, her voice is low and serious."
+    
+    show plumeria serious
+    with dissolve
 
     plumeria "Hey. Do you still want to go out? Last night was- well, emotions were high, right? I’m not going to hold it against you if you’ve changed your mind."
+    
+    show foxglove neutral
+    with dissolve
 
     narrator "I look up at her face. She’s not smiling, her green gaze steady. I match it for a long moment."
     
     narrator "She’s putting on a brave face, but I can see the tension in the set of her jaw, the slight furrow of her brow. I smile and then reach up and lightly flick her nose."
+    
+    show foxglove sarcastic
+    show plumeria flustered
+    with dissolve
 
     plumeria "Wha- hey!"
 
     foxglove "My answer hasn’t changed. There’s no one- there’s no one more important to me than you, Plumeria Feld."
+    
+    show foxglove flustered
+    with dissolve
 
     narrator "I keep my gaze in hers, even as I feel my cheeks heat. In reply, she leans in and kisses me again. Wow, but her lips are soft, even though the cold air of the mountains has chapped them a little."
+    
+    show plumeria grin
+    with dissolve
 
     narrator "She pulls away, smirking at my expression as she does."
 
     plumeria "Come on. Let’s have breakfast and start heading down. Your granny’s probably worried since we didn’t come back last night, and I’m starving for some proper food."
+    
+    show foxglove neutral
+    with dissolve
 
     plumeria "The weather seems to have cleared up a bit over night, but I wouldn’t wait around longer than we need to. There were some big clouds on the horizon."
 
     narrator "At her words, my stomach lets loose with an enormous growl. Abruptly, I realise; yeah, I’m absolutely ravenous, and we have a long way to walk back down."
 
     foxglove "Gods, yeah. What have we got?"
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "Nothing! When I checked out my bag, it turns out someone set it on fire with a flare. Absolutely ruined."
+    
+    show plumeria guffaw
+    show foxglove not smiling
+    with dissolve
 
     narrator "At my expression, she barks out a laugh, loud and teasing."
 
     foxglove "It was- it was necessary!"
 
     plumeria "I know, I know. Luckily, this being a survival shelter, it should have something in here for us."
+    
+    show plumeria neutral
+    show foxglove neutral
+    with dissolve
 
     narrator "She pokes through some of the little cupboards, putting aside firelighters and a couple of packaged survival blankets."
 
@@ -3985,28 +4214,51 @@ label start:
     narrator "She flourishes a chunky block of foil."
 
     plumeria "Chocolate! Enough sugar to keep you fuelled against a billion ice spirits."
+    
+    show foxglove weary
+    with dissolve
 
     narrator "My palm finds my face."
 
     foxglove "Oh my gods, Plume, don’t. Haven’t you ever heard of tempting fate?"
+    
+    show foxglove sarcastic
+    show plumeria grin
+    with dissolve
 
     narrator "She laughs, and I find myself chuckling along. Yeah, last night was scary. Well, more than that - terrifying, perhaps, and I’m sure the whole near-death-experience thing would come back later."
 
     narrator "But for now, in the light of day (or firelight, I guess, in here) the whole thing has an air of unreality."
+    
+    show plumeria neutral
+    with dissolve
 
     plumeria "This is survival chocolate, so, you know, it’s not going to be great, but I figure we could do with something sugary."
+    
+    show foxglove neutral
+    with dissolve
 
     foxglove "I guess there’s that."
 
     narrator "We spend a moment trying to break it to no avail. In the end, we soften it by the fire and shave off chunks with a pocket knife. I chew, thoughtfully, the still-solid mass cracking under my teeth."
+    
+    show foxglove frown
+    with dissolve
 
     foxglove "Huh. This is..."
+    
+    show plumeria annoyed
+    with dissolve
 
     plumeria "Absolutely awful."
 
     foxglove "Yeah. Oh my gods, is this chocolate or sawdust?"
 
     plumeria "Got to have something to stop people from nicking it to eat, I suppose."
+    
+    show plumeria neutral
+    show foxglove neutral
+    with dissolve
 
     narrator "After suffering through as much of the horrible chocolate as I can stomach, I sit back for a moment to let Plume finish hers off."
 
@@ -4023,10 +4275,6 @@ label start:
     show snow_59
     show snow_25
     with fade
-    
-    show foxglove at left    
-    show plumeria at right
-    with dissolve
 
     narrator "Under the cold light of day - so to speak - the events of yesterday seem like a dream. It doesn’t stop me from carefully looking around for any ambush."
 
@@ -4065,10 +4313,12 @@ label start:
     show snow_25
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show expression fireflies as fireflies
+    
+    show foxglove breath at left    
+    show plumeria breath at right
     with dissolve
-
+    
     narrator "We make it down without incident aside from my growing awareness of my aches and pains."
 
     narrator "Climbing up and down the mountain would have been enough on their own, but dragging Plume through the snow and then our... activity... afterwards had given my muscles work all of their own."
@@ -4086,25 +4336,35 @@ label start:
     with fade
     
     show foxglove at left    
-    show plumeria at right
+    show plumeria at center
     with dissolve
 
     foxglove "We’re back!"
     
-    show dahlia at center
+    show dahlia at right
     with dissolve
 
     dahlia "Ah, good."
 
     narrator "She appears from the living room and stops. Her purple eyes scan us up and down, and her mouth hardens into a frown."
+    
+    show foxglove frown
+    show plumeria surprised
+    with dissolve
 
     dahlia "What happened?"
 
     narrator "Before I can offer a word in explanation, we’re shepherded into the living room and made to sit."
 
     narrator "We wait in silence while she makes cups of strong, hot tea and brings them in. She looks between us, and then adds a measured shot of brandy to each."
+    
+    show dahlia commanding
+    with dissolve
 
     dahlia "Now. Talk."
+    
+    show dahlia neutral
+    with dissolve
 
     narrator "We talk. I explain the trip up, the appearance of the spirits, what they said. I talked about driving them off with the flares and the incense."
 
@@ -4125,6 +4385,9 @@ label start:
     dahlia "You two get some more rest. There’s no more trains running, so you’ll have to head back tomorrow."
 
     foxglove "Wait, Grandmother - are you planning to just shoot them if they show up?"
+    
+    show dahlia commanding
+    with dissolve
 
     narrator "The old woman’s lips curl. Above them, in the shadows of her face, her eyes are as firm and unyielding as the mountain."
 
@@ -4133,14 +4396,25 @@ label start:
     narrator "It’s not a big boast. It’s simply a statement, a plain declaration that this old woman would, if necessary, face down the ancient magics of the spirits with a gun made for a war decades distant."
 
     plumeria "Well, I don’t know about you, but if it comes to a fight, my money’s on Granny."
+    
+    show plumeria serious
+    show dahlia amused
+    with dissolve
 
     narrator "She starts and looks at Grandmother as if expecting a thunderbolt, but Dahlia simply raises an eyebrow."
 
     dahlia "I’ll let you have that one."
+    
+    show plumeria grin
+    show dahlia neutral
+    with dissolve
 
     plumeria "Thanks, Gran."
 
     dahlia "Don’t push your luck."
+    
+    show plumeria serious
+    with dissolve
 
     plumeria "R-right."
     
@@ -4158,6 +4432,9 @@ label start:
     plumeria "Your granny is still the scariest thing I’ve ever met. I’ll take the spirits over her when she’s angry, I'll tell you that."
 
     foxglove "Remember what I said about tempting fate?"
+    
+    show cg tucked into bed 2
+    with fade
 
     narrator "Without warning, she falls back, dragging me with her. I bury my face against her chest, feeling it move with her breath, with her heart."
 
@@ -4200,6 +4477,9 @@ label start:
     narrator "A moment of awkward wriggling later and we’re ensconced under the covers. My body slots into the curves of hers, her warmth pressing against me."
 
     stop music fadeout 4.0
+    
+    show cg tucked into bed 3
+    with dissolve
 
     foxglove "I’m sorry."
 
@@ -4212,6 +4492,9 @@ label start:
     foxglove "If I hadn’t come here-!"
 
     narrator "My voice has started to raise, and she gently hushes me."
+    
+    show cg tucked into bed 2
+    with dissolve
 
     plumeria "Not your fault. I chose to come, anyway. Besides, you were the one who saved us, anyway. So if you really insist, you’ve already balanced it out."
 
@@ -4227,8 +4510,8 @@ label start:
     scene bg train day
     with fade
     
-    show foxglove at left    
-    show plumeria at right
+    show foxglove at left_sitting
+    show plumeria at right_sitting
     with dissolve
 
     narrator "Slowly, the train pulls away from the station. My grandmother stands, watching, straight-backed and solemn."
@@ -4242,12 +4525,19 @@ label start:
     narrator "The rattle of the train is constant and soothing. It’s crept into winter, the sun heatless but golden, and flakes of snow dance microsecond ballets in the morning light."
 
     narrator "The morning sun pours in through the windows, like a promise of better days. Plumeria wriggles in closer, our shoulders brushing."
+    
+    show foxglove sarcastic
+    with dissolve
 
     foxglove "Didn’t you want to see Kalarlomoth from the train?"
+    
+    show plumeria surprised
+    with dissolve
 
     plumeria "Ah! You’re right!"
     
     scene cg train dead god day
+    with fade
 
     narrator "She cranes her head round. The dead god lies, still and crystalline, across the mountain top, a petrified giant of glass."
 
