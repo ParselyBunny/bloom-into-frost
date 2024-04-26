@@ -1608,7 +1608,7 @@ label start:
 
     plumeria "Oh, didn’t you know? I’m part of the university triathlon back home. This is nothing, haha!"
 
-    show foxglove angry
+    show foxglove annoyed
     with dissolve
     
     foxglove "..."
