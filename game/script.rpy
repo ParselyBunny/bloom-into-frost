@@ -197,6 +197,42 @@ layeredimage foxglove terror:
         alpha 0.7     # More transparent.
         attribute breath:
             "frost_breath"
+layeredimage foxglove angry:
+    always "character/foxglove/foxglove angry.png"
+    zoom .33
+    ypos 0.175
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove frown:
+    always "character/foxglove/foxglove frown.png"
+    zoom .33
+    ypos 0.175
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage foxglove weary:
+    always "character/foxglove/foxglove weary.png"
+    zoom .33
+    ypos 0.175
+    
+    group breath:
+        pos(1200,750)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 1.7      # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
             
 layeredimage plumeria:
     always "character/plumeria/plumeria neutral.png"
@@ -284,6 +320,42 @@ layeredimage plumeria serious:
             "frost_breath"
 layeredimage plumeria surprised:
     always "character/plumeria/plumeria surprised.png"
+    zoom .36
+    ypos 0.03
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria flustered:
+    always "character/plumeria/plumeria flustered.png"
+    zoom .36
+    ypos 0.03
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria sigh:
+    always "character/plumeria/plumeria sigh.png"
+    zoom .36
+    ypos 0.03
+    
+    group breath:
+        pos(1140,660)  # Line up with mouth.
+        xzoom -1      # Flip horizontally.
+        zoom 2.1     # Resize
+        alpha 0.7     # More transparent.
+        attribute breath:
+            "frost_breath"
+layeredimage plumeria terror:
+    always "character/plumeria/plumeria terror.png"
     zoom .36
     ypos 0.03
     
@@ -561,7 +633,7 @@ label start:
     narrator "She gives a huff of amused exasperation."
     
     stop ambience fadeout 6.0
-    scene bg train station
+    scene bg train station night
     with fade
     play ambience "audio/ambience/train station.mp3" fadein 5.0 volume 0.6
     
@@ -1441,6 +1513,10 @@ label start:
     show snow_25
     with fade
     play ambience "audio/ambience/polar wind mild.ogg" fadein 5.0 loop
+    
+    show foxglove breath at left
+    show plumeria breath at right
+    with dissolve
 
     narrator "The Pilgrim’s Path begins at the foot of the mountain."
 
@@ -1450,29 +1526,25 @@ label start:
     
     narrator "Next to them, a large board depicts the journey of any would-be faith-seekers."
     
-    scene cg pilgrims path map day
-    show snow_100
-    show snow_59
-    show snow_25
-    with fade
-    
-    show foxglove breath at left
-    show plumeria breath at right
-    with dissolve
+    #scene cg pilgrims path map day
+    #show snow_100
+    #show snow_59
+    #show snow_25
+    #with fade
 
     plumeria "Oh, hey. So Mr. Dead up there was called Kalarlomoth. That was bugging me."
 
     foxglove "So the stairs last all the way up to the... Chapel of the Nail? It's not, like... A toenail of it, is it?"
     
-    scene bg pilgrims path day
-    show snow_100
-    show snow_59
-    show snow_25
-    with fade
+    #scene bg pilgrims path day
+    #show snow_100
+    #show snow_59
+    #show snow_25
+    #with fade
     
-    show foxglove breath at left    
-    show plumeria breath serious at right
-    with dissolve
+    #show foxglove breath at left    
+    #show plumeria breath serious at right
+    #with dissolve
 
     narrator "Plumeria had spurned the map to gaze upwards towards that distant funerary peak, her expression approaching resigned from the borders of reluctance."
 
@@ -3557,12 +3629,6 @@ label start:
 
     narrator "Shapes are moving in the bleak fog of the snowdrifts, and I jab at the motion with an outstretched finger. Plumeria looks at what emerges. For once, her words fail her."
 
-    scene cg spirits night
-    show snow_100
-    show snow_59
-    show snow_25
-    with fade
-
     narrator "All around us, figures seem to loom out of the snow. One, three, five- they surround us, still and silent, their frigid bodies shining like the bellies of glaciers."
 
     show foxglove breath terror at left    
@@ -3622,6 +3688,8 @@ label start:
     narrator "I slump to my knees in the snow. It’s doing something. In a frantic motion I tear off my gloves. The tips of my fingers are crystalline and clear, the nails a diamond fleck. Like ice. Like a spirit."
 
     foxglove "Ah- ahhh-"
+    
+    hide plumeria with dissolve
 
     narrator "Plumeria crashes to her knees besides me. She grabs at my hands and looks up to scream at the wintery ghost-figures around us."
     
@@ -3688,6 +3756,12 @@ label start:
     narrator "Plumeria is motionless. The shadows pool in her eyes and make a funeral mask of her face."
 
     narrator "Oh, dead and distant gods, let her live."
+    
+    scene cg spirits night
+    show snow_100
+    show snow_59
+    show snow_25
+    with fade
     
     play sound "audio/oneshot/flare.mp3" volume 1.0
 
