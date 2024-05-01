@@ -3688,8 +3688,6 @@ label start:
     narrator "I slump to my knees in the snow. It’s doing something. In a frantic motion I tear off my gloves. The tips of my fingers are crystalline and clear, the nails a diamond fleck. Like ice. Like a spirit."
 
     foxglove "Ah- ahhh-"
-    
-    hide plumeria with dissolve
 
     narrator "Plumeria crashes to her knees besides me. She grabs at my hands and looks up to scream at the wintery ghost-figures around us."
     
